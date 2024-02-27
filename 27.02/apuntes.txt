@@ -1,0 +1,9 @@
+3_mmap_file.c:
+
+struct stat nos aporta una serie de información como el tamaño del fichero, los permisos, el nodo donde está, etc. 
+
+:38 si el fichero es más pequeño que una página yo tengo que mapear páginas completas. mmap me dice en qué posición hay páginas. La traducción es a nivel de página. ftruncate extiende el fichero para que podamos mapear una página.
+
+:44 En mi tabla de página tengo que encontrar un slot vacío con pagesize de tamaño de página. mmap tiene que mirar cuantas páginas (consecutivas si se pide mucho tamaño) son válidas. Necesito slots consecutivos. En el primer argumento puedo especificar si quiero que mire una posición de memoria específica (hemos puesto NULL porque me da igual cuál sea).
+
+:56 
