@@ -1,0 +1,34 @@
+En el manual de Linux (MAN) 1 equivale a los comandos, 3 equivale a las librerías de C
+
+Cuando programo tengo que tener en cuenta que hay dos errores que hacen que tenga que arreglar el código.
+
+	(errno == EINT) : me han interrumpido durante la ejecución del servicio
+	(errno == EBUSY) : dispositivo ocupado
+
+Una solución sería usar O_NONBLOCK.
+
+SEMAFOROS
+
+sem_t misemaforo;
+
+sem_init(&misemaforo, 0, 0);
+
+sem_post(...)
+sem_wait(&misemaforo);
+err = sem_trywait(...) : si puedo decrementar lo hago, y si no me devuelve un error diferente de 0.
+
+strace: visualiza las llamadas al sistema de un proceso.
+
+Ctrl + D^ es final de fichero, por eso si hago cat para la entrada estándar no para hasta hacer Ctrl+D
+
+En el caso de getch00.c si hago CTRL+C se qeuda pendiente del caracter, no termina la ejecución. Pero getchar() no es ininterrumpible porque si no no saldría el printf() del handler. 
+
+fork.c:
+
+fork me duplicó la memoria junto con los buffers. Ha copiado la cadena fija de printf del padre a un área de datos con un malloc, y lo ha duplicado.
+
+Si pongo un final de línea en el printf se arregla el problema.
+
+fprintf(stderr, "Hola Mundo!"); com oes un error es urgente así que no espera por lo que tampoco sería un problema con el siguiente fork();
+
+Con el strace se ve que el comando clone es el que crea un proceso hijo, que se crea antes que el write en el caso base.
