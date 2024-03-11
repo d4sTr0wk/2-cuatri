@@ -1,0 +1,127 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname USA-PHI-C-RP-RL1
+!
+!
+!
+!
+!
+ip dhcp pool vlan150
+ network 10.0.150.0 255.255.255.0
+ default-router 10.0.150.254
+ dns-server 10.0.0.1
+
+ip dhcp pool vlan151
+ network 10.0.151.0 255.255.255.0
+ default-router 10.0.151.254
+ dns-server 10.0.0.1
+
+ip dhcp pool vlan152
+ network 10.0.152.0 255.255.255.0
+ default-router 10.0.152.254
+ dns-server 10.0.0.1
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/0.150
+ encapsulation dot1Q 150
+ ip address 10.0.150.245 255.255.255.0
+!
+interface GigabitEthernet0/0.151
+ encapsulation dot1Q 151
+ ip address 10.0.151.245 255.255.255.0
+!
+interface GigabitEthernet0/0.152
+ encapsulation dot1Q 152
+ ip address 10.0.152.245 255.255.255.0
+!
+interface GigabitEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet2/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet3/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet6/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet7/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet8/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet9/0
+ no ip address
+ shutdown
+!
+router eigrp 1000
+ network 10.0.0.0
+ no auto-summary
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

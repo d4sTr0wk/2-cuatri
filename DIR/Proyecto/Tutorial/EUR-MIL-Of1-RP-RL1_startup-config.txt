@@ -1,0 +1,118 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname EUR-MIL-Of1-RP-RL1
+!
+!
+!
+!
+!
+ip dhcp pool vlan110
+ network 10.0.110.0 255.255.255.0
+ default-router 10.0.110.254
+ dns-server 10.0.0.1
+
+ip dhcp pool vlan111
+ network 10.0.111.0 255.255.255.0
+ default-router 10.0.111.254
+ dns-server 10.0.0.1
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/0.110
+ encapsulation dot1Q 110
+ ip address 10.0.110.245 255.255.255.0
+!
+interface GigabitEthernet0/0.111
+ encapsulation dot1Q 111
+ ip address 10.0.111.245 255.255.255.0
+!
+interface GigabitEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet2/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet3/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet6/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet7/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet8/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet9/0
+ no ip address
+ shutdown
+!
+router eigrp 1000
+ network 10.0.0.0
+ no auto-summary
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+

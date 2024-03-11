@@ -1,0 +1,127 @@
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname EU-PAR-C-RP-RL1
+!
+!
+!
+!
+!
+ip dhcp pool vlan100
+ network 10.0.100.0 255.255.255.0
+ default-router 10.0.100.254
+ dns-server 10.0.0.1
+
+ip dhcp pool vlan101
+ network 10.0.101.0 255.255.255.0
+ default-router 10.0.101.254
+ dns-server 10.0.0.1
+
+ip dhcp pool vlan102
+ network 10.0.102.0 255.255.255.0
+ default-router 10.0.102.254
+ dns-server 10.0.0.1
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/0.100
+ encapsulation dot1Q 100
+ ip address 10.0.100.245 255.255.255.0
+!
+interface GigabitEthernet0/0.101
+ encapsulation dot1Q 101
+ ip address 10.0.101.245 255.255.255.0
+!
+interface GigabitEthernet0/0.102
+ encapsulation dot1Q 102
+ ip address 10.0.102.245 255.255.255.0
+!
+interface GigabitEthernet1/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet2/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet3/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet6/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet7/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet8/0
+ no ip address
+ shutdown
+!
+interface GigabitEthernet9/0
+ no ip address
+ shutdown
+!
+router eigrp 1000
+ network 10.0.0.0
+ no auto-summary
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ login
+!
+!
+!
+end
+
