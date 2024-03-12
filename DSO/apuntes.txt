@@ -1,0 +1,47 @@
+dd: datadump mueve datos a device
+sync: sincroniza, termina de hacer las operaciones de escritura pendientes para que no queden en caché.
+
+echo "rodri mola" | openssl passwd -6 -stdin encripta la string pasada por argumentos y la pasa por stdin
+
+
+
+7/3:
+
+falta por hacer, falla porque dice que la SD tiene Read-only file system
+sudo cp ~/test_syscall* /media/practicas/rootfs/home/dso
+sudo cp arch/arm/boot/zImage /media/${USER}/bootfs/kernel7.img
+
+12/3:
+
+Cuando un proceso en un SO ejecuta schedule le está cediendo la CPU a otro proceso. Llegará una interrupción pasado un tiempo, se hace la guarda del content switch del proceso que estaba running y se duerme, para recuperar el que primeramente le llamó.
+
+# strace ./my_sem_post
+
+Los ficheros se pueden mapear en memoria, pero también se puede hacer open de un fichero que no tiene respaldo en disco, solo queda en memoria. En un fichero puedo poner cualquier dato binario, una variable por ejemplo.
+
+openat ha abierto un fichero y ha metido mi semáforo ahí. La variable esta vez están apuntando al mismo marco físico de memoria, el semáforo.
+
+Luego hace nmap2 y después close(3), porque una vez mapeado no hace falta tenerlo abierto.
+
+En bootlin linux se puede buscar información de las syscalls de todas las versiones kernel de Linux. 
+
+En kernel/locking/semaphore.c se encuentra down. 
+raw_splin_lock_irqsave sirve por si dos procesos en dos cores distintos ejecutan a la vez down, solo uno puede coger el semáforo. 
+
+likely significa que casi siempre va a ser true. Se hace lo posible para que la entrada then sea directa, para que no se inserten tantas burbujas por el else. Coloca el código del if en una zona donde no se pierde tanto tiempo. 
+
+Con raw por delante se hace de forma forzosa. spin_lock hace que el proceso se quede pausado pidiendo leer. 
+
+sem_post() incrementa el semáforo.
+sem_wait() intenta decrementar, si no se queda esperando hasta que lo pueda hacer.
+sem_trywait() si puede decrementar hazlo, pero si no no me dejes esperando, retorna un error.
+sem_timedwait() si está disponible decrementa el semáforo y si no espera un tiempo determinado.
+
+
+___down_common
+
+214: list_add_tail(&waiter, list, &sem->wai_list);
+
+Primero se pone en la lista, los procesos se encolan en el orden en el que puedan coger el spin_lock
+
+
