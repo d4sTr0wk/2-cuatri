@@ -1,0 +1,17 @@
+¿Por qué usamos fibra entre core switch y access switches?
+
+Por la distancia, a más distancia las señales se atenúan más porque absorve energía el cobre.
+A distancias cortas no tiene problema, por eso se estandariza a 100 metros en total.
+
+Limitamos la probabilidad de error estandarizando la distancia máxima del cobre.
+
+También se pueden usar repetidores, que puede ser un switch que decodifica la señal y la retransmite la señal con la amplitud máxima.
+
+La fibra no tiene ruido térmico, aunque el foto detector tiene transistores y por lo cual en el foto diodo, o transceiver si propaga ruido,
+por lo que el ruido de la fibra viene determinado por el transceiver, esto los hace dispositivos electrónicos caros, cuanto mejor sea el 
+transceiver, a más distancia puede transmitir la fibra.
+
+La idea de poner fibra en vez de UTP entre el switch troncal y los secundarios es también por la capacidad de la fibra en cuanto a ancho de banda
+porque la fibra dura años y en el futuro solo se cambian los transceivers para usar tecnologías mejores con más ancho de banda. Sin embargo con 
+el cable de cobre no pasa esto. Los cables duran la mitad que la fibra pero por la obsolescencia.
+
