@@ -15,3 +15,15 @@ La idea de poner fibra en vez de UTP entre el switch troncal y los secundarios e
 porque la fibra dura años y en el futuro solo se cambian los transceivers para usar tecnologías mejores con más ancho de banda. Sin embargo con 
 el cable de cobre no pasa esto. Los cables duran la mitad que la fibra pero por la obsolescencia.
 
+En la capa 2 de transporte de Ethernet no hay campo TTL (Time to Live) por lo cual si se genera un bucle, un paquete puede quedarse en bucle infinitamente, y
+esto es un problema a la larga porque la red se colapsa completamente. Los switches Ethernet tienen que ser muy simples, y la solución es 
+prohibir los ciclos, o bucles. Esto se consigue con Spanning Tree. 
+
+La luz naranja quiere decir que Spannig Tree decide qeu ese enlace no funcionará porque generaría un bucle. 
+
+Broadcast hace que un paquete llegue a todos los nodos posibles de la red. Usando la dirección de broadcast ff:ff:ff:ff:ff:ff. Por ejemplo el 
+protocolo ARP usa broadcast.
+
+Unicast hace que un paquete llegue a un solo dispositivo.
+
+Multicast hace que un paquete llegue a un grupo reducido. 
