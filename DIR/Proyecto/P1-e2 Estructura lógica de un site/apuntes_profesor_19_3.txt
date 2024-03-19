@@ -1,0 +1,7 @@
+Base de datos de VLANS
+
+>>enable
+>>config term
+>>vlan 100 (crea vlan 100)
+>>name gerencia (no sirve, es solo a nivel de administración)
+>> show vlan
