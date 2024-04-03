@@ -16,31 +16,33 @@ static int num_cnt = 0;
 // file operations
 ssize_t mean_read(struct file *filp, char __user *buf, size_t count, loff_t *off)
 {
-	char	result[1024];
+	char	result[512];
 	int mean, length;
 
+	if (*off != 0)
+		return (0);
 	if (num_cnt > 0)
 	{
-		mean = (num_sum / num_cnt) * 100;
-		len = sprintf(result, "Media = %d.%d, de %d numeros\n", mean/100, mean%100, num_cnt);
+		mean = (num_sum * 100) / num_cnt;
+		length = sprintf(result, "Media = %d.%d, de %d numeros\n", mean/100, mean%100, num_cnt);
 	}
 	else
-		len = sprintf(result, "No hay valores disponibles\n");
-	if (copy_to_user(buf, respuesta, len))
+		length = sprintf(result, "No hay valores disponibles\n");
+	if (copy_to_user(buf, result, length))
 	{
 		printk(KERN_INFO "mean_read: error: copy_to_user");
 		return -EFAULT;
 	}
 
-	++off += len;
-	return len;	
+	*off += length;
+	return (length);	
 }
 
 ssize_t mean_write(struct file *filp, const char __user *buf, size_t count, loff_t *off)
 {
 	// This code must write the received data in cookie_pot	behind the last written byte separated by a comma and if the buffer has the word "CLEAR" it must clear the cookie_pot
 	
-	char	*tmp_buf[count];
+	char	tmp_buf[512];
 	int	space_available = 512;
 	int	num;
 
