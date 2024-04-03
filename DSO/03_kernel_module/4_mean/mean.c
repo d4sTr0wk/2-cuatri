@@ -7,6 +7,7 @@
 
 #define PROC_ENTRY_NAME "mean"
 #define MAX_COOKIE_LENGTH       PAGE_SIZE
+#define	MAX_BUF_READ_SIZE	512
 
 static struct proc_dir_entry *proc_entry;
 
@@ -16,7 +17,7 @@ static int num_cnt = 0;
 // file operations
 ssize_t mean_read(struct file *filp, char __user *buf, size_t count, loff_t *off)
 {
-	char	result[512];
+	char	result[MAX_BUF_READ_SIZE];
 	int mean, length;
 
 	if (*off != 0)
@@ -42,8 +43,8 @@ ssize_t mean_write(struct file *filp, const char __user *buf, size_t count, loff
 {
 	// This code must write the received data in cookie_pot	behind the last written byte separated by a comma and if the buffer has the word "CLEAR" it must clear the cookie_pot
 	
-	char	tmp_buf[512];
 	int	space_available = 512;
+	char	tmp_buf[space_available];
 	int	num;
 
 	if (count > space_available) // No space left on device
