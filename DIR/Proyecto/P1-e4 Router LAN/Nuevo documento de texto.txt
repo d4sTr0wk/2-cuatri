@@ -1,0 +1,34 @@
+
+El Protocolo de Configuración Dinámica de Host (DHCP) consta de varios pasos o fases que ocurren cuando un dispositivo desea obtener 
+una dirección IP y otra información de configuración de red de un servidor DHCP. Estas fases incluyen:
+
+1. Descubrimiento: El cliente DHCP (por ejemplo, un ordenador o dispositivo de red) busca un servidor DHCP disponible en la red. 
+Para hacerlo, envía un paquete de broadcast (difusión) llamado "DHCP Discover" (Descubrimiento DHCP). 
+Este paquete tiene la intención de encontrar servidores DHCP disponibles en la red.
+
+2. Oferta: Cuando un servidor DHCP recibe un paquete DHCP Discover, responde con un paquete llamado "DHCP Offer" (Oferta DHCP). 
+Este paquete contiene una dirección IP disponible y otros parámetros de configuración, como la máscara de subred, la puerta de enlace 
+predeterminada, la dirección del servidor DNS, etc. Si hay varios servidores DHCP en la red, el cliente puede recibir múltiples ofertas.
+
+3. Solicitud: El cliente DHCP selecciona una oferta de entre las recibidas y responde al servidor DHCP emisor con un paquete "DHCP Request" 
+(Solicitud DHCP), aceptando la oferta de configuración. Esto le informa al servidor que desea aceptar la oferta de 
+configuración de red específica.
+
+4. Aceptación: Una vez que el servidor DHCP recibe la solicitud DHCP del cliente, reserva la dirección IP y otros parámetros de 
+configuración que ha ofrecido en la oferta DHCP. Luego, envía un paquete "DHCP Acknowledge" (Aceptación DHCP) al cliente, 
+confirmando que la dirección IP y la configuración solicitada están reservadas para el cliente. Este paquete también puede 
+incluir la duración de la concesión de la dirección IP, es decir, por cuánto tiempo el cliente puede utilizar esa dirección 
+antes de que necesite renovarla.
+
+5. Renovación: Durante el tiempo de concesión, el cliente puede necesitar renovar su dirección IP. Para hacerlo, envía un paquete 
+"DHCP Request" al servidor DHCP que emitió la dirección IP original, solicitando la renovación de la dirección IP.
+
+6. Reasignación: Si el cliente no puede renovar su dirección IP, puede intentar solicitar una nueva dirección IP enviando un 
+paquete "DHCP Request" en forma de broadcast a todos los servidores DHCP disponibles. En respuesta, un servidor DHCP puede ofrecer 
+una nueva dirección IP al cliente.
+
+7. Liberación: Cuando un dispositivo ya no necesita una dirección IP o está saliendo de la red, puede enviar un paquete "DHCP Release" 
+(Liberación DHCP) al servidor DHCP para liberar la dirección IP y los recursos asociados.
+
+Estas fases forman el proceso completo mediante el cual un cliente obtiene una dirección IP y otros parámetros de configuración de 
+red utilizando DHCP.

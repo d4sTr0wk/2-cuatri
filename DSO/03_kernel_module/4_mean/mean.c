@@ -1,3 +1,7 @@
+/*
+* Código desarrollado por Máximo García Aroca y Rodrigo Hernández Barba
+*/
+
 #include <linux/module.h>
 #include <linux/kernel.h>
 #include <linux/proc_fs.h>
@@ -36,13 +40,17 @@ ssize_t mean_read(struct file *filp, char __user *buf, size_t count, loff_t *off
 	}
 
 	*off += length;
-	return (length);	
+	return (length);
 }
 
 ssize_t mean_write(struct file *filp, const char __user *buf, size_t count, loff_t *off)
 {
 	// This code must write the received data in cookie_pot	behind the last written byte separated by a comma and if the buffer has the word "CLEAR" it must clear the cookie_pot
+<<<<<<< Updated upstream
 	
+=======
+
+>>>>>>> Stashed changes
 	int	space_available = 512;
 	char	tmp_buf[space_available];
 	int	num;
@@ -70,7 +78,7 @@ ssize_t mean_write(struct file *filp, const char __user *buf, size_t count, loff
 
 	*off += count;
 	return count;
-}	
+}
 
 static struct proc_ops my_fops={
 	.proc_read = mean_read,
