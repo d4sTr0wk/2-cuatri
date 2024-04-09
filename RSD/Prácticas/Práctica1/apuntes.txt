@@ -1,0 +1,112 @@
+Redes y Sistemas Distribuidos Prácticas de Laboratorio
+Práctica 1
+Utilizar Wireshark para capturar y analizar tramas de Ethernet II y Wifi.
+
+Ejercicio 1. Elija un mensaje icmp, y localice en la cabecera Ethernet II2 la siguiente información:
+Número de la trama analizada: 518
+Información de la dirección MAC de su computadora:
+Dirección MAC (en hexadecimal): 7c:57:58:3a:e7:b0
+Fabricante de NIC (en hexadecimal): 7c:57:58 		nombre: HP_3a:e7:b0
+Número de serie de NIC (en hexadecimal): 3a:e7:b0
+
+Información de la dirección MAC de gateway/router:
+Dirección MAC (en hexadecimal): c4:b3:6a:0a:2e:75
+Fabricante de NIC (en hexadecimal): c4:b3:6a		nombre: Cisco
+Número de serie de NIC (en hexadecimal): 0a:2e:75
+
+Ejercicio 2. Indique qué filtro debe añadir para que se muestren las tramas donde no se utilice su dirección MAC (ni
+como origen ni como destino). ¿Cuántas tramas recibe? ¿Por qué recibe esas tramas? (Para responder esta pregunta,
+observe las características de las direcciones MAC destino de esas tramas)
+
+Usar not eth.addr == 7c:57:58:3a:e7:b0 o not (eth.src == 7c:57:58:3a:e7:b0 || eth.dst == 7c:57:58:3a:e7:b0).
+Recibo 1233 tramas.
+Algunas llegan porque son tramas multicast (Destination: IPv4mcast_fc) y otras porque son broadcast (Destination: Broadcast).
+
+Ejercicio 3. Dibuje la torre de protocolos (tal como se ha visto en clase, es decir, en la parte inferior los protocolos
+de más bajo nivel) de un paquete ARP, uno ICMP, uno DNS y uno HTTP3. Indique el número de la trama usado en
+cada caso.
+
+ARP (600)
+
+Capa de red (Address Resolution Protocol ARP)
+Capa de enlace (Ethernet II)
+
+ICMP (518)
+
+Capa de transporte (Internet Control Message Protocol ICMP)
+Capa de red (Internet Protocol Version 4 IPv4)
+Capa de enlace (Ethernet II)
+
+DNS (513)
+
+Capa de aplicación (Domain Name System DNS)
+Capa de transporte (User Datagram Protocol UDP)
+Capa de red (Internet Protocol Version 4 IPv4)
+Capa de enlace (Ethernet II)
+
+HTTP (2433)
+
+Capa de aplicación (Hypertext Transfer Protocol HTTP)
+Capa de transporte (Transmission Control Protocol TCP)
+Capa de red (Internet Protocol Version 4 IPv4)
+Capa de enlace (Ethernet II)
+
+Ejercicio 4. Observe el valor del campo tipo de la cabecera Ethernet II para cada uno de los mensajes anteriores.
+Rellene la tabla y responda a las preguntas: ¿Qué significa este campo? ¿Por qué en tramas diferentes es igual?
+
+	Ethertype
+ARP	0x0806
+HTTP	0x0800
+ICMP	0x0800
+DNS	0x0800
+
+El campo ethertype es uno de las tramas Ethernet usado para determinar como procesar la trama. HTTP ICMP y DNS tienen el mismo valor para este campo porque son protocolos que operan o en la capa 3 como ICMP o en la capa 4 como HTTP o DNS los cuales se ejecutan sobre TCP/IP o UDP/IP los cuales se identifican por el valor 0x0800.
+
+El valor de Ethertype se determina por el nivel de la pia de protocolos en el que oepera y cómo se encapsula el paquete para que protocolos de nivel superior puedan usar la información transmitida.
+
+Ejercicio 5. En Wireshark observe la diferencia entre el tiempo de la primera petición ICMP (Echo (ping) request)
+y su respuesta (Echo (ping) reply). Indique los números de las tramas consultadas. ¿Cuánto tiempo es? ¿A qué
+concepto visto en la parte de teoría equivale dicho tiempo?
+
+Las tramas fueron 518 y 519.
+El tiempo entre ambas tramas fue 0,00086 segundos, o lo que es lo mismo 0.86 milésimas de segundo. Es el round trip time.
+
+Redes y Sistemas Distribuidos Prácticas de Laboratorio
+Ejercicio 1. Elija un mensaje icmp, y localice en la cabecera Ethernet II2 la siguiente información:
+Número de la trama analizada:
+Información de la dirección MAC de su computadora:
+Dirección MAC (en hexadecimal):
+Fabricante de NIC (en hexadecimal): nombre:
+Número de serie de NIC (en hexadecimal):
+Información de la dirección MAC de gateway/router:
+Dirección MAC (en hexadecimal):
+Fabricante de NIC (en hexadecimal): nombre:
+Número de serie de NIC (en hexadecimal):
+Ejercicio 2. Indique qué filtro debe añadir para que se muestren las tramas donde no se utilice su dirección MAC (ni
+como origen ni como destino). ¿Cuántas tramas recibe? ¿Por qué recibe esas tramas? (Para responder esta pregunta,
+observe las características de las direcciones MAC destino de esas tramas)
+Ejercicio 3. Dibuje la torre de protocolos (tal como se ha visto en clase, es decir, en la parte inferior los protocolos
+de más bajo nivel) de un paquete ARP, uno ICMP, uno DNS y uno HTTP3. Indique el número de la trama usado en
+cada caso.
+Ejercicio 4. Observe el valor del campo tipo de la cabecera Ethernet II para cada uno de los mensajes anteriores.
+Rellene la tabla y responda a las preguntas: ¿Qué significa este campo? ¿Por qué en tramas diferentes es igual?
+Tipo en la cabecera Ethernet II
+(valor en hexadecimal y en texto)
+ARP
+HTTP
+ICMP
+DNS
+
+Ejercicio 5. En Wireshark observe la diferencia entre el tiempo de la primera petición ICMP (Echo (ping) request)
+y su respuesta (Echo (ping) reply). Indique los números de las tramas consultadas. ¿Cuánto tiempo es? ¿A qué
+concepto visto en la parte de teoría equivale dicho tiempo?
+
+Entre las tramas 518 y 519 hay 0,00086 segundos. Equivale al round trip time.
+
+Ejercicio 6. Según la teoría vista en clase, las tramas Ethernet deben tener un tamaño mínimo de 64 bytes. Wireshark
+no muestra el campo FCS (ya que es tratado automáticamente por la tarjeta de red), por lo que la trama mostrada en
+Wireshark tendrá un tamaño de 60 bytes o más. Busque una trama con tamaño 60 (filtro: frame.len == 60), ¿cuántas
+tramas tienen esta característica? ¿Qué mecanismo se utiliza para completar el tamaño si los datos transmitidos son
+más pequeños de 46 bytes)?
+
+Hay 381 tramas con 60 bytes (sin contar el campo FCS). El mecanismo que se usa para llegar a tener una trama con mínimo 64 bytes es la carga útil (o padding en Wireshark). Rellena con 0's la trama.
