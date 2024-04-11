@@ -1,0 +1,103 @@
+SIMAN Run Controller.
+
+7.3833333 Hours>
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/23/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/23/2023
+
+Replication ended at time      : 7.3833333 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclo4                                     1.2402     (Insuf)    .65671     2.9974          8    
+TCiclo3                                     1.2006     (Insuf)    .74243     1.8543          6    
+TCiclo2                                     1.9658     (Insuf)    .78186     3.4493         10    
+TCiclo1                                     1.8438     (Insuf)    .79798     3.2277          6    
+TipeD.VATime                                .21519     (Insuf)    .15481     .38062          8    
+TipeD.NVATime                               .00000     (Insuf)    .00000     .00000          8    
+TipeD.WaitTime                              .80633     (Insuf)    .26457     2.2668          8    
+TipeD.TranTime                              .21875     (Insuf)    .20000     .35000          8    
+TipeD.OtherTime                             .00000     (Insuf)    .00000     .00000          8    
+TipeD.TotalTime                             1.2402     (Insuf)    .65671     2.9974          8    
+TipeC.VATime                                .37771     (Insuf)    .33826     .42126          6    
+TipeC.NVATime                               .00000     (Insuf)    .00000     .00000          6    
+TipeC.WaitTime                              .62290     (Insuf)    .15539     1.3123          6    
+TipeC.TranTime                              .20000     (Insuf)    .20000     .20000          6    
+TipeC.OtherTime                             .00000     (Insuf)    .00000     .00000          6    
+TipeC.TotalTime                             1.2006     (Insuf)    .74243     1.8543          6    
+TipeB.VATime                                .81564     (Insuf)    .51228     1.4047         10    
+TipeB.NVATime                               .00000     (Insuf)    .00000     .00000         10    
+TipeB.WaitTime                              .90518     (Insuf)    .00000     1.7521         10    
+TipeB.TranTime                              .24500     (Insuf)    .20000     .35000         10    
+TipeB.OtherTime                             .00000     (Insuf)    .00000     .00000         10    
+TipeB.TotalTime                             1.9658     (Insuf)    .78186     3.4493         10    
+TipeA.VATime                                .56713     (Insuf)    .27561     1.2896          6    
+TipeA.NVATime                               .00000     (Insuf)    .00000     .00000          6    
+TipeA.WaitTime                              1.0017     (Insuf)    .30914     1.4957          6    
+TipeA.TranTime                              .27500     (Insuf)    .20000     .50000          6    
+TipeA.OtherTime                             .00000     (Insuf)    .00000     .00000          6    
+TipeA.TotalTime                             1.8438     (Insuf)    .79798     3.2277          6    
+Piezas.VATime                                   --         --         --         --          0
+Piezas.NVATime                                  --         --         --         --          0
+Piezas.WaitTime                                 --         --         --         --          0
+Piezas.TranTime                                 --         --         --         --          0
+Piezas.OtherTime                                --         --         --         --          0
+Piezas.TotalTime                                --         --         --         --          0
+Process 5.Queue.WaitingTime                 .07382     (Insuf)    .00000     .28063         40    
+Process 4.Queue.WaitingTime                 .18520     (Insuf)    .00000     .53279         41    
+Process 1.Queue.WaitingTime                 .55550     (Insuf)    .00000     1.6261         44    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+TipeD.WIP                                   2.0549     (Insuf)    .00000     5.0000     5.0000    
+TipeC.WIP                                   .97566     (Insuf)    .00000     3.0000     .00000    
+TipeB.WIP                                   3.5699     (Insuf)    .00000     8.0000     4.0000    
+TipeA.WIP                                   2.5322     (Insuf)    .00000     6.0000     6.0000    
+Piezas.WIP                                  .00000     (Insuf)    .00000     1.0000     .00000    
+MaquinaC.NumberBusy                         .59113     (Insuf)    .00000     1.0000     1.0000    
+MaquinaC.NumberScheduled                    1.0000     (Insuf)    1.0000     1.0000     1.0000    
+MaquinaC.Utilization                        .59113     (Insuf)    .00000     1.0000     1.0000    
+MaquinaB.NumberBusy                         .88557     (Insuf)    .00000     1.0000     .00000    
+MaquinaB.NumberScheduled                    1.0000     (Insuf)    1.0000     1.0000     1.0000    
+MaquinaB.Utilization                        .88557     (Insuf)    .00000     1.0000     .00000    
+MaquinaA.NumberBusy                         .93876     (Insuf)    .00000     1.0000     1.0000    
+MaquinaA.NumberScheduled                    1.0000     (Insuf)    1.0000     1.0000     1.0000    
+MaquinaA.Utilization                        .93876     (Insuf)    .00000     1.0000     1.0000    
+Process 5.Queue.NumberInQueue               .40956     (Insuf)    .00000     2.0000     1.0000    
+Process 4.Queue.NumberInQueue               1.0284     (Insuf)    .00000     4.0000     .00000    
+Process 1.Queue.NumberInQueue               4.1442     (Insuf)    .00000     11.000     9.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+TipeD.NumberIn                              13.000    
+TipeD.NumberOut                             8.0000    
+TipeC.NumberIn                              6.0000    
+TipeC.NumberOut                             6.0000    
+TipeB.NumberIn                              14.000    
+TipeB.NumberOut                             10.000    
+TipeA.NumberIn                              12.000    
+TipeA.NumberOut                             6.0000    
+Piezas.NumberIn                             45.000    
+Piezas.NumberOut                            45.000    
+MaquinaC.NumberSeized                       40.000    
+MaquinaC.ScheduledUtilization               .59113    
+MaquinaB.NumberSeized                       41.000    
+MaquinaB.ScheduledUtilization               .88557    
+MaquinaA.NumberSeized                       44.000    
+MaquinaA.ScheduledUtilization               .93876    
+System.NumberOut                            30.000    
+

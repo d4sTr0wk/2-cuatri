@@ -1,0 +1,82 @@
+SIMAN Run Controller.
+
+326.26242 Minutes>
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 1 of 100
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 326.26242 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Baterias Carga Lenta                        27.374     (Insuf)    26.096     28.652          2    
+Baterias Inservibles                        323.16     (Insuf)    323.16     323.16          1    
+Baterias Reacondicionadas                   33.382     (Insuf)    5.6982     124.51        103    
+Movil.VATime                                11.418     (Insuf)    3.6726     242.18         55    
+Movil.NVATime                               .00000     (Insuf)    .00000     .00000         55    
+Movil.WaitTime                              13.434     (Insuf)    .00000     34.472         55    
+Movil.TranTime                              .00000     (Insuf)    .00000     .00000         55    
+Movil.OtherTime                             .00000     (Insuf)    .00000     .00000         55    
+Movil.TotalTime                             24.853     (Insuf)    5.6982     246.33         55    
+Coche.VATime                                8.6506     (Insuf)    5.1406     24.905         51    
+Coche.NVATime                               .00000     (Insuf)    .00000     .00000         51    
+Coche.WaitTime                              37.869     (Insuf)    1.1905     117.85         51    
+Coche.TranTime                              .00000     (Insuf)    .00000     .00000         51    
+Coche.OtherTime                             .00000     (Insuf)    .00000     .00000         51    
+Coche.TotalTime                             46.519     (Insuf)    7.5379     124.51         51    
+Recepcion Movil Process.Queue.WaitingTime   10.001     (Insuf)    .00000     26.676         60    
+Recepcion Coche Process.Queue.WaitingTime   34.515     (Insuf)    .00000     116.72         55    
+Carga Lenta.Queue.WaitingTime               41.532     (Insuf)    .00000     159.43          4    
+Reacondicionamiento.Queue.WaitingTime       2.8516     (Insuf)    .00000     10.568        112    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Movil.WIP                                   5.4105     (Insuf)    .00000     12.000     6.0000    
+Coche.WIP                                   8.4732     (Insuf)    .00000     21.000     13.000    
+Acondicionador.NumberBusy                   .85874     (Insuf)    .00000     1.0000     1.0000    
+Acondicionador.NumberScheduled              1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Acondicionador.Utilization                  .85874     (Insuf)    .00000     1.0000     1.0000    
+Cargador.NumberBusy                         .80496     (Insuf)    .00000     1.0000     1.0000    
+Cargador.NumberScheduled                    1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Cargador.Utilization                        .80496     (Insuf)    .00000     1.0000     1.0000    
+Recepcion Movil.NumberBusy                  .81520     (Insuf)    .00000     1.0000     1.0000    
+Recepcion Movil.NumberScheduled             1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Recepcion Movil.Utilization                 .81520     (Insuf)    .00000     1.0000     1.0000    
+Recepcion Coche.NumberBusy                  .97421     (Insuf)    .00000     1.0000     1.0000    
+Recepcion Coche.NumberScheduled             1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Recepcion Coche.Utilization                 .97421     (Insuf)    .00000     1.0000     1.0000    
+Recepcion Movil Process.Queue.NumberInQueu  1.8475     (Insuf)    .00000     7.0000     1.0000    
+Recepcion Coche Process.Queue.NumberInQueu  6.0429     (Insuf)    .00000     19.000     9.0000    
+Carga Lenta.Queue.NumberInQueue             1.5611     (Insuf)    .00000     5.0000     4.0000    
+Reacondicionamiento.Queue.NumberInQueue     .97891     (Insuf)    .00000     5.0000     1.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Movil.NumberIn                              61.000    
+Movil.NumberOut                             55.000    
+Coche.NumberIn                              64.000    
+Coche.NumberOut                             51.000    
+Acondicionador.NumberSeized                 112.00    
+Acondicionador.ScheduledUtilization         .85874    
+Cargador.NumberSeized                       4.0000    
+Cargador.ScheduledUtilization               .80496    
+Recepcion Movil.NumberSeized                60.000    
+Recepcion Movil.ScheduledUtilization        .81520    
+Recepcion Coche.NumberSeized                55.000    
+Recepcion Coche.ScheduledUtilization        .97421    
+System.NumberOut                            106.00    
+

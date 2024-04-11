@@ -1,0 +1,23 @@
+[RESOURCES]
+Acondicionador
+Cargador
+Recepcion Movil
+Recepcion Coche
+[VARIABLES]
+Recepcion Movil Process.NumberOut
+Recepcion Coche Process.NumberOut
+Reacondicionamiento.NumberIn
+Reacondicionamiento.NumberOut
+Dispose 2.NumberOut
+Carga Lenta.NumberOut
+Carga Lenta.NumberIn
+Recepcion Coche Process.NumberIn
+Recepcion Movil Process.NumberIn
+Dispose 1.NumberOut
+Dispose 3.NumberOut
+Fallo Carga.NumberOut True
+Fallo Carga Lenta.NumberOut True
+Fallo Carga.NumberOut False
+Create Bmovil.NumberOut
+Create Bcoche.NumberOut
+Fallo Carga Lenta.NumberOut False

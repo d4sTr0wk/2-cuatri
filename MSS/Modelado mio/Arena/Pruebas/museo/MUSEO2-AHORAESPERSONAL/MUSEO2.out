@@ -1,0 +1,99 @@
+SIMAN Run Controller.
+
+12.664885 Hours>
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 5/21/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/21/2023
+
+Replication ended at time      : 12.664885 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Tally Ciclo3                                1.5674     (Insuf)    .91604     2.1554         98    
+Tally Ciclo2                                1.0785     (Insuf)    .55472     1.8493        101    
+Tally Ciclo1                                1.5563     (Corr)     .89824     2.1619        322    
+Visitantes.VATime                           .56335     (Corr)     .27881     .85941        521    
+Visitantes.NVATime                          .00000     .00000     .00000     .00000        521    
+Visitantes.WaitTime                         .61962     (Corr)     .00000     1.1978        521    
+Visitantes.TranTime                         .28285     .00289     .19456     .41927        521    
+Visitantes.OtherTime                        .00000     .00000     .00000     .00000        521    
+Visitantes.TotalTime                        1.4658     (Corr)     .55472     2.1619        521    
+LeaveTornoEntrada.Queue.WaitingTime         .24912     (Corr)     .00000     1.0261        576    
+Mostrador.Queue.WaitingTime                 .00774     .00362     .00000     .12061        596    
+PArte.Queue.WaitingTime                     .00000     (Insuf)    .00000     .00000        105    
+PFisica.Queue.WaitingTime                   .16530     (Corr)     .00000     .48557        463    
+PAstro.Queue.WaitingTime                    .00000     .00000     .00000     .00000        357    
+PHistoria.Queue.WaitingTime                 .00000     (Insuf)    .00000     .00000        208    
+PHall.Queue.WaitingTime                     .00000     .00000     .00000     .00000       1233    
+LeaveTornoSalida.Queue.WaitingTime          .21967     (Corr)     .00000     .95593        522    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Visitantes.WIP                              64.922     (Corr)     .00000     102.00     75.000    
+TornoEntrada.NumberBusy                     1.6715     (Corr)     .00000     3.0000     1.0000    
+TornoEntrada.NumberScheduled                1.9475     (Insuf)    1.0000     3.0000     1.0000    
+TornoEntrada.Utilization                    .88896     (Corr)     .00000     1.0000     1.0000    
+RArte.NumberBusy                            .67681     (Insuf)    .00000     4.0000     1.0000    
+RArte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+RArte.Utilization                           .03384     (Insuf)    .00000     .20000     .05000    
+RAstro.NumberBusy                           5.3989     (Corr)     .00000     17.000     2.0000    
+RAstro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+RAstro.Utilization                          .26995     (Corr)     .00000     .85000     .10000    
+cajero.NumberBusy                           1.4586     .18874     .00000     3.0000     3.0000    
+cajero.NumberScheduled                      3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajero.Utilization                          .48623     .06291     .00000     1.0000     1.0000    
+RHall.NumberBusy                            9.1367     (Corr)     .00000     24.000     12.000    
+RHall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+RHall.Utilization                           .18273     (Corr)     .00000     .48000     .24000    
+RFisica.NumberBusy                          7.1432     (Insuf)    .00000     10.000     10.000    
+RFisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+RFisica.Utilization                         .71432     (Insuf)    .00000     1.0000     1.0000    
+RHistoria.NumberBusy                        1.3681     .33653     .00000     7.0000     1.0000    
+RHistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+RHistoria.Utilization                       .09121     .02244     .00000     .46667     .06667    
+LeaveTornoEntrada.Queue.NumberInQueue       11.547     (Corr)     .00000     48.000     17.000    
+Mostrador.Queue.NumberInQueue               .36429     .17384     .00000     7.0000     .00000    
+PArte.Queue.NumberInQueue                   .00000     (Insuf)    .00000     .00000     .00000    
+PFisica.Queue.NumberInQueue                 6.0481     (Corr)     .00000     26.000     2.0000    
+PAstro.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+PHistoria.Queue.NumberInQueue               .00000     (Insuf)    .00000     .00000     .00000    
+PHall.Queue.NumberInQueue                   .00000     (Insuf)    .00000     .00000     .00000    
+LeaveTornoSalida.Queue.NumberInQueue        9.3357     (Corr)     .00000     32.000     17.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Visitantes.NumberIn                         596.00    
+Visitantes.NumberOut                        521.00    
+TornoEntrada.NumberSeized                   1098.0    
+TornoEntrada.ScheduledUtilization           .85832    
+RArte.NumberSeized                          105.00    
+RArte.ScheduledUtilization                  .03384    
+RAstro.NumberSeized                         357.00    
+RAstro.ScheduledUtilization                 .26995    
+cajero.NumberSeized                         596.00    
+cajero.ScheduledUtilization                 .48623    
+RHall.NumberSeized                          1233.0    
+RHall.ScheduledUtilization                  .18273    
+RFisica.NumberSeized                        463.00    
+RFisica.ScheduledUtilization                .71432    
+RHistoria.NumberSeized                      208.00    
+RHistoria.ScheduledUtilization              .09121    
+System.NumberOut                            521.00    
+
+
+Simulation run time: 0.22 minutes.
+Simulation run complete.

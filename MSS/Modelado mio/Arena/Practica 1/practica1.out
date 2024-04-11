@@ -1,0 +1,840 @@
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   31.070     (Insuf)    18.004     50.906        204    
+cpie.VATime                                 24.909     (Insuf)    16.257     33.597         67    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         67    
+cpie.WaitTime                               2.5132     (Insuf)    .00000     17.358         67    
+cpie.TranTime                               2.4948     (Insuf)    .45491     7.7109         67    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         67    
+cpie.TotalTime                              29.917     (Insuf)    20.207     50.769         67    
+ccoche.VATime                               24.865     (Insuf)    15.332     35.497        111    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000        111    
+ccoche.WaitTime                             3.1596     (Insuf)    .00000     21.461        111    
+ccoche.TranTime                             2.5050     (Insuf)    .54866     6.5897        111    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000        111    
+ccoche.TotalTime                            30.530     (Insuf)    18.004     50.379        111    
+cbus.VATime                                 24.693     (Insuf)    16.660     36.383         26    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         26    
+cbus.WaitTime                               9.2682     (Insuf)    .00000     16.925         26    
+cbus.TranTime                               2.3815     (Insuf)    .46723     8.2476         26    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         26    
+cbus.TotalTime                              36.343     (Insuf)    27.347     50.906         26    
+Recoger.Queue.WaitingTime                   .43302     (Insuf)    .00000     6.2992        224    
+comer.Queue.WaitingTime                     .01710     (Insuf)    .00000     1.6079        222    
+PedidosCobros.Queue.WaitingTime             3.0954     (Insuf)    .00000     19.675        230    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    9.0476     (Insuf)    .00000     16.000     12.000    
+ccoche.WIP                                  15.153     (Insuf)    .00000     30.000     14.000    
+cbus.WIP                                    3.9372     (Insuf)    .00000     26.000     .00000    
+Recoger pedidos.NumberBusy                  1.1226     (Insuf)    .00000     2.0000     2.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .60298     (Insuf)    .00000     1.0000     1.0000    
+comiendo.NumberBusy                         17.319     (Corr)     .00000     30.000     18.000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .57731     (Corr)     .00000     1.0000     .60000    
+Llegada Pedidos.NumberBusy                  4.0724     (Insuf)    .00000     6.0000     6.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .70039     (Insuf)    .00000     1.0000     1.0000    
+Recoger.Queue.NumberInQueue                 .40415     (Insuf)    .00000     4.0000     .00000    
+comer.Queue.NumberInQueue                   .01581     (Insuf)    .00000     2.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           2.9664     (Insuf)    .00000     28.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               79.000    
+cpie.NumberOut                              67.000    
+ccoche.NumberIn                             125.00    
+ccoche.NumberOut                            111.00    
+cbus.NumberIn                               26.000    
+cbus.NumberOut                              26.000    
+Recoger pedidos.NumberSeized                224.00    
+Recoger pedidos.ScheduledUtilization        .58572    
+comiendo.NumberSeized                       222.00    
+comiendo.ScheduledUtilization               .57731    
+Llegada Pedidos.NumberSeized                230.00    
+Llegada Pedidos.ScheduledUtilization        .70824    
+System.NumberOut                            204.00    
+
+Beginning replication 2 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 2 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   31.648     (Insuf)    16.961     56.901        182    
+cpie.VATime                                 26.258     (Insuf)    16.337     34.981         58    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         58    
+cpie.WaitTime                               2.5214     (Insuf)    .00000     25.448         58    
+cpie.TranTime                               2.5570     (Insuf)    .55467     5.7559         58    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         58    
+cpie.TotalTime                              31.337     (Insuf)    19.286     55.431         58    
+ccoche.VATime                               25.270     (Insuf)    14.719     34.862         85    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         85    
+ccoche.WaitTime                             .91289     (Insuf)    .00000     6.2731         85    
+ccoche.TranTime                             2.3852     (Insuf)    .37554     6.2011         85    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         85    
+ccoche.TotalTime                            28.568     (Insuf)    16.961     39.394         85    
+cbus.VATime                                 24.718     (Insuf)    16.540     31.684         39    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         39    
+cbus.WaitTime                               11.702     (Insuf)    .00000     24.927         39    
+cbus.TranTime                               2.4027     (Insuf)    .24044     5.2424         39    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         39    
+cbus.TotalTime                              38.823     (Insuf)    21.590     56.901         39    
+Recoger.Queue.WaitingTime                   .17103     (Insuf)    .00000     1.5019        192    
+comer.Queue.WaitingTime                     .00000     (Insuf)    .00000     .00000        191    
+PedidosCobros.Queue.WaitingTime             3.2828     (Insuf)    .00000     24.389        198    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    7.9237     (Insuf)    .00000     16.000     6.0000    
+ccoche.WIP                                  10.482     (Insuf)    .00000     26.000     13.000    
+cbus.WIP                                    6.3088     (Insuf)    .00000     39.000     .00000    
+Recoger pedidos.NumberBusy                  .99292     (Insuf)    .00000     2.0000     1.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .52140     (Insuf)    .00000     1.0000     .50000    
+comiendo.NumberBusy                         15.416     (Corr)     .00000     28.000     9.0000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .51388     (Corr)     .00000     .93333     .30000    
+Llegada Pedidos.NumberBusy                  3.5260     (Insuf)    .00000     6.0000     6.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .61729     (Insuf)    .00000     1.0000     1.0000    
+Recoger.Queue.NumberInQueue                 .13683     (Insuf)    .00000     3.0000     .00000    
+comer.Queue.NumberInQueue                   .00000     (Insuf)    .00000     .00000     .00000    
+PedidosCobros.Queue.NumberInQueue           2.7120     (Insuf)    .00000     34.000     1.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               64.000    
+cpie.NumberOut                              58.000    
+ccoche.NumberIn                             98.000    
+ccoche.NumberOut                            85.000    
+cbus.NumberIn                               39.000    
+cbus.NumberOut                              39.000    
+Recoger pedidos.NumberSeized                192.00    
+Recoger pedidos.ScheduledUtilization        .51805    
+comiendo.NumberSeized                       191.00    
+comiendo.ScheduledUtilization               .51388    
+Llegada Pedidos.NumberSeized                198.00    
+Llegada Pedidos.ScheduledUtilization        .61323    
+System.NumberOut                            182.00    
+
+Beginning replication 3 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 3 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   29.816     (Insuf)    19.340     49.927        183    
+cpie.VATime                                 25.273     (Insuf)    17.927     35.759         65    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         65    
+cpie.WaitTime                               1.1260     (Insuf)    .00000     14.442         65    
+cpie.TranTime                               2.5259     (Insuf)    .67716     7.4810         65    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         65    
+cpie.TotalTime                              28.925     (Insuf)    20.158     41.033         65    
+ccoche.VATime                               25.084     (Insuf)    16.654     33.401         91    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         91    
+ccoche.WaitTime                             .88566     (Insuf)    .00000     6.4437         91    
+ccoche.TranTime                             2.4941     (Insuf)    .48274     7.0101         91    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         91    
+ccoche.TotalTime                            28.464     (Insuf)    19.340     36.472         91    
+cbus.VATime                                 25.378     (Insuf)    19.309     32.542         27    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         27    
+cbus.WaitTime                               8.6624     (Insuf)    .00000     16.816         27    
+cbus.TranTime                               2.4770     (Insuf)    .70530     5.9570         27    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         27    
+cbus.TotalTime                              36.517     (Insuf)    25.189     49.927         27    
+Recoger.Queue.WaitingTime                   .25885     (Insuf)    .00000     2.3996        195    
+comer.Queue.WaitingTime                     .00617     (Insuf)    .00000     .79577        194    
+PedidosCobros.Queue.WaitingTime             1.7265     (Insuf)    .00000     16.816        200    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    8.2430     (Insuf)    .00000     13.000     7.0000    
+ccoche.WIP                                  11.422     (Insuf)    .00000     23.000     10.000    
+cbus.WIP                                    4.1082     (Insuf)    .00000     27.000     .00000    
+Recoger pedidos.NumberBusy                  1.0297     (Insuf)    .00000     2.0000     1.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .53961     (Insuf)    .00000     1.0000     .50000    
+comiendo.NumberBusy                         15.557     (Corr)     .00000     30.000     10.000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .51858     (Corr)     .00000     1.0000     .33333    
+Llegada Pedidos.NumberBusy                  3.5373     (Insuf)    .00000     6.0000     5.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .61964     (Insuf)    .00000     1.0000     .83333    
+Recoger.Queue.NumberInQueue                 .21032     (Insuf)    .00000     4.0000     .00000    
+comer.Queue.NumberInQueue                   .00499     (Insuf)    .00000     1.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           1.4388     (Insuf)    .00000     24.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               72.000    
+cpie.NumberOut                              65.000    
+ccoche.NumberIn                             101.00    
+ccoche.NumberOut                            91.000    
+cbus.NumberIn                               27.000    
+cbus.NumberOut                              27.000    
+Recoger pedidos.NumberSeized                195.00    
+Recoger pedidos.ScheduledUtilization        .53725    
+comiendo.NumberSeized                       194.00    
+comiendo.ScheduledUtilization               .51858    
+Llegada Pedidos.NumberSeized                200.00    
+Llegada Pedidos.ScheduledUtilization        .61519    
+System.NumberOut                            183.00    
+
+Beginning replication 4 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 4 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   31.063     (Insuf)    18.519     54.111        180    
+cpie.VATime                                 24.709     (Insuf)    16.097     34.325         59    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         59    
+cpie.WaitTime                               2.1171     (Insuf)    .00000     23.446         59    
+cpie.TranTime                               2.5378     (Insuf)    .67900     6.3509         59    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         59    
+cpie.TotalTime                              29.364     (Insuf)    18.519     51.770         59    
+ccoche.VATime                               24.277     (Insuf)    16.340     33.167         88    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         88    
+ccoche.WaitTime                             3.1575     (Insuf)    .00000     23.217         88    
+ccoche.TranTime                             2.2311     (Insuf)    .49054     7.4185         88    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         88    
+ccoche.TotalTime                            29.665     (Insuf)    18.841     54.111         88    
+cbus.VATime                                 25.126     (Insuf)    17.779     34.693         33    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         33    
+cbus.WaitTime                               10.280     (Insuf)    .00000     22.311         33    
+cbus.TranTime                               2.4246     (Insuf)    .66077     6.3931         33    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         33    
+cbus.TotalTime                              37.831     (Insuf)    24.950     52.030         33    
+Recoger.Queue.WaitingTime                   .55843     (Insuf)    .00000     10.151        202    
+comer.Queue.WaitingTime                     .00526     (Insuf)    .00000     .62287        200    
+PedidosCobros.Queue.WaitingTime             4.6452     (Insuf)    .00000     23.446        223    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    8.7766     (Insuf)    .00000     17.000     15.000    
+ccoche.WIP                                  13.537     (Insuf)    .00000     33.000     31.000    
+cbus.WIP                                    5.2017     (Insuf)    .00000     33.000     .00000    
+Recoger pedidos.NumberBusy                  1.0239     (Insuf)    .00000     2.0000     1.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     1.0000    
+Recoger pedidos.Utilization                 .55234     (Insuf)    .00000     1.0000     1.0000    
+comiendo.NumberBusy                         15.430     (Corr)     .00000     30.000     17.000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .51436     (Corr)     .00000     1.0000     .56667    
+Llegada Pedidos.NumberBusy                  3.9099     (Insuf)    .00000     6.0000     6.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .66926     (Insuf)    .00000     1.0000     1.0000    
+Recoger.Queue.NumberInQueue                 .81623     (Insuf)    .00000     16.000     15.000    
+comer.Queue.NumberInQueue                   .00438     (Insuf)    .00000     2.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           4.3620     (Insuf)    .00000     34.000     3.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               74.000    
+cpie.NumberOut                              59.000    
+ccoche.NumberIn                             119.00    
+ccoche.NumberOut                            88.000    
+cbus.NumberIn                               33.000    
+cbus.NumberOut                              33.000    
+Recoger pedidos.NumberSeized                202.00    
+Recoger pedidos.ScheduledUtilization        .53422    
+comiendo.NumberSeized                       200.00    
+comiendo.ScheduledUtilization               .51436    
+Llegada Pedidos.NumberSeized                223.00    
+Llegada Pedidos.ScheduledUtilization        .68000    
+System.NumberOut                            180.00    
+
+Beginning replication 5 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 5 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   33.409     (Insuf)    18.084     55.691        198    
+cpie.VATime                                 25.639     (Insuf)    17.820     32.466         67    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         67    
+cpie.WaitTime                               4.0672     (Insuf)    .00000     18.046         67    
+cpie.TranTime                               2.3169     (Insuf)    .40154     9.9374         67    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         67    
+cpie.TotalTime                              32.023     (Insuf)    19.384     47.883         67    
+ccoche.VATime                               25.457     (Insuf)    14.946     35.729         98    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         98    
+ccoche.WaitTime                             5.0460     (Insuf)    .00000     21.575         98    
+ccoche.TranTime                             2.4744     (Insuf)    .39302     8.4843         98    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         98    
+ccoche.TotalTime                            32.978     (Insuf)    18.084     54.732         98    
+cbus.VATime                                 24.866     (Insuf)    17.014     34.452         33    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         33    
+cbus.WaitTime                               9.8633     (Insuf)    .00000     21.470         33    
+cbus.TranTime                               2.7706     (Insuf)    .76630     8.0567         33    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         33    
+cbus.TotalTime                              37.500     (Insuf)    23.985     55.691         33    
+Recoger.Queue.WaitingTime                   .38935     (Insuf)    .00000     2.6391        209    
+comer.Queue.WaitingTime                     .01112     (Insuf)    .00000     .81177        208    
+PedidosCobros.Queue.WaitingTime             4.8450     (Insuf)    .00000     21.322        209    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    9.4739     (Insuf)    .00000     22.000     7.0000    
+ccoche.WIP                                  13.700     (Insuf)    .00000     35.000     4.0000    
+cbus.WIP                                    5.1563     (Insuf)    .00000     33.000     .00000    
+Recoger pedidos.NumberBusy                  1.1003     (Insuf)    .00000     2.0000     .00000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .57427     (Insuf)    .00000     1.0000     .00000    
+comiendo.NumberBusy                         16.827     (Corr)     .00000     30.000     10.000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .56091     (Corr)     .00000     1.0000     .33333    
+Llegada Pedidos.NumberBusy                  3.7403     (Insuf)    .00000     6.0000     .00000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .65552     (Insuf)    .00000     1.0000     .00000    
+Recoger.Queue.NumberInQueue                 .33905     (Insuf)    .00000     4.0000     .00000    
+comer.Queue.NumberInQueue                   .00964     (Insuf)    .00000     2.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           4.2192     (Insuf)    .00000     30.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               74.000    
+cpie.NumberOut                              67.000    
+ccoche.NumberIn                             102.00    
+ccoche.NumberOut                            98.000    
+cbus.NumberIn                               33.000    
+cbus.NumberOut                              33.000    
+Recoger pedidos.NumberSeized                209.00    
+Recoger pedidos.ScheduledUtilization        .57409    
+comiendo.NumberSeized                       208.00    
+comiendo.ScheduledUtilization               .56091    
+Llegada Pedidos.NumberSeized                209.00    
+Llegada Pedidos.ScheduledUtilization        .65050    
+System.NumberOut                            198.00    
+
+Beginning replication 6 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 6 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   32.459     (Insuf)    17.164     56.724        199    
+cpie.VATime                                 25.980     (Insuf)    17.309     34.116         69    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         69    
+cpie.WaitTime                               2.5327     (Insuf)    .00000     21.230         69    
+cpie.TranTime                               2.0140     (Insuf)    .26877     4.9535         69    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         69    
+cpie.TotalTime                              30.527     (Insuf)    20.815     54.704         69    
+ccoche.VATime                               25.555     (Insuf)    15.449     33.388         98    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         98    
+ccoche.WaitTime                             3.3584     (Insuf)    .00000     20.108         98    
+ccoche.TranTime                             2.1913     (Insuf)    .36312     5.8747         98    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         98    
+ccoche.TotalTime                            31.104     (Insuf)    17.164     50.208         98    
+cbus.VATime                                 26.479     (Insuf)    16.683     33.356         32    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         32    
+cbus.WaitTime                               12.328     (Insuf)    .82333     23.143         32    
+cbus.TranTime                               1.9664     (Insuf)    .53395     4.1319         32    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         32    
+cbus.TotalTime                              40.774     (Insuf)    27.404     56.724         32    
+Recoger.Queue.WaitingTime                   .60923     (Insuf)    .00000     8.6438        220    
+comer.Queue.WaitingTime                     .01494     (Insuf)    .00000     .58121        218    
+PedidosCobros.Queue.WaitingTime             4.0649     (Insuf)    .00000     21.061        235    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    9.9364     (Insuf)    .00000     26.000     17.000    
+ccoche.WIP                                  14.346     (Insuf)    .00000     25.000     20.000    
+cbus.WIP                                    5.4365     (Insuf)    .00000     32.000     .00000    
+Recoger pedidos.NumberBusy                  1.1005     (Insuf)    .00000     2.0000     2.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .59120     (Insuf)    .00000     1.0000     1.0000    
+comiendo.NumberBusy                         17.790     (Corr)     .00000     30.000     17.000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .59303     (Corr)     .00000     1.0000     .56667    
+Llegada Pedidos.NumberBusy                  4.1920     (Insuf)    .00000     6.0000     2.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .72596     (Insuf)    .00000     1.0000     .33333    
+Recoger.Queue.NumberInQueue                 .73847     (Insuf)    .00000     12.000     10.000    
+comer.Queue.NumberInQueue                   .01357     (Insuf)    .00000     3.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           3.9802     (Insuf)    .00000     31.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               86.000    
+cpie.NumberOut                              69.000    
+ccoche.NumberIn                             118.00    
+ccoche.NumberOut                            98.000    
+cbus.NumberIn                               32.000    
+cbus.NumberOut                              32.000    
+Recoger pedidos.NumberSeized                220.00    
+Recoger pedidos.ScheduledUtilization        .57418    
+comiendo.NumberSeized                       218.00    
+comiendo.ScheduledUtilization               .59303    
+Llegada Pedidos.NumberSeized                235.00    
+Llegada Pedidos.ScheduledUtilization        .72905    
+System.NumberOut                            199.00    
+
+Beginning replication 7 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 7 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   31.743     (Insuf)    20.871     53.190        200    
+cpie.VATime                                 26.361     (Insuf)    17.709     35.433         67    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         67    
+cpie.WaitTime                               1.7414     (Insuf)    .00000     20.440         67    
+cpie.TranTime                               2.2752     (Insuf)    .61932     5.6131         67    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         67    
+cpie.TotalTime                              30.378     (Insuf)    20.871     50.860         67    
+ccoche.VATime                               25.996     (Insuf)    16.932     35.516        105    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000        105    
+ccoche.WaitTime                             2.1049     (Insuf)    .00000     17.509        105    
+ccoche.TranTime                             2.5324     (Insuf)    .61581     8.3447        105    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000        105    
+ccoche.TotalTime                            30.633     (Insuf)    21.354     42.745        105    
+cbus.VATime                                 25.712     (Insuf)    18.508     33.248         28    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         28    
+cbus.WaitTime                               10.501     (Insuf)    1.4865     22.426         28    
+cbus.TranTime                               2.9622     (Insuf)    .59178     6.8301         28    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         28    
+cbus.TotalTime                              39.175     (Insuf)    28.481     53.190         28    
+Recoger.Queue.WaitingTime                   .38799     (Insuf)    .00000     4.4248        211    
+comer.Queue.WaitingTime                     .07760     (Insuf)    .00000     3.3974        209    
+PedidosCobros.Queue.WaitingTime             2.5467     (Insuf)    .00000     18.941        220    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    8.5769     (Insuf)    .00000     18.000     4.0000    
+ccoche.WIP                                  14.295     (Insuf)    .00000     28.000     17.000    
+cbus.WIP                                    4.5704     (Insuf)    .00000     28.000     .00000    
+Recoger pedidos.NumberBusy                  1.1377     (Insuf)    .00000     2.0000     2.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .59700     (Insuf)    .00000     1.0000     1.0000    
+comiendo.NumberBusy                         17.419     (Corr)     .00000     30.000     9.0000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .58065     (Corr)     .00000     1.0000     .30000    
+Llegada Pedidos.NumberBusy                  3.9479     (Insuf)    .00000     6.0000     6.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .68137     (Insuf)    .00000     1.0000     1.0000    
+Recoger.Queue.NumberInQueue                 .34993     (Insuf)    .00000     4.0000     3.0000    
+comer.Queue.NumberInQueue                   .06758     (Insuf)    .00000     5.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           2.3345     (Insuf)    .00000     29.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               71.000    
+cpie.NumberOut                              67.000    
+ccoche.NumberIn                             122.00    
+ccoche.NumberOut                            105.00    
+cbus.NumberIn                               28.000    
+cbus.NumberOut                              28.000    
+Recoger pedidos.NumberSeized                211.00    
+Recoger pedidos.ScheduledUtilization        .59360    
+comiendo.NumberSeized                       209.00    
+comiendo.ScheduledUtilization               .58065    
+Llegada Pedidos.NumberSeized                220.00    
+Llegada Pedidos.ScheduledUtilization        .68659    
+System.NumberOut                            200.00    
+
+Beginning replication 8 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 8 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   31.671     (Insuf)    19.223     54.881        167    
+cpie.VATime                                 25.899     (Insuf)    17.991     34.059         60    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         60    
+cpie.WaitTime                               1.5696     (Insuf)    .00000     19.319         60    
+cpie.TranTime                               2.3913     (Insuf)    .56572     5.5144         60    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         60    
+cpie.TotalTime                              29.860     (Insuf)    19.234     50.413         60    
+ccoche.VATime                               25.437     (Insuf)    15.986     34.121         77    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         77    
+ccoche.WaitTime                             2.0293     (Insuf)    .00000     18.882         77    
+ccoche.TranTime                             2.4726     (Insuf)    .49305     6.1050         77    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         77    
+ccoche.TotalTime                            29.939     (Insuf)    19.223     48.357         77    
+cbus.VATime                                 26.663     (Insuf)    20.061     32.465         30    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         30    
+cbus.WaitTime                               10.312     (Insuf)    .00000     21.089         30    
+cbus.TranTime                               2.7653     (Insuf)    .38459     5.4614         30    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         30    
+cbus.TotalTime                              39.741     (Insuf)    25.327     54.881         30    
+Recoger.Queue.WaitingTime                   .45009     (Insuf)    .00000     4.7764        185    
+comer.Queue.WaitingTime                     .02672     (Insuf)    .00000     1.1306        182    
+PedidosCobros.Queue.WaitingTime             2.7080     (Insuf)    .00000     20.094        190    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    8.2033     (Insuf)    .00000     17.000     11.000    
+ccoche.WIP                                  10.238     (Insuf)    .00000     19.000     12.000    
+cbus.WIP                                    4.9677     (Insuf)    .00000     30.000     .00000    
+Recoger pedidos.NumberBusy                  .95438     (Insuf)    .00000     2.0000     2.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .51784     (Insuf)    .00000     1.0000     1.0000    
+comiendo.NumberBusy                         14.651     (Corr)     .00000     30.000     15.000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .48839     (Corr)     .00000     1.0000     .50000    
+Llegada Pedidos.NumberBusy                  3.4272     (Insuf)    .00000     6.0000     4.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .59114     (Insuf)    .00000     1.0000     .66667    
+Recoger.Queue.NumberInQueue                 .35276     (Insuf)    .00000     6.0000     1.0000    
+comer.Queue.NumberInQueue                   .02026     (Insuf)    .00000     2.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           2.1438     (Insuf)    .00000     29.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               71.000    
+cpie.NumberOut                              60.000    
+ccoche.NumberIn                             89.000    
+ccoche.NumberOut                            77.000    
+cbus.NumberIn                               30.000    
+cbus.NumberOut                              30.000    
+Recoger pedidos.NumberSeized                185.00    
+Recoger pedidos.ScheduledUtilization        .49794    
+comiendo.NumberSeized                       182.00    
+comiendo.ScheduledUtilization               .48839    
+Llegada Pedidos.NumberSeized                190.00    
+Llegada Pedidos.ScheduledUtilization        .59604    
+System.NumberOut                            167.00    
+
+Beginning replication 9 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 9 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   34.496     (Insuf)    18.834     58.876        201    
+cpie.VATime                                 25.020     (Insuf)    15.896     34.441         92    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         92    
+cpie.WaitTime                               4.7295     (Insuf)    .00000     25.526         92    
+cpie.TranTime                               2.5098     (Insuf)    .56498     5.7956         92    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         92    
+cpie.TotalTime                              32.259     (Insuf)    18.834     58.876         92    
+ccoche.VATime                               25.993     (Insuf)    18.432     34.752         78    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         78    
+ccoche.WaitTime                             6.1361     (Insuf)    .00000     21.397         78    
+ccoche.TranTime                             2.2662     (Insuf)    .47372     6.7071         78    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         78    
+ccoche.TotalTime                            34.395     (Insuf)    21.574     55.623         78    
+cbus.VATime                                 25.640     (Insuf)    16.436     32.738         31    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         31    
+cbus.WaitTime                               13.354     (Insuf)    .02175     25.723         31    
+cbus.TranTime                               2.3968     (Insuf)    .48268     9.0397         31    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         31    
+cbus.TotalTime                              41.391     (Insuf)    24.724     55.340         31    
+Recoger.Queue.WaitingTime                   .38921     (Insuf)    .00000     6.1797        217    
+comer.Queue.WaitingTime                     .05801     (Insuf)    .00000     3.1392        215    
+PedidosCobros.Queue.WaitingTime             5.6162     (Insuf)    .00000     24.443        226    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    13.064     (Insuf)    .00000     21.000     13.000    
+ccoche.WIP                                  11.819     (Insuf)    .00000     32.000     16.000    
+cbus.WIP                                    5.3464     (Insuf)    .00000     31.000     .00000    
+Recoger pedidos.NumberBusy                  1.1154     (Insuf)    .00000     2.0000     2.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .59269     (Insuf)    .00000     1.0000     1.0000    
+comiendo.NumberBusy                         17.263     (Corr)     .00000     30.000     14.000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .57546     (Corr)     .00000     1.0000     .46667    
+Llegada Pedidos.NumberBusy                  4.0341     (Insuf)    .00000     6.0000     6.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .69893     (Insuf)    .00000     1.0000     1.0000    
+Recoger.Queue.NumberInQueue                 .35792     (Insuf)    .00000     5.0000     3.0000    
+comer.Queue.NumberInQueue                   .05197     (Insuf)    .00000     3.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           5.2886     (Insuf)    .00000     33.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               105.00    
+cpie.NumberOut                              92.000    
+ccoche.NumberIn                             94.000    
+ccoche.NumberOut                            78.000    
+cbus.NumberIn                               31.000    
+cbus.NumberOut                              31.000    
+Recoger pedidos.NumberSeized                217.00    
+Recoger pedidos.ScheduledUtilization        .58195    
+comiendo.NumberSeized                       215.00    
+comiendo.ScheduledUtilization               .57546    
+Llegada Pedidos.NumberSeized                226.00    
+Llegada Pedidos.ScheduledUtilization        .70160    
+System.NumberOut                            201.00    
+
+Beginning replication 10 of 10
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 10 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+Replication ended at time      : 240.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Intervalo                                   34.317     (Insuf)    19.362     60.085        190    
+cpie.VATime                                 24.657     (Insuf)    16.323     32.893         66    
+cpie.NVATime                                .00000     (Insuf)    .00000     .00000         66    
+cpie.WaitTime                               5.3941     (Insuf)    .00000     25.430         66    
+cpie.TranTime                               2.4539     (Insuf)    .63057     8.5661         66    
+cpie.OtherTime                              .00000     (Insuf)    .00000     .00000         66    
+cpie.TotalTime                              32.505     (Insuf)    21.041     58.182         66    
+ccoche.VATime                               25.668     (Insuf)    16.850     34.572         91    
+ccoche.NVATime                              .00000     (Insuf)    .00000     .00000         91    
+ccoche.WaitTime                             4.9850     (Insuf)    .00000     25.063         91    
+ccoche.TranTime                             2.5692     (Insuf)    .57448     7.6084         91    
+ccoche.OtherTime                            .00000     (Insuf)    .00000     .00000         91    
+ccoche.TotalTime                            33.222     (Insuf)    19.362     57.955         91    
+cbus.VATime                                 25.871     (Insuf)    16.657     33.347         33    
+cbus.NVATime                                .00000     (Insuf)    .00000     .00000         33    
+cbus.WaitTime                               12.879     (Insuf)    .70633     25.526         33    
+cbus.TranTime                               2.2107     (Insuf)    .51832     5.1072         33    
+cbus.OtherTime                              .00000     (Insuf)    .00000     .00000         33    
+cbus.TotalTime                              40.961     (Insuf)    26.637     60.085         33    
+Recoger.Queue.WaitingTime                   .39361     (Insuf)    .00000     2.4718        198    
+comer.Queue.WaitingTime                     .02533     (Insuf)    .00000     1.0430        196    
+PedidosCobros.Queue.WaitingTime             5.7675     (Insuf)    .00000     25.317        201    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+cpie.WIP                                    9.6620     (Insuf)    .00000     20.000     11.000    
+ccoche.WIP                                  12.596     (Insuf)    .00000     27.000     .00000    
+cbus.WIP                                    5.6322     (Insuf)    .00000     33.000     .00000    
+Recoger pedidos.NumberBusy                  .99152     (Insuf)    .00000     2.0000     2.0000    
+Recoger pedidos.NumberScheduled             1.9166     (Insuf)    1.0000     2.0000     2.0000    
+Recoger pedidos.Utilization                 .51502     (Insuf)    .00000     1.0000     1.0000    
+comiendo.NumberBusy                         16.026     (Corr)     .00000     30.000     5.0000    
+comiendo.NumberScheduled                    30.000     (Insuf)    30.000     30.000     30.000    
+comiendo.Utilization                        .53422     (Corr)     .00000     1.0000     .16667    
+Llegada Pedidos.NumberBusy                  3.6606     (Insuf)    .00000     6.0000     2.0000    
+Llegada Pedidos.NumberScheduled             5.7500     (Insuf)    5.0000     6.0000     6.0000    
+Llegada Pedidos.Utilization                 .63576     (Insuf)    .00000     1.0000     .33333    
+Recoger.Queue.NumberInQueue                 .32562     (Insuf)    .00000     4.0000     1.0000    
+comer.Queue.NumberInQueue                   .02069     (Insuf)    .00000     2.0000     .00000    
+PedidosCobros.Queue.NumberInQueue           4.8302     (Insuf)    .00000     36.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+cpie.NumberIn                               77.000    
+cpie.NumberOut                              66.000    
+ccoche.NumberIn                             91.000    
+ccoche.NumberOut                            91.000    
+cbus.NumberIn                               33.000    
+cbus.NumberOut                              33.000    
+Recoger pedidos.NumberSeized                198.00    
+Recoger pedidos.ScheduledUtilization        .51731    
+comiendo.NumberSeized                       196.00    
+comiendo.ScheduledUtilization               .53422    
+Llegada Pedidos.NumberSeized                201.00    
+Llegada Pedidos.ScheduledUtilization        .63664    
+System.NumberOut                            190.00    
+
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                 Output Summary for 10 Replications
+
+Project: Unnamed Project                                             Run execution date : 4/26/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 4/26/2023
+
+
+                                             OUTPUTS
+
+Identifier                                 Average    Half-width Minimum    Maximum # Replications
+___________________________________________________________________________________________________
+
+cpie.NumberIn                               77.300     8.0931     64.000     105.00     10
+cpie.NumberOut                              67.000     6.8609     58.000     92.000     10
+ccoche.NumberIn                             105.90     9.8104     89.000     125.00     10
+ccoche.NumberOut                            92.200     7.8705     77.000     111.00     10
+cbus.NumberIn                               31.200     2.6933     26.000     39.000     10
+cbus.NumberOut                              31.200     2.6933     26.000     39.000     10
+Recoger pedidos.NumberSeized                205.30     9.2594     185.00     224.00     10
+Recoger pedidos.ScheduledUtilization        .55143     .02449     .49794     .59360     10
+comiendo.NumberSeized                       203.50     9.2729     182.00     222.00     10
+comiendo.ScheduledUtilization               .54568     .02582     .48839     .59303     10
+Llegada Pedidos.NumberSeized                213.20     11.116     190.00     235.00     10
+Llegada Pedidos.ScheduledUtilization        .66171     .03272     .59604     .72905     10
+System.NumberOut                            190.40     8.6048     167.00     204.00     10
+
+Simulation run time: 0.90 minutes.
+Simulation run complete.

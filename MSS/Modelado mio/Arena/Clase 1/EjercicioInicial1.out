@@ -1,0 +1,78 @@
+SIMAN Run Controller.
+
+0.18664626 Hours>
+----------------------------------------------------------------------
+19114:CCREAT
+A runtime error was detected at time 2.623197 at the following block:
+
+ *    1 2$              CREATE,1,MinutesToBaseTime(0.0),maletas:
+                            MinutesToBaseTime(EXPO(0.5)):
+                            NEXT(3$);
+
+Maximum of 150 entities exceeded.
+Possible causes:
+- A logic problem in your model is creating too many entities or not
+  disposing them. The run controller may be helpful in finding the problem.
+- You are in demo mode and have exceeded the entity limit. The commercial
+  version is required to run large models.
+- You have set an entity limit on the DISCRETE element that is too small.
+  Remove the limit or set it to a larger number.
+- You have exceeded the standard array s 
+pace for models. Use the Array Sizes
+  page in the Run/Setup dialog to increase the RSET space allocated and
+  recheck your model.
+----------------------------------------------------------------------
+
+
+SIMAN Run Controller.
+
+2.623197 Hours>
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 2.623197 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+maletas.VATime                              .01697     (Insuf)    .00965     .02439        154    
+maletas.NVATime                             .00000     (Insuf)    .00000     .00000        154    
+maletas.WaitTime                            .60434     (Insuf)    .00000     1.2208        154    
+maletas.TranTime                            .00000     (Insuf)    .00000     .00000        154    
+maletas.OtherTime                           .00000     (Insuf)    .00000     .00000        154    
+maletas.TotalTime                           .62130     (Insuf)    .01540     1.2387        154    
+Process 1.Queue.WaitingTime                 .60837     (Insuf)    .00000     1.2295        155    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+maletas.WIP                                 69.833     (Insuf)    .00000     148.00     148.00    
+escaner.NumberBusy                          1.0000     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         1.0000     (Insuf)    .00000     1.0000     1.0000    
+Process 1.Queue.NumberInQueue               68.833     (Insuf)    .00000     147.00     147.00    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+maletas.NumberIn                            302.00    
+maletas.NumberOut                           154.00    
+escaner.NumberSeized                        155.00    
+escaner.ScheduledUtilization                1.0000    
+System.NumberOut                            154.00    
+
+
+Simulation run time: 0.17 minutes.
+Simulation run completed with 1 error(s) and 0 warning(s).

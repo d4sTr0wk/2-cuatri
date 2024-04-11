@@ -1,0 +1,601 @@
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 30
+
+Project: Unnamed Project                                             Run execution date : 5/24/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/24/2023
+
+Replication ended at time      : 4.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclos1                                    2.5074     (Insuf)    .85345     3.8012         78    
+TCiclos2                                    2.5360     (Insuf)    .78470     3.8832         29    
+TCiclos3                                    2.2302     (Insuf)    .97548     3.1271         20    
+persona.VATime                              .83181     (Insuf)    .53439     1.1106        127    
+persona.NVATime                             .00000     (Insuf)    .00000     .00000        127    
+persona.WaitTime                            .08336     (Insuf)    .00000     .28033        127    
+persona.TranTime                            .00000     (Insuf)    .00000     .00000        127    
+persona.OtherTime                           .00000     (Insuf)    .00000     .00000        127    
+persona.TotalTime                           .91517     (Insuf)    .57517     1.2509        127    
+Leave 7.Queue.WaitingTime                   .02794     (Insuf)    .00000     .09386        128    
+P_FISICA.Queue.WaitingTime                   8.4877E-4 (Insuf)    .00000     .04363        116    
+Mostrador.Queue.WaitingTime                 .00360     (Insuf)    .00000     .05265        166    
+P_ASTRO.Queue.WaitingTime                   .00000     (Insuf)    .00000     .00000         96    
+TornoEntrada.Queue.WaitingTime              .03875     (Insuf)    .00000     .23197        166    
+P_HALL.Queue.WaitingTime                    .00000     .00000     .00000     .00000        326    
+P_ARTE.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000         30    
+P_HISTORIA.Queue.WaitingTime                .00000     (Insuf)    .00000     .00000         57    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+persona.WIP                                 33.323     (Insuf)    .00000     48.000     39.000    
+TornoSalida.NumberBusy                      .60120     (Insuf)    .00000     1.0000     1.0000    
+TornoSalida.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+TornoSalida.Utilization                     .60120     (Insuf)    .00000     1.0000     1.0000    
+hfisica.NumberBusy                          5.4460     (Insuf)    .00000     10.000     6.0000    
+hfisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+hfisica.Utilization                         .54460     (Insuf)    .00000     1.0000     .60000    
+cajeros.NumberBusy                          1.2838     (Insuf)    .00000     3.0000     .00000    
+cajeros.NumberScheduled                     3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajeros.Utilization                         .42795     (Insuf)    .00000     1.0000     .00000    
+hastro.NumberBusy                           4.6067     (Insuf)    .00000     10.000     5.0000    
+hastro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+hastro.Utilization                          .23034     (Insuf)    .00000     .50000     .25000    
+hhistoria.NumberBusy                        1.1663     (Insuf)    .00000     5.0000     1.0000    
+hhistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+hhistoria.Utilization                       .07775     (Insuf)    .00000     .33333     .06667    
+hhall.NumberBusy                            7.5655     (Insuf)    .00000     17.000     12.000    
+hhall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+hhall.Utilization                           .15131     (Insuf)    .00000     .34000     .24000    
+Torno.NumberBusy                            .80922     (Insuf)    .00000     3.0000     3.0000    
+Torno.NumberScheduled                       2.0000     (Insuf)    1.0000     3.0000     1.0000    
+Torno.Utilization                           .53307     (Insuf)    .00000     1.0000     1.0000    
+harte.NumberBusy                            .58424     (Insuf)    .00000     3.0000     1.0000    
+harte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+harte.Utilization                           .02921     (Insuf)    .00000     .15000     .05000    
+Leave 7.Queue.NumberInQueue                 .89422     (Insuf)    .00000     5.0000     .00000    
+P_FISICA.Queue.NumberInQueue                .02461     (Insuf)    .00000     2.0000     .00000    
+Mostrador.Queue.NumberInQueue               .14961     (Insuf)    .00000     4.0000     .00000    
+P_ASTRO.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+TornoEntrada.Queue.NumberInQueue            1.6082     (Insuf)    .00000     11.000     .00000    
+P_HALL.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_ARTE.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_HISTORIA.Queue.NumberInQueue              .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+persona.NumberIn                            166.00    
+persona.NumberOut                           127.00    
+TornoSalida.NumberSeized                    128.00    
+TornoSalida.ScheduledUtilization            .60120    
+hfisica.NumberSeized                        116.00    
+hfisica.ScheduledUtilization                .54460    
+cajeros.NumberSeized                        166.00    
+cajeros.ScheduledUtilization                .42795    
+hastro.NumberSeized                         96.000    
+hastro.ScheduledUtilization                 .23034    
+hhistoria.NumberSeized                      57.000    
+hhistoria.ScheduledUtilization              .07775    
+hhall.NumberSeized                          326.00    
+hhall.ScheduledUtilization                  .15131    
+Torno.NumberSeized                          166.00    
+Torno.ScheduledUtilization                  .40461    
+harte.NumberSeized                          30.000    
+harte.ScheduledUtilization                  .02921    
+System.NumberOut                            127.00    
+
+Beginning replication 2 of 30
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 2 of 30
+
+Project: Unnamed Project                                             Run execution date : 5/24/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/24/2023
+
+Replication ended at time      : 4.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclos1                                    2.5562     (Insuf)    .94578     3.9805         92    
+TCiclos2                                    2.3207     (Insuf)    .75802     3.8911         29    
+TCiclos3                                    2.4736     (Insuf)    .91834     3.9135         27    
+persona.VATime                              .85813     (Insuf)    .54364     1.1482        148    
+persona.NVATime                             .00000     (Insuf)    .00000     .00000        148    
+persona.WaitTime                            .14074     (Insuf)    .00000     .38264        148    
+persona.TranTime                            .00000     (Insuf)    .00000     .00000        148    
+persona.OtherTime                           .00000     (Insuf)    .00000     .00000        148    
+persona.TotalTime                           .99887     (Insuf)    .58447     1.3444        148    
+Leave 7.Queue.WaitingTime                   .07486     (Insuf)    .00000     .19660        149    
+P_FISICA.Queue.WaitingTime                  .02396     (Insuf)    .00000     .14469        143    
+Mostrador.Queue.WaitingTime                 .01263     (Insuf)    .00000     .10464        187    
+P_ASTRO.Queue.WaitingTime                   .00000     (Insuf)    .00000     .00000        110    
+TornoEntrada.Queue.WaitingTime              .03299     (Insuf)    .00000     .17051        185    
+P_HALL.Queue.WaitingTime                    .00000     .00000     .00000     .00000        383    
+P_ARTE.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000         32    
+P_HISTORIA.Queue.WaitingTime                .00000     (Insuf)    .00000     .00000         64    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+persona.WIP                                 43.007     (Insuf)    .00000     58.000     39.000    
+TornoSalida.NumberBusy                      .75040     (Insuf)    .00000     1.0000     1.0000    
+TornoSalida.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+TornoSalida.Utilization                     .75040     (Insuf)    .00000     1.0000     1.0000    
+hfisica.NumberBusy                          7.0237     (Insuf)    .00000     10.000     4.0000    
+hfisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+hfisica.Utilization                         .70237     (Insuf)    .00000     1.0000     .40000    
+cajeros.NumberBusy                          1.5377     (Insuf)    .00000     3.0000     2.0000    
+cajeros.NumberScheduled                     3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajeros.Utilization                         .51258     (Insuf)    .00000     1.0000     .66667    
+hastro.NumberBusy                           5.5269     (Insuf)    .00000     14.000     3.0000    
+hastro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+hastro.Utilization                          .27635     (Insuf)    .00000     .70000     .15000    
+hhistoria.NumberBusy                        1.3226     (Insuf)    .00000     5.0000     .00000    
+hhistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+hhistoria.Utilization                       .08817     (Insuf)    .00000     .33333     .00000    
+hhall.NumberBusy                            8.9837     (Insuf)    .00000     19.000     9.0000    
+hhall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+hhall.Utilization                           .17967     (Insuf)    .00000     .38000     .18000    
+Torno.NumberBusy                            .87731     (Insuf)    .00000     3.0000     .00000    
+Torno.NumberScheduled                       2.0000     (Insuf)    1.0000     3.0000     1.0000    
+Torno.Utilization                           .57691     (Insuf)    .00000     1.0000     .00000    
+harte.NumberBusy                            .62887     (Insuf)    .00000     3.0000     .00000    
+harte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+harte.Utilization                           .03144     (Insuf)    .00000     .15000     .00000    
+Leave 7.Queue.NumberInQueue                 2.9219     (Insuf)    .00000     11.000     8.0000    
+P_FISICA.Queue.NumberInQueue                .85643     (Insuf)    .00000     8.0000     .00000    
+Mostrador.Queue.NumberInQueue               .59038     (Insuf)    .00000     8.0000     .00000    
+P_ASTRO.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+TornoEntrada.Queue.NumberInQueue            1.5258     (Insuf)    .00000     11.000     .00000    
+P_HALL.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_ARTE.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_HISTORIA.Queue.NumberInQueue              .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+persona.NumberIn                            187.00    
+persona.NumberOut                           148.00    
+TornoSalida.NumberSeized                    149.00    
+TornoSalida.ScheduledUtilization            .75040    
+hfisica.NumberSeized                        143.00    
+hfisica.ScheduledUtilization                .70237    
+cajeros.NumberSeized                        187.00    
+cajeros.ScheduledUtilization                .51258    
+hastro.NumberSeized                         110.00    
+hastro.ScheduledUtilization                 .27635    
+hhistoria.NumberSeized                      64.000    
+hhistoria.ScheduledUtilization              .08817    
+hhall.NumberSeized                          383.00    
+hhall.ScheduledUtilization                  .17967    
+Torno.NumberSeized                          185.00    
+Torno.ScheduledUtilization                  .43866    
+harte.NumberSeized                          32.000    
+harte.ScheduledUtilization                  .03144    
+System.NumberOut                            148.00    
+
+Beginning replication 3 of 30
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 3 of 30
+
+Project: Unnamed Project                                             Run execution date : 5/24/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/24/2023
+
+Replication ended at time      : 4.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclos1                                    2.4883     (Insuf)    .74238     3.9918         82    
+TCiclos2                                    2.5417     (Insuf)    .77628     3.7973         30    
+TCiclos3                                    2.7653     (Insuf)    1.0896     3.9190         25    
+persona.VATime                              .83254     (Insuf)    .53408     1.1846        137    
+persona.NVATime                             .00000     (Insuf)    .00000     .00000        137    
+persona.WaitTime                            .08870     (Insuf)    .00000     .27724        137    
+persona.TranTime                            .00000     (Insuf)    .00000     .00000        137    
+persona.OtherTime                           .00000     (Insuf)    .00000     .00000        137    
+persona.TotalTime                           .92124     (Insuf)    .61010     1.2940        137    
+Leave 7.Queue.WaitingTime                   .04650     (Insuf)    .00000     .20113        138    
+P_FISICA.Queue.WaitingTime                  .00399     (Insuf)    .00000     .06309        133    
+Mostrador.Queue.WaitingTime                 .01544     (Insuf)    .00000     .10375        186    
+P_ASTRO.Queue.WaitingTime                   .00000     (Insuf)    .00000     .00000        110    
+TornoEntrada.Queue.WaitingTime              .02796     (Insuf)    .00000     .18099        183    
+P_HALL.Queue.WaitingTime                    .00000     .00000     .00000     .00000        364    
+P_ARTE.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000         31    
+P_HISTORIA.Queue.WaitingTime                .00000     (Insuf)    .00000     .00000         60    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+persona.WIP                                 38.272     (Insuf)    .00000     60.000     51.000    
+TornoSalida.NumberBusy                      .68345     (Insuf)    .00000     1.0000     1.0000    
+TornoSalida.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+TornoSalida.Utilization                     .68345     (Insuf)    .00000     1.0000     1.0000    
+hfisica.NumberBusy                          6.1634     (Insuf)    .00000     10.000     9.0000    
+hfisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+hfisica.Utilization                         .61634     (Insuf)    .00000     1.0000     .90000    
+cajeros.NumberBusy                          1.5112     (Insuf)    .00000     3.0000     3.0000    
+cajeros.NumberScheduled                     3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajeros.Utilization                         .50375     (Insuf)    .00000     1.0000     1.0000    
+hastro.NumberBusy                           5.1228     (Insuf)    .00000     14.000     5.0000    
+hastro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+hastro.Utilization                          .25614     (Insuf)    .00000     .70000     .25000    
+hhistoria.NumberBusy                        1.2518     (Insuf)    .00000     5.0000     .00000    
+hhistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+hhistoria.Utilization                       .08346     (Insuf)    .00000     .33333     .00000    
+hhall.NumberBusy                            8.3696     (Insuf)    .00000     19.000     9.0000    
+hhall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+hhall.Utilization                           .16739     (Insuf)    .00000     .38000     .18000    
+Torno.NumberBusy                            .88158     (Insuf)    .00000     3.0000     .00000    
+Torno.NumberScheduled                       2.0000     (Insuf)    1.0000     3.0000     1.0000    
+Torno.Utilization                           .54491     (Insuf)    .00000     1.0000     .00000    
+harte.NumberBusy                            .63747     (Insuf)    .00000     3.0000     1.0000    
+harte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+harte.Utilization                           .03187     (Insuf)    .00000     .15000     .05000    
+Leave 7.Queue.NumberInQueue                 1.8457     (Insuf)    .00000     12.000     12.000    
+P_FISICA.Queue.NumberInQueue                .13259     (Insuf)    .00000     4.0000     .00000    
+Mostrador.Queue.NumberInQueue               .72177     (Insuf)    .00000     9.0000     2.0000    
+P_ASTRO.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+TornoEntrada.Queue.NumberInQueue            1.2792     (Insuf)    .00000     10.000     .00000    
+P_HALL.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_ARTE.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_HISTORIA.Queue.NumberInQueue              .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+persona.NumberIn                            188.00    
+persona.NumberOut                           137.00    
+TornoSalida.NumberSeized                    138.00    
+TornoSalida.ScheduledUtilization            .68345    
+hfisica.NumberSeized                        133.00    
+hfisica.ScheduledUtilization                .61634    
+cajeros.NumberSeized                        186.00    
+cajeros.ScheduledUtilization                .50375    
+hastro.NumberSeized                         110.00    
+hastro.ScheduledUtilization                 .25614    
+hhistoria.NumberSeized                      60.000    
+hhistoria.ScheduledUtilization              .08346    
+hhall.NumberSeized                          364.00    
+hhall.ScheduledUtilization                  .16739    
+Torno.NumberSeized                          183.00    
+Torno.ScheduledUtilization                  .44079    
+harte.NumberSeized                          31.000    
+harte.ScheduledUtilization                  .03187    
+System.NumberOut                            137.00    
+
+Beginning replication 4 of 30
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 4 of 30
+
+Project: Unnamed Project                                             Run execution date : 5/24/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/24/2023
+
+Replication ended at time      : 4.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclos1                                    2.5847     (Insuf)    1.0556     3.9639         76    
+TCiclos2                                    2.5237     (Insuf)    1.0366     3.9907         29    
+TCiclos3                                    2.3269     (Insuf)    .88033     3.8292         23    
+persona.VATime                              .82735     (Insuf)    .51025     1.0578        128    
+persona.NVATime                             .00000     (Insuf)    .00000     .00000        128    
+persona.WaitTime                            .06711     (Insuf)    .00000     .21791        128    
+persona.TranTime                            .00000     (Insuf)    .00000     .00000        128    
+persona.OtherTime                           .00000     (Insuf)    .00000     .00000        128    
+persona.TotalTime                           .89446     (Insuf)    .51558     1.2012        128    
+Leave 7.Queue.WaitingTime                   .02161     (Insuf)    .00000     .09479        129    
+P_FISICA.Queue.WaitingTime                  .00289     (Insuf)    .00000     .08782        114    
+Mostrador.Queue.WaitingTime                 .00996     (Insuf)    .00000     .06404        163    
+P_ASTRO.Queue.WaitingTime                   .00000     (Insuf)    .00000     .00000         91    
+TornoEntrada.Queue.WaitingTime              .03129     (Insuf)    .00000     .20399        158    
+P_HALL.Queue.WaitingTime                    .00000     .00000     .00000     .00000        320    
+P_ARTE.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000         33    
+P_HISTORIA.Queue.WaitingTime                .00000     (Insuf)    .00000     .00000         59    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+persona.WIP                                 32.787     (Insuf)    .00000     50.000     35.000    
+TornoSalida.NumberBusy                      .60303     (Insuf)    .00000     1.0000     1.0000    
+TornoSalida.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+TornoSalida.Utilization                     .60303     (Insuf)    .00000     1.0000     1.0000    
+hfisica.NumberBusy                          5.3772     (Insuf)    .00000     10.000     7.0000    
+hfisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+hfisica.Utilization                         .53772     (Insuf)    .00000     1.0000     .70000    
+cajeros.NumberBusy                          1.2931     (Insuf)    .00000     3.0000     3.0000    
+cajeros.NumberScheduled                     3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajeros.Utilization                         .43104     (Insuf)    .00000     1.0000     1.0000    
+hastro.NumberBusy                           4.2650     (Insuf)    .00000     10.000     1.0000    
+hastro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+hastro.Utilization                          .21325     (Insuf)    .00000     .50000     .05000    
+hhistoria.NumberBusy                        1.2036     (Insuf)    .00000     8.0000     .00000    
+hhistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+hhistoria.Utilization                       .08024     (Insuf)    .00000     .53333     .00000    
+hhall.NumberBusy                            7.5527     (Insuf)    .00000     20.000     6.0000    
+hhall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+hhall.Utilization                           .15106     (Insuf)    .00000     .40000     .12000    
+Torno.NumberBusy                            .73117     (Insuf)    .00000     3.0000     3.0000    
+Torno.NumberScheduled                       2.0000     (Insuf)    1.0000     3.0000     1.0000    
+Torno.Utilization                           .49249     (Insuf)    .00000     1.0000     1.0000    
+harte.NumberBusy                            .65167     (Insuf)    .00000     4.0000     1.0000    
+harte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+harte.Utilization                           .03258     (Insuf)    .00000     .20000     .05000    
+Leave 7.Queue.NumberInQueue                 .70792     (Insuf)    .00000     6.0000     5.0000    
+P_FISICA.Queue.NumberInQueue                .08246     (Insuf)    .00000     2.0000     .00000    
+Mostrador.Queue.NumberInQueue               .40598     (Insuf)    .00000     7.0000     .00000    
+P_ASTRO.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+TornoEntrada.Queue.NumberInQueue            1.2415     (Insuf)    .00000     10.000     2.0000    
+P_HALL.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_ARTE.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_HISTORIA.Queue.NumberInQueue              .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+persona.NumberIn                            163.00    
+persona.NumberOut                           128.00    
+TornoSalida.NumberSeized                    129.00    
+TornoSalida.ScheduledUtilization            .60303    
+hfisica.NumberSeized                        114.00    
+hfisica.ScheduledUtilization                .53772    
+cajeros.NumberSeized                        163.00    
+cajeros.ScheduledUtilization                .43104    
+hastro.NumberSeized                         91.000    
+hastro.ScheduledUtilization                 .21325    
+hhistoria.NumberSeized                      59.000    
+hhistoria.ScheduledUtilization              .08024    
+hhall.NumberSeized                          320.00    
+hhall.ScheduledUtilization                  .15106    
+Torno.NumberSeized                          158.00    
+Torno.ScheduledUtilization                  .36559    
+harte.NumberSeized                          33.000    
+harte.ScheduledUtilization                  .03258    
+System.NumberOut                            128.00    
+
+Beginning replication 5 of 30
+
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 5 of 30
+
+Project: Unnamed Project                                             Run execution date : 5/24/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/24/2023
+
+Replication ended at time      : 4.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclos1                                    2.7009     (Insuf)    .84925     3.9948         85    
+TCiclos2                                    2.3038     (Insuf)    .70780     3.5113         28    
+TCiclos3                                    2.4894     (Insuf)    1.3900     3.8991         25    
+persona.VATime                              .83506     (Insuf)    .58628     1.1644        138    
+persona.NVATime                             .00000     (Insuf)    .00000     .00000        138    
+persona.WaitTime                            .18652     (Insuf)    .00000     .52727        138    
+persona.TranTime                            .00000     (Insuf)    .00000     .00000        138    
+persona.OtherTime                           .00000     (Insuf)    .00000     .00000        138    
+persona.TotalTime                           1.0215     (Insuf)    .60231     1.6808        138    
+Leave 7.Queue.WaitingTime                   .11272     (Insuf)    .00000     .33851        139    
+P_FISICA.Queue.WaitingTime                  .01052     (Insuf)    .00000     .09325        129    
+Mostrador.Queue.WaitingTime                 .01294     (Insuf)    .00000     .10187        181    
+P_ASTRO.Queue.WaitingTime                   .00000     (Insuf)    .00000     .00000        109    
+TornoEntrada.Queue.WaitingTime              .03613     (Insuf)    .00000     .17904        180    
+P_HALL.Queue.WaitingTime                    .00000     .00000     .00000     .00000        358    
+P_ARTE.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000         31    
+P_HISTORIA.Queue.WaitingTime                .00000     (Insuf)    .00000     .00000         62    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+persona.WIP                                 39.920     (Insuf)    .00000     63.000     43.000    
+TornoSalida.NumberBusy                      .67688     (Insuf)    .00000     1.0000     1.0000    
+TornoSalida.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+TornoSalida.Utilization                     .67688     (Insuf)    .00000     1.0000     1.0000    
+hfisica.NumberBusy                          5.8679     (Insuf)    .00000     10.000     8.0000    
+hfisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+hfisica.Utilization                         .58680     (Insuf)    .00000     1.0000     .80000    
+cajeros.NumberBusy                          1.3560     (Insuf)    .00000     3.0000     1.0000    
+cajeros.NumberScheduled                     3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajeros.Utilization                         .45202     (Insuf)    .00000     1.0000     .33333    
+hastro.NumberBusy                           4.7678     (Insuf)    .00000     13.000     10.000    
+hastro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+hastro.Utilization                          .23839     (Insuf)    .00000     .65000     .50000    
+hhistoria.NumberBusy                        1.2727     (Insuf)    .00000     9.0000     .00000    
+hhistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+hhistoria.Utilization                       .08485     (Insuf)    .00000     .60000     .00000    
+hhall.NumberBusy                            8.3437     (Insuf)    .00000     22.000     7.0000    
+hhall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+hhall.Utilization                           .16688     (Insuf)    .00000     .44000     .14000    
+Torno.NumberBusy                            .86109     (Insuf)    .00000     3.0000     .00000    
+Torno.NumberScheduled                       2.0000     (Insuf)    1.0000     3.0000     1.0000    
+Torno.Utilization                           .53476     (Insuf)    .00000     1.0000     .00000    
+harte.NumberBusy                            .58185     (Insuf)    .00000     7.0000     2.0000    
+harte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+harte.Utilization                           .02909     (Insuf)    .00000     .35000     .10000    
+Leave 7.Queue.NumberInQueue                 3.9171     (Insuf)    .00000     18.000     .00000    
+P_FISICA.Queue.NumberInQueue                .33915     (Insuf)    .00000     7.0000     .00000    
+Mostrador.Queue.NumberInQueue               .58567     (Insuf)    .00000     12.000     .00000    
+P_ASTRO.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+TornoEntrada.Queue.NumberInQueue            1.6260     (Insuf)    .00000     15.000     .00000    
+P_HALL.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_ARTE.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_HISTORIA.Queue.NumberInQueue              .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+persona.NumberIn                            181.00    
+persona.NumberOut                           138.00    
+TornoSalida.NumberSeized                    139.00    
+TornoSalida.ScheduledUtilization            .67688    
+hfisica.NumberSeized                        129.00    
+hfisica.ScheduledUtilization                .58680    
+cajeros.NumberSeized                        181.00    
+cajeros.ScheduledUtilization                .45202    
+hastro.NumberSeized                         109.00    
+hastro.ScheduledUtilization                 .23839    
+hhistoria.NumberSeized                      62.000    
+hhistoria.ScheduledUtilization              .08485    
+hhall.NumberSeized                          358.00    
+hhall.ScheduledUtilization                  .16688    
+Torno.NumberSeized                          180.00    
+Torno.ScheduledUtilization                  .43055    
+harte.NumberSeized                          31.000    
+harte.ScheduledUtilization                  .02909    
+System.NumberOut                            138.00    
+
+Beginning replication 6 of 30
+SIMAN Run Controller.
+
+2.7781323 Hours>
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 6 of 30
+
+Project: Unnamed Project                                             Run execution date : 5/24/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/24/2023
+
+Replication ended at time      : 2.7781323 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclos1                                    1.8388     (Insuf)    .90106     2.7379         49    
+TCiclos2                                    1.9196     (Insuf)    .73734     2.7624         21    
+TCiclos3                                    1.8049     (Insuf)    1.0927     2.5776         16    
+persona.VATime                              .81019     (Insuf)    .52626     1.0858         86    
+persona.NVATime                             .00000     (Insuf)    .00000     .00000         86    
+persona.WaitTime                            .14234     (Insuf)    .00000     .37954         86    
+persona.TranTime                            .00000     (Insuf)    .00000     .00000         86    
+persona.OtherTime                           .00000     (Insuf)    .00000     .00000         86    
+persona.TotalTime                           .95253     (Insuf)    .64356     1.2981         86    
+Leave 7.Queue.WaitingTime                   .01656     (Insuf)    .00000     .05203         87    
+P_FISICA.Queue.WaitingTime                  .02730     (Insuf)    .00000     .17657         97    
+Mostrador.Queue.WaitingTime                 .02039     (Insuf)    .00000     .10054        148    
+P_ASTRO.Queue.WaitingTime                   .00000     (Insuf)    .00000     .00000         84    
+TornoEntrada.Queue.WaitingTime              .08099     (Insuf)    .00000     .32914        148    
+P_HALL.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000        273    
+P_ARTE.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000         23    
+P_HISTORIA.Queue.WaitingTime                .00000     (Insuf)    .00000     .00000         48    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+persona.WIP                                 43.390     (Insuf)    .00000     69.000     62.000    
+TornoSalida.NumberBusy                      .58938     (Insuf)    .00000     1.0000     1.0000    
+TornoSalida.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+TornoSalida.Utilization                     .58938     (Insuf)    .00000     1.0000     1.0000    
+hfisica.NumberBusy                          5.9968     (Insuf)    .00000     10.000     10.000    
+hfisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+hfisica.Utilization                         .59969     (Insuf)    .00000     1.0000     1.0000    
+cajeros.NumberBusy                          1.8325     (Insuf)    .00000     3.0000     .00000    
+cajeros.NumberScheduled                     3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajeros.Utilization                         .61085     (Insuf)    .00000     1.0000     .00000    
+hastro.NumberBusy                           5.7757     (Insuf)    .00000     17.000     2.0000    
+hastro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+hastro.Utilization                          .28879     (Insuf)    .00000     .85000     .10000    
+hhistoria.NumberBusy                        1.3536     (Insuf)    .00000     5.0000     2.0000    
+hhistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+hhistoria.Utilization                       .09025     (Insuf)    .00000     .33333     .13333    
+hhall.NumberBusy                            8.5844     (Insuf)    .00000     22.000     15.000    
+hhall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+hhall.Utilization                           .17169     (Insuf)    .00000     .44000     .30000    
+Torno.NumberBusy                            1.0079     (Insuf)    .00000     3.0000     3.0000    
+Torno.NumberScheduled                       1.5601     (Insuf)    1.0000     3.0000     3.0000    
+Torno.Utilization                           .75343     (Insuf)    .00000     1.0000     1.0000    
+harte.NumberBusy                            .68224     (Insuf)    .00000     4.0000     .00000    
+harte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+harte.Utilization                           .03411     (Insuf)    .00000     .20000     .00000    
+Leave 7.Queue.NumberInQueue                 .54574     (Insuf)    .00000     3.0000     3.0000    
+P_FISICA.Queue.NumberInQueue                1.5204     (Insuf)    .00000     16.000     11.000    
+Mostrador.Queue.NumberInQueue               1.0860     (Insuf)    .00000     12.000     .00000    
+P_ASTRO.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+TornoEntrada.Queue.NumberInQueue            4.3143     (Insuf)    .00000     17.000     .00000    
+P_HALL.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_ARTE.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+P_HISTORIA.Queue.NumberInQueue              .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+persona.NumberIn                            148.00    
+persona.NumberOut                           86.000    
+TornoSalida.NumberSeized                    87.000    
+TornoSalida.ScheduledUtilization            .58938    
+hfisica.NumberSeized                        97.000    
+hfisica.ScheduledUtilization                .59969    
+cajeros.NumberSeized                        148.00    
+cajeros.ScheduledUtilization                .61085    
+hastro.NumberSeized                         84.000    
+hastro.ScheduledUtilization                 .28879    
+hhistoria.NumberSeized                      48.000    
+hhistoria.ScheduledUtilization              .09025    
+hhall.NumberSeized                          273.00    
+hhall.ScheduledUtilization                  .17169    
+Torno.NumberSeized                          148.00    
+Torno.ScheduledUtilization                  .64606    
+harte.NumberSeized                          23.000    
+harte.ScheduledUtilization                  .03411    
+System.NumberOut                            86.000    
+

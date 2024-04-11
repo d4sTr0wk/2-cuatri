@@ -1,0 +1,122 @@
+
+----------------------------------------------------------------------
+11520:GETMEM
+Entity: 4
+A runtime error was detected at time 0.036173016 at the following block:
+
+ *    3 0$              ASSIGN:
+                            Entity.Picture=SetPictures(sala):
+                            TLlegada=TNOW:
+                            sala=DISC(0.6,1,0.8,2,1,3):
+                            Entity.Sequence=salitas(sala):
+                            NEXT(1$);
+
+Index 0 into set 2 is not in valid range 1 - 3
+----------------------------------------------------------------------
+
+
+SIMAN Run Controller.
+
+0.036173016 Hours>
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 30
+
+Project: Unnamed Project                                             Run execution date : 5/22/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/22/2023
+
+Replication ended at time      : 0.036173016 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+TCiclos                                         --         --         --         --          0
+Ciclostour1                                     --         --         --         --          0
+Ciclostour3                                     --         --         --         --          0
+Ciclostour2                                     --         --         --         --          0
+Ciclostour4                                     --         --         --         --          0
+personas.VATime                                 --         --         --         --          0
+personas.NVATime                                --         --         --         --          0
+personas.WaitTime                               --         --         --         --          0
+personas.TranTime                               --         --         --         --          0
+personas.OtherTime                              --         --         --         --          0
+personas.TotalTime                              --         --         --         --          0
+mostrador.Queue.WaitingTime                     --         --         --         --          0
+Historia.Queue.WaitingTime                      --         --         --         --          0
+Torno1e.Queue.WaitingTime                       --         --         --         --          0
+Fisica.Queue.WaitingTime                        --         --         --         --          0
+HALLp.Queue.WaitingTime                         --         --         --         --          0
+Tornosalida.Queue.WaitingTime                   --         --         --         --          0
+Arte.Queue.WaitingTime                          --         --         --         --          0
+Astronomia.Queue.WaitingTime                    --         --         --         --          0
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+personas.WIP                                .00000     (Insuf)    .00000     1.0000     1.0000    
+Tornoentrada.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+Tornoentrada.NumberScheduled                1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tornoentrada.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+huecoshist.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+huecoshist.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+huecoshist.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+HuecosHall.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+HuecosHall.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+HuecosHall.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+huecosfisica.NumberBusy                     .00000     (Insuf)    .00000     .00000     .00000    
+huecosfisica.NumberScheduled                1.0000     (Insuf)    1.0000     1.0000     1.0000    
+huecosfisica.Utilization                    .00000     (Insuf)    .00000     .00000     .00000    
+cajeras.NumberBusy                          .00000     (Insuf)    .00000     .00000     .00000    
+cajeras.NumberScheduled                     3.0000     (Insuf)    3.0000     3.0000     3.0000    
+cajeras.Utilization                         .00000     (Insuf)    .00000     .00000     .00000    
+huecosastro.NumberBusy                      .00000     (Insuf)    .00000     .00000     .00000    
+huecosastro.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+huecosastro.Utilization                     .00000     (Insuf)    .00000     .00000     .00000    
+huecosarte.NumberBusy                       .00000     (Insuf)    .00000     .00000     .00000    
+huecosarte.NumberScheduled                  1.0000     (Insuf)    1.0000     1.0000     1.0000    
+huecosarte.Utilization                      .00000     (Insuf)    .00000     .00000     .00000    
+mostrador.Queue.NumberInQueue               .00000     (Insuf)    .00000     .00000     .00000    
+Historia.Queue.NumberInQueue                .00000     (Insuf)    .00000     .00000     .00000    
+Torno1e.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+Fisica.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+HALLp.Queue.NumberInQueue                   .00000     (Insuf)    .00000     .00000     .00000    
+Tornosalida.Queue.NumberInQueue             .00000     (Insuf)    .00000     .00000     .00000    
+Arte.Queue.NumberInQueue                    .00000     (Insuf)    .00000     .00000     .00000    
+Astronomia.Queue.NumberInQueue              .00000     (Insuf)    .00000     .00000     .00000    
+
+                                             COUNTERS
+
+Identifier                                    Count   Limit
+_____________________________________________________________
+
+vueltaextra                                       0  Infinite
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+personas.NumberIn                           1.0000    
+personas.NumberOut                          .00000    
+Tornoentrada.NumberSeized                   .00000    
+Tornoentrada.ScheduledUtilization           .00000    
+huecoshist.NumberSeized                     .00000    
+huecoshist.ScheduledUtilization             .00000    
+HuecosHall.NumberSeized                     .00000    
+HuecosHall.ScheduledUtilization             .00000    
+huecosfisica.NumberSeized                   .00000    
+huecosfisica.ScheduledUtilization           .00000    
+cajeras.NumberSeized                        .00000    
+cajeras.ScheduledUtilization                .00000    
+huecosastro.NumberSeized                    .00000    
+huecosastro.ScheduledUtilization            .00000    
+huecosarte.NumberSeized                     .00000    
+huecosarte.ScheduledUtilization             .00000    
+System.NumberOut                            .00000    
+

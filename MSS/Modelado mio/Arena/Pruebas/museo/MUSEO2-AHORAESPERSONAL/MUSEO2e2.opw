@@ -1,0 +1,28 @@
+[RESOURCES]
+TornoEntrada
+RArte
+RAstro
+cajero
+RHall
+RFisica
+RHistoria
+ticketsa
+ticketsb
+ticketsc
+[VARIABLES]
+PHistoria.NumberIn
+Decide 1.NumberOut False
+PHall.NumberIn
+PFisica.NumberIn
+PHall.NumberOut
+PFisica.NumberOut
+Create 1.NumberOut
+Mostrador.NumberIn
+Dispose 1.NumberOut
+PHistoria.NumberOut
+PArte.NumberIn
+PAstro.NumberOut
+PArte.NumberOut
+PAstro.NumberIn
+Mostrador.NumberOut
+Decide 1.NumberOut True

@@ -1,0 +1,25 @@
+[RESOURCES]
+Tornoentrada
+huecoshist
+HuecosHall
+huecosfisica
+cajeras
+huecosastro
+huecosarte
+[VARIABLES]
+Decide 1.NumberOut False
+HALLp.NumberIn
+Fisica.NumberOut
+Fisica.NumberIn
+Astronomia.NumberIn
+Arte.NumberIn
+Arte.NumberOut
+Historia.NumberIn
+Create 1.NumberOut
+Historia.NumberOut
+mostrador.NumberIn
+Dispose 1.NumberOut
+Astronomia.NumberOut
+HALLp.NumberOut
+mostrador.NumberOut
+Decide 1.NumberOut True

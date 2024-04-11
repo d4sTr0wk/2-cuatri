@@ -1,0 +1,33 @@
+[RESOURCES]
+TornoSalida
+TornoEntrada
+RArte
+empleado_ticket
+RAstro
+empleadoB
+empleadoC
+empleadoA
+RHall
+Rfisica
+RHistoria
+[VARIABLES]
+PHistoria.NumberIn
+Decide 2.NumberOut False
+Decide 1.NumberOut False
+SeqExtra
+PHall.NumberIn
+Tickets.NumberOut
+PFisica.NumberIn
+PHall.NumberOut
+PFisica.NumberOut
+Tickets.NumberIn
+Create 1.NumberOut
+Dispose 1.NumberOut
+PHistoria.NumberOut
+PArte.NumberIn
+PAstro.NumberOut
+PArte.NumberOut
+coche_N
+PAstro.NumberIn
+Decide 2.NumberOut True
+Decide 1.NumberOut True

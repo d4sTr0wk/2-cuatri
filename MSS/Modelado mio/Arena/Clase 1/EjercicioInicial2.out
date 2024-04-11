@@ -1,0 +1,50 @@
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 0.33333333 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .02068     (Insuf)    .00350     .04605          4    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000          4    
+Piezas.WaitTime                              5.8967E-4 (Insuf)    .00000     .00236          4    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000          4    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000          4    
+Piezas.TotalTime                            .02127     (Insuf)    .00586     .04605          4    
+Procesamiento de Piezas.Queue.WaitingTime    4.7173E-4 (Insuf)    .00000     .00236          5    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  .51829     (Insuf)    .00000     2.0000     1.0000    
+escaner.NumberBusy                          .51122     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .51122     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  .00708     (Insuf)    .00000     1.0000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             5.0000    
+Piezas.NumberOut                            4.0000    
+escaner.NumberSeized                        5.0000    
+escaner.ScheduledUtilization                .51122    
+System.NumberOut                            4.0000    
+
+
+Simulation run time: 0.02 minutes.
+Simulation run complete.

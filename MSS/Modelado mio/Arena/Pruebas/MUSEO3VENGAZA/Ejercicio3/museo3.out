@@ -1,0 +1,117 @@
+SIMAN Run Controller.
+
+234.09064 Minutes>
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 30
+
+Project: Ejer Museo                                                  Run execution date : 5/24/2023
+Analyst: jgmonroy                                                    Model revision date: 5/24/2023
+
+Replication ended at time      : 234.09064 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Tally TCiclo4                                   --         --         --         --          0
+Tally TCiclo3                               68.378     (Insuf)    53.851     101.00         22    
+Tally TCiclo2                               51.904     (Insuf)    39.997     68.635         22    
+Tally TCiclo1                               65.946     (Insuf)    43.994     128.48         72    
+visitante.VATime                            35.658     (Insuf)    18.338     72.379        116    
+visitante.NVATime                           .00000     (Insuf)    .00000     .00000        116    
+visitante.WaitTime                          11.050     (Insuf)    .00000     28.931        116    
+visitante.TranTime                          17.036     (Insuf)    12.897     37.675        116    
+visitante.OtherTime                         .00000     (Insuf)    .00000     .00000        116    
+visitante.TotalTime                         63.744     (Insuf)    39.997     128.48        116    
+LeaveTornoEntrada.Queue.WaitingTime         4.7363     (Insuf)    .00000     20.385        159    
+Tickets.Queue.WaitingTime                   2.0688     (Insuf)    .00000     9.5617        161    
+PArte.Queue.WaitingTime                     .00000     (Insuf)    .00000     .00000         25    
+PFisica.Queue.WaitingTime                   .32075     (Insuf)    .00000     4.3162        120    
+PAstro.Queue.WaitingTime                    .00000     (Insuf)    .00000     .00000         97    
+PHistoria.Queue.WaitingTime                 .00000     (Insuf)    .00000     .00000         53    
+PHall.Queue.WaitingTime                     .00000     (Insuf)    .00000     .00000        318    
+LeaveTornoSalida.Queue.WaitingTime          3.4231     (Insuf)    .00000     12.191        117    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+visitante.WIP                               38.230     (Insuf)    .00000     61.000     45.000    
+TornoSalida.NumberBusy                      .58061     (Insuf)    .00000     1.0000     1.0000    
+TornoSalida.NumberScheduled                 1.0000     (Insuf)    1.0000     1.0000     1.0000    
+TornoSalida.Utilization                     .58061     (Insuf)    .00000     1.0000     1.0000    
+TornoEntrada.NumberBusy                     .77659     (Insuf)    .00000     3.0000     .00000    
+TornoEntrada.NumberScheduled                1.9747     (Insuf)    1.0000     3.0000     3.0000    
+TornoEntrada.Utilization                    .49449     (Insuf)    .00000     1.0000     .00000    
+RArte.NumberBusy                            .52317     (Insuf)    .00000     4.0000     1.0000    
+RArte.NumberScheduled                       20.000     (Insuf)    20.000     20.000     20.000    
+RArte.Utilization                           .02616     (Insuf)    .00000     .20000     .05000    
+empleado_ticket.NumberBusy                  .00000     (Insuf)    .00000     .00000     .00000    
+empleado_ticket.NumberScheduled             3.0000     (Insuf)    3.0000     3.0000     3.0000    
+empleado_ticket.Utilization                 .00000     (Insuf)    .00000     .00000     .00000    
+RAstro.NumberBusy                           4.7411     (Insuf)    .00000     11.000     5.0000    
+RAstro.NumberScheduled                      20.000     (Insuf)    20.000     20.000     20.000    
+RAstro.Utilization                          .23706     (Insuf)    .00000     .55000     .25000    
+empleadoB.NumberBusy                        .73673     (Insuf)    .00000     1.0000     1.0000    
+empleadoB.NumberScheduled                   1.0000     (Insuf)    1.0000     1.0000     1.0000    
+empleadoB.Utilization                       .73673     (Insuf)    .00000     1.0000     1.0000    
+empleadoC.NumberBusy                        .81763     (Insuf)    .00000     1.0000     1.0000    
+empleadoC.NumberScheduled                   1.0000     (Insuf)    1.0000     1.0000     1.0000    
+empleadoC.Utilization                       .81763     (Insuf)    .00000     1.0000     1.0000    
+empleadoA.NumberBusy                        .60120     (Insuf)    .00000     1.0000     .00000    
+empleadoA.NumberScheduled                   1.0000     (Insuf)    1.0000     1.0000     1.0000    
+empleadoA.Utilization                       .60120     (Insuf)    .00000     1.0000     .00000    
+RHall.NumberBusy                            7.5420     (Corr)     .00000     20.000     16.000    
+RHall.NumberScheduled                       50.000     (Insuf)    50.000     50.000     50.000    
+RHall.Utilization                           .15084     (Corr)     .00000     .40000     .32000    
+Rfisica.NumberBusy                          5.6730     (Insuf)    .00000     10.000     9.0000    
+Rfisica.NumberScheduled                     10.000     (Insuf)    10.000     10.000     10.000    
+Rfisica.Utilization                         .56731     (Insuf)    .00000     1.0000     .90000    
+RHistoria.NumberBusy                        1.1398     (Insuf)    .00000     5.0000     .00000    
+RHistoria.NumberScheduled                   15.000     (Insuf)    15.000     15.000     15.000    
+RHistoria.Utilization                       .07599     (Insuf)    .00000     .33333     .00000    
+LeaveTornoEntrada.Queue.NumberInQueue       3.2170     (Insuf)    .00000     15.000     .00000    
+Tickets.Queue.NumberInQueue                 1.4229     (Insuf)    .00000     11.000     .00000    
+PArte.Queue.NumberInQueue                   .00000     (Insuf)    .00000     .00000     .00000    
+PFisica.Queue.NumberInQueue                 .16443     (Insuf)    .00000     3.0000     .00000    
+PAstro.Queue.NumberInQueue                  .00000     (Insuf)    .00000     .00000     .00000    
+PHistoria.Queue.NumberInQueue               .00000     (Insuf)    .00000     .00000     .00000    
+PHall.Queue.NumberInQueue                   .00000     (Insuf)    .00000     .00000     .00000    
+LeaveTornoSalida.Queue.NumberInQueue        1.7178     (Insuf)    .00000     11.000     3.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+visitante.NumberIn                          161.00    
+visitante.NumberOut                         116.00    
+TornoSalida.NumberSeized                    117.00    
+TornoSalida.ScheduledUtilization            .58061    
+TornoEntrada.NumberSeized                   159.00    
+TornoEntrada.ScheduledUtilization           .39326    
+RArte.NumberSeized                          25.000    
+RArte.ScheduledUtilization                  .02616    
+empleado_ticket.NumberSeized                .00000    
+empleado_ticket.ScheduledUtilization        .00000    
+RAstro.NumberSeized                         97.000    
+RAstro.ScheduledUtilization                 .23706    
+empleadoB.NumberSeized                      48.000    
+empleadoB.ScheduledUtilization              .73673    
+empleadoC.NumberSeized                      31.000    
+empleadoC.ScheduledUtilization              .81763    
+empleadoA.NumberSeized                      82.000    
+empleadoA.ScheduledUtilization              .60120    
+RHall.NumberSeized                          318.00    
+RHall.ScheduledUtilization                  .15084    
+Rfisica.NumberSeized                        120.00    
+Rfisica.ScheduledUtilization                .56731    
+RHistoria.NumberSeized                      53.000    
+RHistoria.ScheduledUtilization              .07599    
+System.NumberOut                            116.00    
+

@@ -1,0 +1,16 @@
+[RESOURCES]
+Machine A
+Machine B
+Machine C
+[VARIABLES]
+Process A.NumberIn
+Decide 1.NumberOut False
+Process A.NumberOut
+Process C.NumberOut
+Exit.NumberOut
+Process C.NumberIn
+Piezas.NumberOut
+WIP
+Process B.NumberOut
+Process B.NumberIn
+Decide 1.NumberOut True

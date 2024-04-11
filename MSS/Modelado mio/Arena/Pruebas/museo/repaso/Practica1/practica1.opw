@@ -1,0 +1,15 @@
+[RESOURCES]
+mesa
+cobros
+op_recoger
+[VARIABLES]
+mostradorcobros.NumberIn
+recoger.NumberIn
+recoger.NumberOut
+comer.NumberOut
+Create 3.NumberOut
+Create 2.NumberOut
+Create 1.NumberOut
+mostradorcobros.NumberOut
+Dispose 1.NumberOut
+comer.NumberIn

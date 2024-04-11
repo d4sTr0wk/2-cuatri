@@ -1,0 +1,502 @@
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 1 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               4.1890     (Insuf)    .01082     23.085        104    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        104    
+Piezas.WaitTime                             17.209     (Insuf)    .00000     55.395        104    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        104    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        104    
+Piezas.TotalTime                            21.398     (Insuf)    .35152     60.156        104    
+Procesamiento de Piezas.Queue.WaitingTime   17.334     (Insuf)    .00000     55.395        105    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  4.9552     (Insuf)    .00000     14.000     8.0000    
+escaner.NumberBusy                          .90777     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .90777     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  4.0475     (Insuf)    .00000     13.000     7.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             112.00    
+Piezas.NumberOut                            104.00    
+escaner.NumberSeized                        105.00    
+escaner.ScheduledUtilization                .90777    
+System.NumberOut                            104.00    
+
+Beginning replication 2 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 2 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.5818     (Insuf)    .06278     18.982        116    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        116    
+Piezas.WaitTime                             7.8577     (Insuf)    .00000     20.696        116    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        116    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        116    
+Piezas.TotalTime                            11.439     (Insuf)    .11401     26.086        116    
+Procesamiento de Piezas.Queue.WaitingTime   7.9706     (Insuf)    .00000     21.075        117    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  2.9750     (Insuf)    .00000     11.000     6.0000    
+escaner.NumberBusy                          .86700     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .86700     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  2.1080     (Insuf)    .00000     10.000     5.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             122.00    
+Piezas.NumberOut                            116.00    
+escaner.NumberSeized                        117.00    
+escaner.ScheduledUtilization                .86700    
+System.NumberOut                            116.00    
+
+Beginning replication 3 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 3 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.4488     (Insuf)    .01430     23.999        118    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        118    
+Piezas.WaitTime                             13.755     (Insuf)    .00000     44.476        118    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        118    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        118    
+Piezas.TotalTime                            17.204     (Insuf)    .01430     47.209        118    
+Procesamiento de Piezas.Queue.WaitingTime   13.924     (Insuf)    .00000     44.476        119    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  4.4729     (Insuf)    .00000     14.000     5.0000    
+escaner.NumberBusy                          .85634     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .85634     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  3.6165     (Insuf)    .00000     13.000     4.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             123.00    
+Piezas.NumberOut                            118.00    
+escaner.NumberSeized                        119.00    
+escaner.ScheduledUtilization                .85634    
+System.NumberOut                            118.00    
+
+Beginning replication 4 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 4 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.2075     (Insuf)    .07950     18.251        107    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        107    
+Piezas.WaitTime                             3.3061     (Insuf)    .00000     16.233        107    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        107    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        107    
+Piezas.TotalTime                            6.5137     (Insuf)    .11342     22.704        107    
+Procesamiento de Piezas.Queue.WaitingTime   3.3220     (Insuf)    .00000     16.233        108    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  1.4817     (Insuf)    .00000     5.0000     3.0000    
+escaner.NumberBusy                          .72160     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .72160     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  .76018     (Insuf)    .00000     4.0000     2.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             110.00    
+Piezas.NumberOut                            107.00    
+escaner.NumberSeized                        108.00    
+escaner.ScheduledUtilization                .72160    
+System.NumberOut                            107.00    
+
+Beginning replication 5 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 5 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.5106     (Insuf)    .00147     15.639        136    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        136    
+Piezas.WaitTime                             55.363     (Insuf)    .00000     99.910        136    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        136    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        136    
+Piezas.TotalTime                            58.873     (Insuf)    3.9732     104.32        136    
+Procesamiento de Piezas.Queue.WaitingTime   55.298     (Insuf)    .00000     99.910        137    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  17.597     (Insuf)    .00000     29.000     16.000    
+escaner.NumberBusy                          1.0000     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         1.0000     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  16.597     (Insuf)    .00000     28.000     15.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             152.00    
+Piezas.NumberOut                            136.00    
+escaner.NumberSeized                        137.00    
+escaner.ScheduledUtilization                1.0000    
+System.NumberOut                            136.00    
+
+Beginning replication 6 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 6 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.9509     (Insuf)    .01986     21.656        109    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        109    
+Piezas.WaitTime                             10.668     (Insuf)    .00000     38.681        109    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        109    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        109    
+Piezas.TotalTime                            14.619     (Insuf)    .29571     48.433        109    
+Procesamiento de Piezas.Queue.WaitingTime   10.979     (Insuf)    .00000     44.849        110    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  4.4488     (Insuf)    .00000     22.000     21.000    
+escaner.NumberBusy                          .89958     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .89958     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  3.5492     (Insuf)    .00000     21.000     20.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             130.00    
+Piezas.NumberOut                            109.00    
+escaner.NumberSeized                        110.00    
+escaner.ScheduledUtilization                .89958    
+System.NumberOut                            109.00    
+
+Beginning replication 7 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 7 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.7349     (Insuf)    .02623     16.036        119    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        119    
+Piezas.WaitTime                             25.647     (Insuf)    .00000     61.460        119    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        119    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        119    
+Piezas.TotalTime                            29.382     (Insuf)    .16390     65.370        119    
+Procesamiento de Piezas.Queue.WaitingTime   25.647     (Insuf)    .00000     61.460        119    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  7.2843     (Insuf)    .00000     15.000     .00000    
+escaner.NumberBusy                          .92597     (Insuf)    .00000     1.0000     .00000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .92597     (Insuf)    .00000     1.0000     .00000    
+Procesamiento de Piezas.Queue.NumberInQueu  6.3583     (Insuf)    .00000     14.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             119.00    
+Piezas.NumberOut                            119.00    
+escaner.NumberSeized                        119.00    
+escaner.ScheduledUtilization                .92597    
+System.NumberOut                            119.00    
+
+Beginning replication 8 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 8 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               4.0611     (Insuf)    .00755     25.515        105    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        105    
+Piezas.WaitTime                             21.495     (Insuf)    .00000     69.765        105    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        105    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        105    
+Piezas.TotalTime                            25.556     (Insuf)    .30134     70.736        105    
+Procesamiento de Piezas.Queue.WaitingTime   21.495     (Insuf)    .00000     69.765        105    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  5.5904     (Insuf)    .00000     18.000     .00000    
+escaner.NumberBusy                          .88838     (Insuf)    .00000     1.0000     .00000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .88838     (Insuf)    .00000     1.0000     .00000    
+Procesamiento de Piezas.Queue.NumberInQueu  4.7021     (Insuf)    .00000     17.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             105.00    
+Piezas.NumberOut                            105.00    
+escaner.NumberSeized                        105.00    
+escaner.ScheduledUtilization                .88838    
+System.NumberOut                            105.00    
+
+Beginning replication 9 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 9 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.7565     (Insuf)    .04353     15.386        122    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        122    
+Piezas.WaitTime                             31.450     (Insuf)    .00000     68.021        122    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        122    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        122    
+Piezas.TotalTime                            35.207     (Insuf)    .82039     73.042        122    
+Procesamiento de Piezas.Queue.WaitingTime   31.430     (Insuf)    .00000     68.021        123    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  9.2577     (Insuf)    .00000     20.000     6.0000    
+escaner.NumberBusy                          .97052     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .97052     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  8.2872     (Insuf)    .00000     19.000     5.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             128.00    
+Piezas.NumberOut                            122.00    
+escaner.NumberSeized                        123.00    
+escaner.ScheduledUtilization                .97052    
+System.NumberOut                            122.00    
+
+Beginning replication 10 of 10
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                  Summary for Replication 10 of 10
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+Replication ended at time      : 480.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               3.2223     (Insuf)    .03388     14.922        109    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        109    
+Piezas.WaitTime                             9.0813     (Insuf)    .00000     42.372        109    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        109    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        109    
+Piezas.TotalTime                            12.303     (Insuf)    .03388     44.006        109    
+Procesamiento de Piezas.Queue.WaitingTime   9.3028     (Insuf)    .00000     42.372        110    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  3.1658     (Insuf)    .00000     13.000     8.0000    
+escaner.NumberBusy                          .73324     (Insuf)    .00000     1.0000     1.0000    
+escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+escaner.Utilization                         .73324     (Insuf)    .00000     1.0000     1.0000    
+Procesamiento de Piezas.Queue.NumberInQueu  2.4326     (Insuf)    .00000     12.000     7.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             117.00    
+Piezas.NumberOut                            109.00    
+escaner.NumberSeized                        110.00    
+escaner.ScheduledUtilization                .73324    
+System.NumberOut                            109.00    
+
+
+                                      ARENA Simulation Results
+                                      Javier - License: STUDENT
+
+                                 Output Summary for 10 Replications
+
+Project: Unnamed Project                                             Run execution date : 4/13/2023
+Analyst: Usuario_UMA                                                 Model revision date: 4/13/2023
+
+
+                                             OUTPUTS
+
+Identifier                                 Average    Half-width Minimum    Maximum # Replications
+___________________________________________________________________________________________________
+
+Piezas.NumberIn                             121.80     9.4403     105.00     152.00     10
+Piezas.NumberOut                            114.50     7.0348     104.00     136.00     10
+escaner.NumberSeized                        115.30     7.0815     105.00     137.00     10
+escaner.ScheduledUtilization                .87704     .06451     .72160     1.0000     10
+System.NumberOut                            114.50     7.0348     104.00     136.00     10
+
+Simulation run time: 0.07 minutes.
+Simulation run complete.

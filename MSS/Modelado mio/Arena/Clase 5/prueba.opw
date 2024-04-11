@@ -1,0 +1,26 @@
+[RESOURCES]
+cajera
+[VARIABLES]
+Decide 3.NumberOut False
+Decide 2.NumberOut False
+Decide 1.NumberOut False
+Caja2.NumberIn
+Separate 3.NumberOut Orig
+Caja1.NumberOut
+Dispose 2.NumberOut
+Contador
+Separate 2.NumberOut Dup
+Create 1.NumberOut
+Dispose 1.NumberOut
+Dispose 4.NumberOut
+Caja1.NumberIn
+Dispose 5.NumberOut
+Separate 2.NumberOut Orig
+Buscando
+Separate 3.NumberOut Dup
+Caja2.NumberOut
+Decide 3.NumberOut True
+Remove 2.NumberOfEntities
+Decide 2.NumberOut True
+Remove 1.NumberOfEntities
+Decide 1.NumberOut True

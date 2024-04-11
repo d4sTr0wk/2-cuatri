@@ -1,0 +1,38 @@
+[RESOURCES]
+cajera2
+Interauto
+registro2
+registro1
+cajera
+Nacionalauto
+Operarios Avion
+[VARIABLES]
+Decide 3.NumberOut False
+Decide 5.NumberOut False
+Decide 4.NumberOut False
+Decide 2.NumberOut False
+Decide 1.NumberOut False
+mostrador1.NumberIn
+mostrador2.NumberIn
+manualnaciona.NumberOut
+mostrador2.NumberOut
+manualnaciona.NumberIn
+mostrador1.NumberOut
+maquinanacional.NumberOut
+maquinainter.NumberOut
+Entrada.NumberOut
+Maletas Dudosas
+manualinter.NumberIn
+manualinter.NumberOut
+Separate 1.NumberOut Orig
+Dispose 1.NumberOut
+Dispose 4.NumberOut
+maquinanacional.NumberIn
+Dispose 3.NumberOut
+Separate 1.NumberOut Dup
+maquinainter.NumberIn
+Decide 3.NumberOut True
+Decide 5.NumberOut True
+Decide 4.NumberOut True
+Decide 2.NumberOut True
+Decide 1.NumberOut True

@@ -1,0 +1,82 @@
+SIMAN Run Controller.
+
+2.0084996 Hours>
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/22/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/22/2023
+
+Replication ended at time      : 2.0084996 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Tally 1                                     .94382     (Insuf)    .50954     1.3337         43    
+bus.VATime                                      --         --         --         --          0
+bus.NVATime                                     --         --         --         --          0
+bus.WaitTime                                    --         --         --         --          0
+bus.TranTime                                    --         --         --         --          0
+bus.OtherTime                                   --         --         --         --          0
+bus.TotalTime                                   --         --         --         --          0
+coche.VATime                                .44042     (Insuf)    .31337     .60767         25    
+coche.NVATime                               .00000     (Insuf)    .00000     .00000         25    
+coche.WaitTime                              .42268     (Insuf)    .00000     .80713         25    
+coche.TranTime                              .04058     (Insuf)    .00657     .07828         25    
+coche.OtherTime                             .00000     (Insuf)    .00000     .00000         25    
+coche.TotalTime                             .90368     (Insuf)    .55472     1.3337         25    
+pie.VATime                                  .43226     (Insuf)    .34893     .56119         18    
+pie.NVATime                                 .00000     (Insuf)    .00000     .00000         18    
+pie.WaitTime                                .52313     (Insuf)    .00000     .80174         18    
+pie.TranTime                                .04418     (Insuf)    .01420     .07705         18    
+pie.OtherTime                               .00000     (Insuf)    .00000     .00000         18    
+pie.TotalTime                               .99957     (Insuf)    .50954     1.3004         18    
+recoger.Queue.WaitingTime                   .00000     (Insuf)    .00000     .00000         52    
+comer.Queue.WaitingTime                     .00000     (Insuf)    .00000     .00000         52    
+mostradorcobros.Queue.WaitingTime           .53538     (Insuf)    .00000     .87458         55    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+bus.WIP                                     5.4797     (Insuf)    .00000     26.000     26.000    
+coche.WIP                                   19.957     (Insuf)    .00000     36.000     35.000    
+pie.WIP                                     15.707     (Insuf)    .00000     32.000     31.000    
+mesa.NumberBusy                             8.1002     (Insuf)    .00000     12.000     9.0000    
+mesa.NumberScheduled                        30.000     (Insuf)    30.000     30.000     30.000    
+mesa.Utilization                            .27001     (Insuf)    .00000     .40000     .30000    
+cobros.NumberBusy                           1.9983     (Insuf)    .00000     2.0000     2.0000    
+cobros.NumberScheduled                      2.0000     (Insuf)    2.0000     2.0000     2.0000    
+cobros.Utilization                          .99918     (Insuf)    .00000     1.0000     1.0000    
+op_recoger.NumberBusy                       .48396     (Insuf)    .00000     2.0000     .00000    
+op_recoger.NumberScheduled                  5.0000     (Insuf)    5.0000     5.0000     5.0000    
+op_recoger.Utilization                      .09679     (Insuf)    .00000     .40000     .00000    
+recoger.Queue.NumberInQueue                 .00000     (Insuf)    .00000     .00000     .00000    
+comer.Queue.NumberInQueue                   .00000     (Insuf)    .00000     .00000     .00000    
+mostradorcobros.Queue.NumberInQueue         29.215     (Insuf)    .00000     81.000     80.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+bus.NumberIn                                26.000    
+bus.NumberOut                               .00000    
+coche.NumberIn                              60.000    
+coche.NumberOut                             25.000    
+pie.NumberIn                                49.000    
+pie.NumberOut                               18.000    
+mesa.NumberSeized                           52.000    
+mesa.ScheduledUtilization                   .27001    
+cobros.NumberSeized                         55.000    
+cobros.ScheduledUtilization                 .99918    
+op_recoger.NumberSeized                     52.000    
+op_recoger.ScheduledUtilization             .09679    
+System.NumberOut                            43.000    
+

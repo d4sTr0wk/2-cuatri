@@ -1,0 +1,24 @@
+[RESOURCES]
+TornoSalida
+hfisica
+cajeros
+hastro
+hhistoria
+hhall
+Torno
+harte
+[VARIABLES]
+P_FISICA.NumberIn
+P_FISICA.NumberOut
+P_ARTE.NumberOut
+P_ARTE.NumberIn
+Create 1.NumberOut
+Mostrador.NumberIn
+P_HALL.NumberOut
+P_HALL.NumberIn
+Dispose 1.NumberOut
+P_HISTORIA.NumberOut
+P_ASTRO.NumberIn
+P_ASTRO.NumberOut
+Mostrador.NumberOut
+P_HISTORIA.NumberIn

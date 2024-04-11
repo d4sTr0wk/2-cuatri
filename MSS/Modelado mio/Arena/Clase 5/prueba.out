@@ -1,0 +1,73 @@
+
+----------------------------------------------------------------------
+19114:GGTAEC
+A runtime error was detected at time 2.2782947 at the following block:
+
+ *   13 13$             DUPLICATE,100-50:1,43$,50:NEXT(42$);
+
+Maximum of 150 entities exceeded.
+Possible causes:
+- A logic problem in your model is creating too many entities or not
+  disposing them. The run controller may be helpful in finding the problem.
+- You are in demo mode and have exceeded the entity limit. The commercial
+  version is required to run large models.
+- You have set an entity limit on the DISCRETE element that is too small.
+  Remove the limit or set it to a larger number.
+- You have exceeded the standard array s 
+pace for models. Use the Array Sizes
+  page in the Run/Setup dialog to increase the RSET space allocated and
+  recheck your model.
+----------------------------------------------------------------------
+
+
+SIMAN Run Controller.
+
+2.2782947 Hours>
+                                      ARENA Simulation Results
+                              adrubenlopez@gmail.com - License: STUDENT
+
+                                  Summary for Replication 1 of 8
+
+Project: Unnamed Project                                             Run execution date : 5/25/2023
+Analyst: adrubenlopez@gmail.com                                      Model revision date: 5/25/2023
+
+Replication ended at time      : 2.2782947 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Entity 1.VATime                              2.3958E-4 (Corr)     .00000     .06394        634    
+Entity 1.NVATime                            .00000     .00000     .00000     .00000        634    
+Entity 1.WaitTime                            1.6736E-4 (Corr)     .00000     .07093        634    
+Entity 1.TranTime                           .00000     .00000     .00000     .00000        634    
+Entity 1.OtherTime                          .10580     (Corr)     .00000     .93537        634    
+Entity 1.TotalTime                          .10620     (Corr)      1.0876E-4 .93537        634    
+Caja2.Queue.WaitingTime                     .11171     (Insuf)     1.1431E-4 .93537        296    
+Caja1.Queue.WaitingTime                     .10098     (Corr)     .00000     .75475        335    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Entity 1.WIP                                64.850     (Insuf)    .00000     148.00     148.00    
+cajera.NumberBusy                           1.0000     (Insuf)    .00000     1.0000     1.0000    
+cajera.NumberScheduled                      1.0000     (Insuf)    1.0000     1.0000     1.0000    
+cajera.Utilization                          1.0000     (Insuf)    .00000     1.0000     1.0000    
+Caja2.Queue.NumberInQueue                   15.849     (Insuf)    .00000     37.000     36.000    
+Caja1.Queue.NumberInQueue                   16.036     (Insuf)    .00000     37.000     37.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Entity 1.NumberIn                           782.00    
+Entity 1.NumberOut                          634.00    
+cajera.NumberSeized                         4.0000    
+cajera.ScheduledUtilization                 1.0000    
+System.NumberOut                            634.00    
+

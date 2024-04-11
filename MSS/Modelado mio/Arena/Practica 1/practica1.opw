@@ -1,0 +1,15 @@
+[RESOURCES]
+Recoger pedidos
+comiendo
+Llegada Pedidos
+[VARIABLES]
+PedidosCobros.NumberOut
+Recoger.NumberIn
+Recoger.NumberOut
+comer.NumberOut
+Bus.NumberOut
+A PIE.NumberOut
+Coche.NumberOut
+Salida.NumberOut
+PedidosCobros.NumberIn
+comer.NumberIn
