@@ -1,0 +1,48 @@
+exceptions
+interrupts
+
+softirq
+tasklets
+timers
+Kthreads (task)
+
+process (task)
+threads (task)
+
+· Interrupciones: proceden del entorno del procesador. "Ha llegado un evento que tienes que tratar".
+
+Diferencias entre interrupciones y procesos: los procesos se pueden planificar (dormir y despertar). Tienen un PCB con un campo de contexto donde guardar los registros. Cuando no está usando el hardware se guardan los registros. Los procesos son de tipo "task". 
+Las interrupciones son funciones registradas. No tienen entorno atómico, es decir, si se ve interrumpido se guarda en la pila (CUIDADO CON NO CAMBIAR DE UNA PILA A OTRA).
+
+Una trama es una secuencia de direcciones que se van ejecutando, incluso de acceso a memoria de datos. En una traza normal se tienen un montón de instrucciones del proceso. Si hay una interrupción se recorre de forma lineal un "Linux Kernel Path", lo que es una secuencia de instrucciones ejecutadas por el SO, por lo cual son instrucciones ejecutadas en modo protegido. Se pueden dar por excepciones o interrupciones. Puedo tener varias anidadas, lo que se llama "Nested Kernel Paths".
+
+Cuando estamos ejecutando código de Kernel de forma general no pueden haber interrupciones. Hay una excepción que ocurren dentro de un "Kernel Path" fallo de acceso a página.
+
+Las interrupciones se encargan de CPU-Intensive y también interrupciones Hardware. Las CPU-Intensive meten delay a los procesos que se van ejecutando. Cuando hay ocasiones de estrés en el sistema se puede separar de alguna forma las partes que son menos urgentes para que se retrasen. Se separan las interrupciones y se quedan pendientes en alguna lista de funciones enlazadas una detrás de otra. Cuando ya no hay más interrupciones Hardware que ejecutar, y no hay más instrucciones de usuario que ejecutar entonces ejecuta las funciones de CPU-Intensive.
+
+Las interrupciones se dividen en dos trocitos: TOP_HALF y BOTTOM_HALF. TOP_HALF se dedica al hardware, extrae información de él, registra la función BOTTOM_HALF y si no hay más que hacer pues termina. BOTTOM_HALF son las funciones que se ejecutan. Cuando no hay ninguna interrupción pendiente se sale. 
+
+Hay dos situaciones en las que se ejecuta el BOTTOM_HALF, justo antes de pasar a usuario y a las salidas de las system calls. En general justo antes de salir cuando verifica si hay algo más que ejecutar. 
+
+Asíncrono por interrupciones y los modos síncronos (involuntario excepción y voluntario sys_call) son las formas de entrar en el "Kernel Path".
+
+· Softirq: las TOP_HALF son las irq's y el concepto BOTTOM_HALF sigue existiendo como cualquier trabajo postergado. Hay un vector que tienes tantas posiciones como entradas del procesador. Yo puedo tener diferentes tipos de softirq (del teclado, del ratón, etc). Si programo un código para softirq me responsabilizo de hacer los mutex (la exclusión o sincronización correcta) con cualquier otra softirq. Las softirq no pueden interrumpir a las irq, pero las irq  a las softirq sí.
+
+Puedo declarar las softirq de dos formas: o mando una solicitud de softirq para futuro o para ahora mismo.
+
+Las tasklets son interrupciones que se tienen que ejecutar en el mismo momento de darse y se les pasa la función que deben ejecutar.
+Los timers son interrpciones que se tienen que ejecutar en un momento futuro y se les pasa cuándo se debe ejecutar y la función a ejecutar.
+
+Las tasklets pueden coexistir simultáneamente en diferentes cores. Los accesos a las estructuras que pueden darse como simultáneos están protegidos pero los mismos tipos de tasklets no pueden estar en el mismo core.
+
+No ha hecho falta reescribir los BOTTOM_HALF antiguos porque se usa el soporte de softirq para que se compile para las máquinas más modernas.
+
+TOP_HALF - IRQ_HANDLER: a día de hoy ya no se usan los BOTTOM_HALF (se ha quedado anticuado), se utiliza solo el concepto de éste.
+
+Los softirq están numerados (hay 32 en Linux). Nosotros generamos tasklets y timers. El mismo softirq en dos cores pueden estar corriendo simultáneamente. Lo que no puede darse es el mismo tasklet en varios cores porque digamos que se quita de una lista y hasta que no termina no regresa para que esté disponible.
+
+También tenemos threads. Para Linux todos son tasks, la única diferencia es que en la estructura de la tarea puedo definir cuánto independiente es. ¿Cómo resuelvo la sincronización entre procesos y threads? Pues puedo dormir los procesos (tenemos colas, semáforos, mutex). ¿Podemos hacer algo parecido con las interrupciones? Surgen los kernel threads o Kthreads, que son tasks. Como son tareas si las puedo dormir.
+
+Lo bueno de esto es que como es una tarea, si le ejecutas un kill, la manera de matarlo es ponerlo a ejecutar si está bloqueado, o esperar a que termine la ejecución ya en marcha. 
+
+
