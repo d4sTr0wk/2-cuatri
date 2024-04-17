@@ -13,6 +13,11 @@ en un futuro se declarasen las VLANs que tengan un core switch establecido como 
 He configurado el Router para que el protocolo DHCP excluya las IP's pertenecientes a las gateways (IP del Router) para cada VLAN.
 
 14/04
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+	DATA CENTER
+XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
+1. He añadido las VLAN's del Data Center mediante el protocolo VTP (las añadí únicamente en el máster de VTP RP-Core1)
 
+2. 
 
