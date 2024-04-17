@@ -1,0 +1,18 @@
+10/04
+He configurado dos terminales de mismo departamento (VLAN) con IP's estáticas y de diferente departamento para comprobar si funciona la conexión 
+entre distintas VLANs (enlace 3). El paquete ICMP se transmite con éxito entre los PC 1A01 e 1C01.
+
+También voy a suponer que los departamentos 102 y 104 tienen más tráfico de lo normal por lo que voy a balancear el spanning-tree configurando
+como root para cada uno un core distinto. Para la VLAN 104 el Core Switch 1 y para la 102 el Core Switch 2, y las 4 VLANs restantes las divido
+dos a uno y dos a otro (indistintamente, el tráfico voy a suponer que es menor y queda el tráfico lo más equilibrado posible).
+
+Para el resto de posibles VLANs (que actualmente no están creadas) las configuro para el RP-Core2 como root primary del spanning tree por si 
+en un futuro se declarasen las VLANs que tengan un core switch establecido como root del grafo.
+
+11/04
+He configurado el Router para que el protocolo DHCP excluya las IP's pertenecientes a las gateways (IP del Router) para cada VLAN.
+
+14/04
+
+
+
