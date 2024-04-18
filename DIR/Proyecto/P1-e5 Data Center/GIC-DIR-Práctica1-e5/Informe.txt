@@ -1,3 +1,6 @@
+XXXXXXXXXXXXXXXXXXXXXXXXXXX
+	ROUTING IP
+XXXXXXXXXXXXXXXXXXXXXXXXXXX
 10/04
 He configurado dos terminales de mismo departamento (VLAN) con IP's estáticas y de diferente departamento para comprobar si funciona la conexión 
 entre distintas VLANs (enlace 3). El paquete ICMP se transmite con éxito entre los PC 1A01 e 1C01.
@@ -12,20 +15,20 @@ en un futuro se declarasen las VLANs que tengan un core switch establecido como 
 11/04
 He configurado el Router para que el protocolo DHCP excluya las IP's pertenecientes a las gateways (IP del Router) para cada VLAN.
 
-14/04
+
 XXXXXXXXXXXXXXXXXXXXXXXXXXXX
 	DATA CENTER
 XXXXXXXXXXXXXXXXXXXXXXXXXXXX
+He añadido algunas modificaciones en la parte de red física (faltaba denominar algunos racks y algunos nombres estaban mal puestos como la asignación de número de piso)
 
+He añadido las VLAN's del Data Center mediante el protocolo VTP (las añadí únicamente en el máster de VTP RP-Core1)
 
-1. He añadido las VLAN's del Data Center mediante el protocolo VTP (las añadí únicamente en el máster de VTP RP-Core1)
+He configurado el STP en el Data Center para que se use el modo Rapid PVST y el portfast como default
 
-2. He configurado el STP en el Data Center para que se use el modo Rapid PVST y el portfast como default
+Puertos configurados como enlaces access a los VLANS correspondientes.
 
-3. Puertos configurados como enlaces access a los VLANS correspondientes.
+Configuré las direcciones IP's estáticas de las interfaces de servidores.
 
-4. Configuré las direcciones IP's estáticas de las interfaces de servidores.
-
-5. 
+Por último he configurado las subinterfaces en el router para conectar las VLANs
 
 De paso he configurado los terminales para que soliciten mediante el protocolo DHCP su IP.
