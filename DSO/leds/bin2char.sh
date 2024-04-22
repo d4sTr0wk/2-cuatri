@@ -11,4 +11,12 @@ fi
 # Convert the binary number to decimal
 dec=$(echo "ibase=2; $1" | bc)
 
-echo $dec
+oct=$(printf '%03o' $dec)
+
+if [ -n "$oct" ]; then
+        printf "\\$oct\n"
+else
+        char=$(printf \\$(printf '%03o' $dec))
+        echo "$char"
+fi
+

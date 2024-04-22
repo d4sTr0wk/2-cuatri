@@ -8,7 +8,7 @@
 #include <linux/uaccess.h>    // copy to/from user space
 #include <linux/gpio.h>       // gpio_get/set_value
 
-#define DRIVER_AUTHOR "Máximo García Aroca/Rodrigo Hernández Barba"
+#define DRIVER_AUTHOR "DAC-UMA"
 #define DRIVER_DESC   "Device driver for berryclip leds"
 
 //Minor=0: all leds, minor=i: i'th led (from 1 to 6)
@@ -36,6 +36,70 @@ static char *desc_led[] = { "RED1", "RED2",
 static ssize_t leds_write(struct file *file, const char __user *buf,
                           size_t count, loff_t *ppos)
 {
+    int minor = iminor(file->f_path.dentry->d_inode);
+    int led;
+        char    ch;
+
+    if (*ppos > 0) return count;
+    if (minor > NUM_LEDS) return -ENOSYS;
+    if (copy_from_user(&ch, buf, 1)) return -EFAULT;
+    if (minor == 0) 
+    {
+                if ((ch & 0xC0) == 0) //00xxxxxx
+                {
+                        for (led = 0; led < NUM_LEDS; led++) {
+                                gpio_set_value(gpio_led[led], ((int)ch >> led) & 1);
+                                printk(KERN_INFO "%s: set led %d to %d\n", KBUILD_MODNAME, led, (int)(ch >> led) & 1);
+                        }
+                } 
+                else if ((ch & 0x40) == 0x40 && (ch & 0x80) == 0)//01xxxxxx
+                {
+                        for (led = 0; led < NUM_LEDS; led++) {
+                                if ((((int)ch >> led) & 1) == 1)
+                                {
+                                        gpio_set_value(gpio_led[led], 1);
+                                        printk(KERN_INFO "%s: set led %d to %d\n", KBUILD_MODNAME, led, 1);
+                                }
+                        }
+                }
+                else if ((ch & 0x80) == 0x80 && (ch & 0x40) == 0) //10xxxxxx
+                {
+                        for (led = 0; led < NUM_LEDS; led++) {
+                                if ((((int)ch >> led) & 1) == 1)
+                                {
+                                        gpio_set_value(gpio_led[led], 0);
+                                        printk(KERN_INFO "%s: set led %d to %d\n", KBUILD_MODNAME, led, 0);
+                                }
+                        }
+                }
+                else //11xxxxxx
+                {
+                        for (led = 0; led < NUM_LEDS; led++) {
+                                if ((((int)ch >> led) & 1) == 1)
+                                {
+                                        if(gpio_get_value(gpio_led[led]))
+                                        {
+                                                gpio_set_value(gpio_led[led], 0);
+                                                printk(KERN_INFO "%s: set led %d to %d\n", KBUILD_MODNAME, led, 0);
+                                        }
+                                        else
+                                        {
+                                                gpio_set_value(gpio_led[led], 1);
+                                                printk(KERN_INFO "%s: set led %d to %d\n", KBUILD_MODNAME, led, 1);
+                                        }
+                                }
+                        }
+                }
+    } else {
+        printk(KERN_WARNING "%s: invalid minor number %d\n", KBUILD_MODNAME, minor);
+    }
+    *ppos += 1;
+    return (1);
+}
+
+/*static ssize_t one_led_write(struct file *file, const char __user *buf,
+                          size_t count, loff_t *ppos)
+{
     char ch;
     int minor = iminor(file->f_path.dentry->d_inode);
     int led;
@@ -44,24 +108,21 @@ static ssize_t leds_write(struct file *file, const char __user *buf,
     if (copy_from_user(&ch, buf, 1)) return -EFAULT;
     if (minor > NUM_LEDS) return -ENOSYS;
     if (minor == 0) {
-	//if bit 7 and 6 are 0, bits 5 to 0 are the value to set all leds
-	if ((ch & 0xC0) == 0) {
-        for (led = 0; led < NUM_LEDS; led++) {
-            gpio_set_value(gpio_led[led], (int)ch & 1);
-        }
-        printk(KERN_INFO "%s: set all leds to %d\n", KBUILD_MODNAME, (int)ch & 1);
-    } else {
         printk(KERN_WARNING "%s: invalid minor number %d\n", KBUILD_MODNAME, minor);
+    } else {
+        led = minor - 1;
+        gpio_set_value(gpio_led[led], ch & 1);
+        printk(KERN_INFO "%s: set led %s to %d\n", KBUILD_MODNAME, desc_led[led], (int)ch & 1);
     }
     *ppos += 1;
-    return (1);
+    return 1;
 }
 
-/*static ssize_t leds_read(struct file *file, char __user *buf,
+static ssize_t one_led_read(struct file *file, char __user *buf,
                          size_t count, loff_t *ppos)
 {
     int ch = 0;
-    int minor = iminor(file->f_path.dentry->d_inode); 
+    int minor = iminor(file->f_path.dentry->d_inode);
     int led;
 
     if (*ppos > 0) return 0;
@@ -79,11 +140,13 @@ static ssize_t leds_write(struct file *file, const char __user *buf,
     return 1;
 }*/
 
-// LED's device struct file operations
+
+
+
+// struct file operations
 static const struct file_operations leds_fops = {
-	.owner = THIS_MODULE,
-	.write = leds_write,
-	//.read = leds_read.
+    .owner = THIS_MODULE,
+    .write = leds_write,
 };
 
 // This functions registers devices and requests GPIOs
@@ -102,46 +165,44 @@ static char *berryclip_devnode(struct device *dev, umode_t *mode)
 
 static int r_devices_config(void)
 {
-	int i;
+    // Request the kernel for N_MINOR devices
+    alloc_chrdev_region(&dev_num, 0, NUM_MINORS, "berryclip");
 
-	// Request the kernel for N_MINOR devices
-	alloc_chrdev_region(&dev_num, 0, NUM_MINORS, "berryclip");
-
-	// Create a class : appears at /sys/class
-	berryclip_class = class_create(THIS_MODULE, "berryclip_class");
-	if (IS_ERR(berryclip_class)) return (PTR_ERR(berryclip_class));
-	berryclip_class->devnode = berryclip_devnode;
+    // Create a class : appears at /sys/class
+    berryclip_class = class_create(THIS_MODULE, "berryclip_class");
+    if (IS_ERR(berryclip_class)) return PTR_ERR(berryclip_class);
+    berryclip_class->devnode = berryclip_devnode;
     
-	// Create /dev/leds for all leds together
-	cdev_init(&berryclip_cdev[0], &leds_fops);
-	device[0] = MKDEV(MAJOR(dev_num), MINOR(dev_num));
-	device_create(berryclip_class, NULL, device[0], NULL, "leds");
-	cdev_add(&berryclip_cdev[0], device[0], 1);
+    // Create /dev/leds for all leds together
+    cdev_init(&berryclip_cdev[0], &leds_fops);
+    device[0] = MKDEV(MAJOR(dev_num), MINOR(dev_num));
+    device_create(berryclip_class, NULL, device[0], NULL, "leds");
+    cdev_add(&berryclip_cdev[0], device[0], 1);
 
-	return (0);
+        return 0;
 }
 
 static int r_GPIO_config(void)
 {
-	int i;
-	int res;
-	for(i = 0; i < NUM_LEDS; i++) {
+    int i;
+    int res;
+    for(i = 0; i < NUM_LEDS; i++) {
         if ((res = gpio_is_valid(gpio_led[i])) < 0) {
-	            printk(KERN_ERR "%s:   Invalid GPIO %d\n", KBUILD_MODNAME, gpio_led[i]);
-	            return (res);
-	        }
-	        if ((res = gpio_request_one(gpio_led[i],GPIOF_INIT_LOW,desc_led[i])) < 0) {
-	            printk(KERN_ERR "%s:   GPIO request failure: led %s GPIO %d\n",
-						KBUILD_MODNAME, desc_led[i], gpio_led[i]);
-	            return (res);
-	        }
-	        if ((res = gpio_direction_output(gpio_led[i], 0)) < 0) {
-	            printk(KERN_ERR "%s:   GPIO set direction output failure: led %s GPIO %d\n",
-						KBUILD_MODNAME, desc_led[i], gpio_led[i]);
-	            return (res);
-	        }
-	}
-	return (0);
+            printk(KERN_ERR "%s:   Invalid GPIO %d\n", KBUILD_MODNAME, gpio_led[i]);
+            return res;
+        }
+        if ((res = gpio_request_one(gpio_led[i],GPIOF_INIT_LOW,desc_led[i])) < 0) {
+            printk(KERN_ERR "%s:   GPIO request failure: led %s GPIO %d\n",
+                                        KBUILD_MODNAME, desc_led[i], gpio_led[i]);
+            return res;
+        }
+        if ((res = gpio_direction_output(gpio_led[i], 0)) < 0) {
+            printk(KERN_ERR "%s:   GPIO set direction output failure: led %s GPIO %d\n",
+                                        KBUILD_MODNAME, desc_led[i], gpio_led[i]);
+            return res;
+        }
+        }
+        return 0;
 }
 
 
@@ -167,7 +228,7 @@ static void r_cleanup(void)
 
 static int r_init(void)
 {
-	int res;
+        int res;
     printk(KERN_NOTICE "%s: module loading\n", KBUILD_MODNAME);
 
     printk(KERN_NOTICE "%s:  devices config\n", KBUILD_MODNAME);
@@ -176,7 +237,7 @@ static int r_init(void)
         return res;
     }
     printk(KERN_NOTICE "%s:  ok\n", KBUILD_MODNAME);
-	
+
     printk(KERN_NOTICE "%s:  GPIO config\n", KBUILD_MODNAME);
     if((res = r_GPIO_config())) {
         printk(KERN_ERR "%s:  failed\n", KBUILD_MODNAME);
@@ -184,7 +245,7 @@ static int r_init(void)
         return res;
     }
     printk(KERN_NOTICE "%s:  ok\n", KBUILD_MODNAME);
-	
+
     return 0;
 }
 
