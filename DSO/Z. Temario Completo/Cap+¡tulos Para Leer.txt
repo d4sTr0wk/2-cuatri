@@ -1,0 +1,32 @@
+*Understanding the Linux Kernel:*
+
+Capítulo 12 (The Virtual Filesystem)
+Capítulo 14 (Secciones Block Devices Handling, The Generic Block Layer y The I/O Scheduler)
+Capítulo 15 (Page Cache)
+
+------------------------------------------
+
+*Linux Kernel Development:*
+
+Capítulo 6 (Kernel Data Structures)
+   ->Linked lists
+   ->Queues
+   ->Maps
+   ->Binary trees
+
+Capítulo 7 (Interrupts and Interrupt Handlers)
+   ->Interrupts
+   ->Interrupt Handlers
+   ->Top Halves Versus Bottom Halves
+   ->Registering an Interrupt Handler
+   ->Freeing an Interrupt Handler
+   ->Implementing Interrupt Handlers
+
+Capítulo 8 (Bottom Halves and Deferring Work)
+   ->Bottom Halves
+   ->Why Bottom Halves?
+   ->Tasklets
+
+capítulo 13 (The Virtual Filesystem) -> Pág 288, (28 páginas)
+Capítulo 14 (The Block I/O layer) -> Pág 316, (16 páginas)
+Capítulo 16 (The Page Cache and Page Writeback) -> Pág 350, (12 páginas)
