@@ -1,0 +1,69 @@
+!
+version 12.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname RS1-S1
+!
+!
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree portfast default
+spanning-tree extend system-id
+!
+interface GigabitEthernet0/1
+ switchport mode trunk
+!
+interface GigabitEthernet1/1
+ shutdown
+!
+interface GigabitEthernet2/1
+ shutdown
+!
+interface GigabitEthernet3/1
+ shutdown
+!
+interface GigabitEthernet4/1
+ shutdown
+!
+interface GigabitEthernet5/1
+ shutdown
+!
+interface GigabitEthernet6/1
+ shutdown
+!
+interface GigabitEthernet7/1
+ switchport access vlan 105
+!
+interface GigabitEthernet8/1
+ switchport access vlan 105
+!
+interface GigabitEthernet9/1
+ switchport mode trunk
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address 10.2.0.12 255.255.255.0
+!
+!
+!
+!
+line con 0
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+!
+!
+!
+!
+end
+
