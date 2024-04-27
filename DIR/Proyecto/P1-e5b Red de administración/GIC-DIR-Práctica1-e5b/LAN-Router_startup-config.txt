@@ -2,11 +2,13 @@
 version 15.1
 no service timestamps log datetime msec
 no service timestamps debug datetime msec
-no service password-encryption
+service password-encryption
 !
 hostname Router
 !
 !
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
 !
 !
 ip dhcp excluded-address 10.0.0.1
@@ -62,6 +64,8 @@ no ipv6 cef
 !
 !
 !
+username admin secret 5 $1$mERr$biJ0wkoRnlW9ixJF3DkJW0
+!
 !
 license udi pid CISCO2811/K9 sn FTX10177MRD-
 !
@@ -73,6 +77,7 @@ license udi pid CISCO2811/K9 sn FTX10177MRD-
 !
 !
 !
+ip domain-name acme.com
 !
 !
 spanning-tree mode pvst
@@ -154,70 +159,6 @@ interface FastEthernet0/1
  speed auto
  shutdown
 !
-interface FastEthernet1/0
- switchport mode access
- shutdown
-!
-interface FastEthernet1/1
- switchport mode access
- shutdown
-!
-interface FastEthernet1/2
- switchport mode access
- shutdown
-!
-interface FastEthernet1/3
- switchport mode access
- shutdown
-!
-interface FastEthernet1/4
- switchport mode access
- shutdown
-!
-interface FastEthernet1/5
- switchport mode access
- shutdown
-!
-interface FastEthernet1/6
- switchport mode access
- shutdown
-!
-interface FastEthernet1/7
- switchport mode access
- shutdown
-!
-interface FastEthernet1/8
- switchport mode access
- shutdown
-!
-interface FastEthernet1/9
- switchport mode access
- shutdown
-!
-interface FastEthernet1/10
- switchport mode access
- shutdown
-!
-interface FastEthernet1/11
- switchport mode access
- shutdown
-!
-interface FastEthernet1/12
- switchport mode access
- shutdown
-!
-interface FastEthernet1/13
- switchport mode access
- shutdown
-!
-interface FastEthernet1/14
- switchport mode access
- shutdown
-!
-interface FastEthernet1/15
- switchport mode access
- shutdown
-!
 interface Vlan1
  no ip address
  shutdown
@@ -228,9 +169,9 @@ ip flow-export version 9
 !
 !
 ip access-list extended admin-in
- permit tcp 10.2.0.1 0.0.0.1 host 10.2.0.2 eq 22
+ permit tcp 10.2.0.0 0.0.0.255 host 10.2.0.2 eq 22
 ip access-list extended admin-out
- permit tcp host 10.2.0.2 eq 22 10.2.0.1 0.0.0.1 established
+ permit tcp host 10.2.0.2 eq 22 10.2.0.0 0.0.0.255 established
 ip access-list extended ssh-in
  permit tcp 10.2.0.0 0.0.0.255 any eq 22
 !
@@ -244,6 +185,11 @@ line aux 0
 !
 line vty 0 4
  access-class ssh-in in
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 15
+ password 7 0822455D0A16
  login local
  transport input ssh
 !
