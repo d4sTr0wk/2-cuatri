@@ -45,4 +45,18 @@ También tenemos threads. Para Linux todos son tasks, la única diferencia es qu
 
 Lo bueno de esto es que como es una tarea, si le ejecutas un kill, la manera de matarlo es ponerlo a ejecutar si está bloqueado, o esperar a que termine la ejecución ya en marcha. 
 
+30/04
 
+03/05
+
+mount muestra los puntos de montaje
+
+mount /dev/loop9 pm1 (donde pm1 es una carpeta que me creé)
+
+dd if=/dev/zero of=partition.img count="BYTES" sirve para crear un archivo con ceros
+
+fdisk sirve para eliminar, listar, crear particiones
+
+mkfs."sistema de ficheros" sirve para darle un formato a una partición
+
+losetup -f --show partition.img conecta el fichero como un dispositivo nuevo
