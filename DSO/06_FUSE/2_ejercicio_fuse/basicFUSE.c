@@ -41,20 +41,19 @@ static int mi_getattr(const char *path, struct stat *stbuf)
 	int res = 0;
 
 	memset(stbuf, 0, sizeof(struct stat));
-	if (strcmp(path, "/") == 0) {
-		stbuf->st_mode = S_IFDIR | 0755;
-		stbuf->st_nlink = 2;
-		stbuf->st_uid = mis_datos->st_uid;
-		stbuf->st_gid = mis_datos->st_gid;
+	if (strcmp(path, "/") == 0) { // directorio raíz
+		stbuf->st_mode = S_IFDIR | 0755; // directorio con permisos de lectura y ejecución
+		stbuf->st_nlink = 2; // directorio con dos enlaces
+		stbuf->st_uid = mis_datos->st_uid; // usuario propietario
+		stbuf->st_gid = mis_datos->st_gid; // grupo propietario
 		
-		stbuf->st_atime = mis_datos->st_atime;
-		stbuf->st_mtime = mis_datos->st_mtime;
-		stbuf->st_ctime = mis_datos->st_ctime;
-		stbuf->st_size = 1024;
-		stbuf->st_blocks = 2;
-		
-	} else if ((i= buscar_fichero(path, mis_datos)) >= 0) {
-		stbuf->st_mode = S_IFREG | 0444;
+		stbuf->st_atime = mis_datos->st_atime; // último acceso
+		stbuf->st_mtime = mis_datos->st_mtime; // última modificación
+		stbuf->st_ctime = mis_datos->st_ctime; // última modificación de los metadatos
+		stbuf->st_size = 1024; // tamaño del directorio
+		stbuf->st_blocks = 2; // bloques ocupados por el directorio
+	} else if ((i= buscar_fichero(path, mis_datos)) >= 0) { // fichero en el directorio raíz
+		stbuf->st_mode = S_IFREG | 0444; // fichero con permisos de lectura
 		stbuf->st_nlink = 1;
 		
 		stbuf->st_uid = mis_datos->st_uid;
@@ -65,10 +64,58 @@ static int mi_getattr(const char *path, struct stat *stbuf)
 		stbuf->st_ctime = mis_datos->st_ctime;
 		
 		stbuf->st_size = strlen(mis_datos->contenido_ficheros[i]);
-		stbuf->st_blocks = stbuf->st_size/512 + (stbuf->st_size%512)? 1 : 0;
+		stbuf->st_blocks = stbuf->st_size/512 + (stbuf->st_size%512)? 1 : 0; // bloques ocupados por el fichero
+	} else if (strcmp(path, "/BIG") == 0) {
+		stbuf->st_mode = S_IFDIR | 0755; // directorio con permisos de lectura y ejecución
+		stbuf->st_nlink = 2; // directorio con dos enlaces
+		stbuf->st_uid = mis_datos->st_uid; // usuario propietario
+		stbuf->st_gid = mis_datos->st_gid; // grupo propietario
+		
+		stbuf->st_atime = mis_datos->st_atime; // último acceso
+		stbuf->st_mtime = mis_datos->st_mtime; // última modificación
+		stbuf->st_ctime = mis_datos->st_ctime; // última modificación de los metadatos
+		stbuf->st_size = 1024; // tamaño del directorio
+		stbuf->st_blocks = 2; // bloques ocupados por el directorio
+	} else if (strcmp(path, "/little") == 0) {
+		stbuf->st_mode = S_IFDIR | 0755; // directorio con permisos de lectura y ejecución
+		stbuf->st_nlink = 2; // directorio con dos enlaces
+		stbuf->st_uid = mis_datos->st_uid; // usuario propietario
+		stbuf->st_gid = mis_datos->st_gid; // grupo propietario
+		
+		stbuf->st_atime = mis_datos->st_atime; // último acceso
+		stbuf->st_mtime = mis_datos->st_mtime; // última modificación
+		stbuf->st_ctime = mis_datos->st_ctime; // última modificación de los metadatos
+		stbuf->st_size = 1024; // tamaño del directorio
+		stbuf->st_blocks = 2; // bloques ocupados por el directorio
+	} else if ((strstr(path, "BIG") != NULL) && (i= buscar_fichero(path+4, mis_datos)) >= 0) { // fichero en el directorio /BIG
+		stbuf->st_mode = S_IFREG | 0444; // fichero con permisos de lectura
+		stbuf->st_nlink = 1;
+		
+		stbuf->st_uid = mis_datos->st_uid;
+		stbuf->st_gid = mis_datos->st_gid;
+		
+		stbuf->st_atime = mis_datos->st_atime;
+		stbuf->st_mtime = mis_datos->st_mtime;
+		stbuf->st_ctime = mis_datos->st_ctime;
+
+		stbuf->st_size = strlen(mis_datos->contenido_ficheros[i]);
+		stbuf->st_blocks = stbuf->st_size/512 + (stbuf->st_size%512)? 1 : 0; // bloques ocupados por el fichero
+	} else if ((strstr(path, "little") != NULL) && (i = buscar_fichero(path+7, mis_datos)) >= 0) { // fichero en el directorio /little
+		stbuf->st_mode = S_IFREG | 0444; // fichero con permisos de lectura
+		stbuf->st_nlink = 1;
+		
+		stbuf->st_uid = mis_datos->st_uid;
+		stbuf->st_gid = mis_datos->st_gid;
+		
+		stbuf->st_atime = mis_datos->st_atime;
+		stbuf->st_mtime = mis_datos->st_mtime;
+		stbuf->st_ctime = mis_datos->st_ctime;
+
+		stbuf->st_size = strlen(mis_datos->contenido_ficheros[i]);
+		stbuf->st_blocks = stbuf->st_size/512 + (stbuf->st_size%512)? 1 : 0; // bloques ocupados por el fichero
 	} else
 		res = -ENOENT;
-
+	
 	return res;
 }
 
@@ -78,27 +125,54 @@ static int mi_getattr(const char *path, struct stat *stbuf)
 static int mi_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 			 off_t offset, struct fuse_file_info *fi)
 {
-struct structura_mis_datos *mis_datos= (struct structura_mis_datos *) fuse_get_context()->private_data;
+	struct structura_mis_datos *mis_datos= (struct structura_mis_datos *) fuse_get_context()->private_data;
 		
-	/* completar */
-	int i;
-	
 	(void) offset;
 	(void) fi;
 
-	if (strcmp(path, "/") != 0)
+	if (*path !=  '/') // Si no es una dirección se reporta error
 		return -ENOENT;
-
-	if(filler(buf, "." , NULL, 0)!=0) return -ENOMEM;
-	if(filler(buf, "..", NULL, 0)!=0) return -ENOMEM;
 	
-	
-	for (i=0; i< mis_datos->numero_ficheros; i++)
+	if (strcmp(path, "/") == 0) // Si es la raíz
 	{
-		if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0)
-            return -ENOMEM;
+		if(filler(buf, "." , NULL, 0)!=0) return -ENOMEM; // añadir "." al directorio
+		if(filler(buf, "..", NULL, 0)!=0) return -ENOMEM; // añadir ".." al directorio
+		if (filler(buf,"BIG", NULL, 0) != 0) return -ENOMEM; // añadir "BIG" al directorio	
+		if (filler(buf,"little", NULL, 0) != 0) return -ENOMEM; // añadir "little" al directorio
+
+		for (int i=0; i< mis_datos->numero_ficheros; i++)
+		{
+			if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0)
+				return -ENOMEM;
+		}
 	}
-	
+	else if	(strstr(path, "BIG") != NULL)
+	{
+		if(filler(buf, "." , NULL, 0)!=0) return -ENOMEM; // añadir "." al directorio
+		if(filler(buf, "..", NULL, 0)!=0) return -ENOMEM; // añadir ".." al directorio
+		for(int i = 0; i < mis_datos->numero_ficheros; i++)
+		{
+			if (strlen(mis_datos->contenido_ficheros[i]) > 255) // Si el nombre del fichero es mayor a 255 caracteres
+			{
+				if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0)
+					return -ENOMEM;
+			}
+		}
+	}
+	else if	(strstr(path, "little") != NULL)
+	{
+		if(filler(buf, "." , NULL, 0)!=0) return -ENOMEM; // añadir "." al directorio
+		if(filler(buf, "..", NULL, 0)!=0) return -ENOMEM; // añadir ".." al directorio
+		for(int i = 0; i < mis_datos->numero_ficheros; i++)
+		{
+			if (strlen(mis_datos->contenido_ficheros[i]) < 256) // Si el nombre del fichero es menor a 256 caracteres
+			{
+				if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0)
+					return -ENOMEM;
+			}
+		}
+	}
+
 	return 0;
 
 }
@@ -109,15 +183,27 @@ static int mi_open(const char *path, struct fuse_file_info *fi)
 {
 	struct structura_mis_datos *mis_datos= (struct structura_mis_datos *) fuse_get_context()->private_data;
 
-	int file_descriptor;
-	int position = buscar_fichero(path, mis_datos);
-
-	if (position < 0) return -ENOENT; // no existe el fichero
-	if ((fi->flags & 3) != O_RDONLY) return -EACCES; // Se intentó abrir en modo escritura
-	if (strcmp(path + 1, mis_datos->nombre_ficheros[position]) != 0) return -ENOENT; // no coincide el nombre del fichero
-	if((file_descriptor = open(mis_datos->nombre_ficheros[position], O_RDONLY)) < 0) return -errno; // error al abrir el fichero, dejo la apertura para el final así no tengo que cerrarlo
+	int	file_descriptor;
+	int	chapter_position;
 	
-	fi->fh = position; // voy a utilizar el descriptor para guardar la posición del fichero en el array de ficheros
+	if ((fi->flags & 3) != O_RDONLY) return -EACCES; // Se intentó abrir en modo escritura
+	if (strstr(path, "BIG") != NULL)
+	{
+		chapter_position = buscar_fichero(path+4, mis_datos); // buscar capítulo /BIG/...
+		if (chapter_position < 0) return -ENOENT; // no existe el fichero
+	}
+	else if (strstr(path, "little") != NULL)
+	{
+		chapter_position = buscar_fichero(path+7, mis_datos); // buscar capítulo /little/...
+		if (chapter_position < 0) return -ENOENT; // no existe el fichero
+	}
+	else
+	{
+		chapter_position = buscar_fichero(path, mis_datos); // buscar capítulo /...
+		if (chapter_position < 0) return -ENOENT; // no existe el fichero
+	}
+	
+	fi->fh = chapter_position; // voy a utilizar el descriptor para guardar la posición del fichero en el array de ficheros
 	return (0);
 }
 
@@ -128,16 +214,17 @@ static int mi_read(const char *path, char *buf, size_t size, off_t offset,
 		      struct fuse_file_info *fi)
 {
 	struct structura_mis_datos *mis_datos= (struct structura_mis_datos *) fuse_get_context()->private_data;
-	buf = mis_datos->contenido_ficheros[fi->fh];
+	char *contenido_ficheros = mis_datos->contenido_ficheros[fi->fh];
 
-	size_t length = strlen(buf);
+	size_t length = strlen(contenido_ficheros);
 	if (offset < length) {
 		if (offset + size > length) size = length - offset;
-		memcpy(buf, buf + offset, size);
+		memcpy(buf, contenido_ficheros + offset, size);
+		return (size);
 	} 
-	else size = 0;
+	else 
+		return (0);
 
-	return (size);
 }
 
 
