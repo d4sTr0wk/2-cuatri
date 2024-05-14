@@ -14,4 +14,4 @@ Timeout = 10000
 NoTXN = 0
 SyncPragma = NORMAL
 StepAPI = 0
-Database=C:\Users\adrub\Desktop\Ruben\UMA\Optativas\Modelado y Simulación de Sistemas\Modelado mio\Arena\Clase 3\Ejercicio.db
+Database=C:\Users\necro\OneDrive\Documentos\2-cuatri\MSS\Modelado mio\Arena\Clase 3\Ejercicio.db
