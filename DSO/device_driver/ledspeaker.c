@@ -151,7 +151,7 @@ static ssize_t speaker_write(struct file *file, const char __user *buf,
 // struct file operations
 static const struct file_operations leds_fops = {
         .owner = THIS_MODULE,
-        .write = leds_write,le
+        .write = leds_write,
 };
 
 static const struct file_operations speaker_fops = {
