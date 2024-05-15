@@ -1,0 +1,231 @@
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname LAN-Router
+!
+!
+!
+enable secret 5 $1$mERr$hx5rVt7rPNoS4wqbXKX7m0
+!
+!
+ip dhcp excluded-address 10.5.0.1
+ip dhcp excluded-address 10.5.4.1
+ip dhcp excluded-address 10.5.8.1
+ip dhcp excluded-address 10.5.10.1
+ip dhcp excluded-address 10.5.11.1
+ip dhcp excluded-address 10.5.11.129
+ip dhcp excluded-address 10.6.0.1
+ip dhcp excluded-address 10.6.6.1
+ip dhcp excluded-address 10.6.12.1
+ip dhcp excluded-address 10.6.12.16
+!
+ip dhcp pool pool100
+ network 10.5.11.0 255.255.255.128
+ default-router 10.5.11.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool101
+ network 10.5.8.0 255.255.254.0
+ default-router 10.5.8.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool102
+ network 10.5.0.0 255.255.252.0
+ default-router 10.5.0.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool103
+ network 10.5.10.0 255.255.255.0
+ default-router 10.5.10.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool104
+ network 10.5.4.0 255.255.252.0
+ default-router 10.5.4.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool105
+ network 10.5.11.128 255.255.255.192
+ default-router 10.5.11.129
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool150
+ network 10.6.0.0 255.255.254.0
+ default-router 10.6.0.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool151
+ network 10.6.2.0 255.255.254.0
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool152
+ network 10.6.4.0 255.255.254.0
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool153
+ network 10.6.6.0 255.255.254.0
+ default-router 10.6.6.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool154
+ network 10.6.8.0 255.255.254.0
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool155
+ network 10.6.10.0 255.255.254.0
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+ip dhcp pool pool160
+ network 10.6.12.0 255.255.254.0
+ default-router 10.6.12.1
+ dns-server 10.6.12.16
+ domain-name site2.enterprise4.com
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+username admin secret 5 $1$mERr$biJ0wkoRnlW9ixJF3DkJW0
+!
+!
+license udi pid CISCO2811/K9 sn FTX1017I5R8-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip domain-name acme.com
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.100.2 255.255.255.0
+ ip access-group admin-in in
+ ip access-group admin-out out
+!
+interface FastEthernet0/0.100
+ encapsulation dot1Q 100
+ ip address 10.5.11.1 255.255.255.128
+!
+interface FastEthernet0/0.101
+ encapsulation dot1Q 101
+ ip address 10.5.8.1 255.255.254.0
+!
+interface FastEthernet0/0.102
+ encapsulation dot1Q 102
+ ip address 10.5.0.1 255.255.252.0
+!
+interface FastEthernet0/0.103
+ encapsulation dot1Q 103
+ ip address 10.5.10.1 255.255.255.0
+!
+interface FastEthernet0/0.104
+ encapsulation dot1Q 104
+ ip address 10.5.4.1 255.255.252.0
+!
+interface FastEthernet0/0.105
+ encapsulation dot1Q 105
+ ip address 10.5.11.129 255.255.255.192
+!
+interface FastEthernet0/0.150
+ encapsulation dot1Q 150
+ ip address 10.6.0.1 255.255.254.0
+!
+interface FastEthernet0/0.151
+ encapsulation dot1Q 151
+ no ip address
+!
+interface FastEthernet0/0.152
+ encapsulation dot1Q 152
+ no ip address
+!
+interface FastEthernet0/0.153
+ encapsulation dot1Q 153
+ ip address 10.6.6.1 255.255.254.0
+!
+interface FastEthernet0/0.154
+ encapsulation dot1Q 154
+ no ip address
+!
+interface FastEthernet0/0.155
+ encapsulation dot1Q 155
+ no ip address
+!
+interface FastEthernet0/0.160
+ encapsulation dot1Q 160
+ ip address 10.6.12.1 255.255.254.0
+!
+interface FastEthernet0/1
+ ip address 192.168.128.2 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface FastEthernet1/0
+ ip address 192.168.128.5 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+!
+router eigrp 400
+ network 10.5.0.0 0.0.31.255
+ network 10.6.0.0 0.0.31.255
+ network 192.168.128.0 0.0.0.7
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+ip access-list extended admin-in
+ permit tcp host 192.168.100.1 host 192.168.100.2 eq 22
+ip access-list extended admin-out
+ permit tcp host 192.168.100.2 eq 22 host 192.168.100.1 established
+ip access-list extended ssh-in
+ permit tcp 192.168.100.0 0.0.0.255 any eq 22
+!
+!
+!
+!
+!
+line con 0
+!
+line aux 0
+!
+line vty 0 4
+ access-class ssh-in in
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+line vty 5 15
+ password 7 0822455D0A16
+ login local
+ transport input ssh
+!
+!
+!
+end
+
