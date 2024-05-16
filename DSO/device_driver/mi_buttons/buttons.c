@@ -19,7 +19,8 @@
 #define GPIO_BUTTON_2_DESC "BUTTON_2"
 #define GPIO_BUTTON_DEVICE_DESC "Berryclip"
 
-static char[64]	buffer;
+// Buffer for the buttons
+static char	buffer[64] = {0};
 static int	buffer_ptr = 0;
 static int	irq_BUTTON_1 = 0;
 static int	irq_BUTTON_2 = 0;
@@ -36,14 +37,15 @@ static irqreturn_t r_irq_handler_button1(int irq, void *dev_id)
 {
 	printk(KERN_NOTICE "%s: Button 1 pressed.\n", KBUILD_MODNAME);
 	mutex_lock(&counter_mutex);
-	if (buffer_ptr == 0)
+	if (buffer_ptr == 64)
 	{
+
 		printk(KERN_NOTICE "%s: Buffer is full.\n", KBUILD_MODNAME);
 		mutex_unlock(&counter_mutex);
-		return (-1);
+		return (-EFAULT);
 	}
 	buffer[buffer_ptr++] = '1';
-	buffer[buffer_ptr+1] = '\0';
+	should_block = 0;
 	mutex_unlock(&counter_mutex);
 	wake_up_interruptible(&my_wait_queue);
 	return (IRQ_HANDLED);
@@ -52,16 +54,16 @@ static irqreturn_t r_irq_handler_button1(int irq, void *dev_id)
 // IRQ handler for Button2
 static irqreturn_t r_irq_handler_button2(int irq, void *dev_id)
 {
-	pritnk(KERN_NOTICE "%s: Button 2 pressed.\n", KBUILD_MODNAME);
+	printk(KERN_NOTICE "%s: Button 2 pressed.\n", KBUILD_MODNAME);
 	mutex_lock(&counter_mutex);
-	if (buffer_ptr == 0)
+	if (buffer_ptr == 64)
 	{
 		printk(KERN_NOTICE "%s: Buffer is full.\n", KBUILD_MODNAME);
 		mutex_unlock(&counter_mutex);
-		return (-1);
+		return (-EFAULT);
 	}
 	buffer[buffer_ptr++] = '2';
-	buffer[buffer_ptr+1] = '\0';
+	should_block = 0;
 	mutex_unlock(&counter_mutex);
 	wake_up_interruptible(&my_wait_queue);
 	return (IRQ_HANDLED);
@@ -82,6 +84,7 @@ static ssize_t buttons_read(struct file *file, char __user *out, size_t size, lo
 	}
 	
 	mutex_lock(&counter_mutex);
+	should_block = 1;
 	if (buffer_ptr < 0)
 	{
 		printk(KERN_NOTICE "%s: Buffer pointer is negative.\n", KBUILD_MODNAME);
@@ -94,21 +97,23 @@ static ssize_t buttons_read(struct file *file, char __user *out, size_t size, lo
 		mutex_unlock(&counter_mutex);
 		return (0);
 	}
-	if (size < buffer_ptr)
+	if (buffer_ptr < size || size > 64)
 	{
-		printk(KERN_NOTICE "%s: Buffer is too big.\n", KBUILD_MODNAME);
-		mutex_unlock(&counter_mutex);
-		return (-1);
+		size = buffer_ptr;
 	}
-	if (copy_to_user(out, buffer, buffer_ptr))
+	if (copy_to_user(out, buffer, size))
 	{
 		printk(KERN_NOTICE "%s: Copy to user failed.\n", KBUILD_MODNAME);
 		mutex_unlock(&counter_mutex);
 		return (-1);
 	}
 	buffer_ptr = 0;
+	for(int i = 0; i < 64; i++)
+	{
+		buffer[i] = 0;
+	}
 	mutex_unlock(&counter_mutex);
-	
+
 	return (size);
 }
 
@@ -144,7 +149,7 @@ static int r_GPIO_config(void)
 	// Config BUTTON_1 GPIO
 	if ((res = gpio_is_valid(GPIO_BUTTON_1)) < 0)
 	{
-		printk(KERN_ERR "%s: Invalid GPIO %d.\n" BUILD_MODNAME, GPIO_BUTTON_1);
+		printk(KERN_ERR "%s: Invalid GPIO %d.\n" KBUILD_MODNAME, GPIO_BUTTON_1);
 		return (res);
 	}
 	if ((res = gpio_request(GPIO_BUTTON_1, GPIO_BUTTON_1_DESC)) < 0)
@@ -162,12 +167,12 @@ static int r_GPIO_config(void)
 		printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
 		return (res);
 	}
-	pritnk(KERN_NOTICE "%s: BUTTON_1 configured.\n", KBUILD_MODNAME);
+	printk(KERN_NOTICE "%s: BUTTON_1 configured.\n", KBUILD_MODNAME);
 
 	// Config BUTTON_2 GPIO
 	if ((res = gpio_is_valid(GPIO_BUTTON_2)) < 0)
 	{
-		printk(KERN_ERR "%s: Invalid GPIO %d.\n" BUILD_MODNAME, GPIO_BUTTON_2);
+		printk(KERN_ERR "%s: Invalid GPIO %d.\n" KBUILD_MODNAME, GPIO_BUTTON_2);
 		return (res);
 	}
 	if ((res = gpio_request(GPIO_BUTTON_2, GPIO_BUTTON_2_DESC)) < 0)
@@ -180,12 +185,12 @@ static int r_GPIO_config(void)
 		printk(KERN_ERR "%s: GPIO mapping to IRQ number failed %s.\n", KBUILD_MODNAME, GPIO_BUTTON_2_DESC);
 		return (irq_BUTTON_2);
 	}
-	if ((res = request_irq(irq_BUTTON_2, (irq_handler_t) r_irq_handler_button2, IRQF_TRIGGER_FALLING, GPIO_BUTTON_2_DESC, GPIO_BUTTON_2_DEVICE_DESC)))
+	if ((res = request_irq(irq_BUTTON_2, (irq_handler_t) r_irq_handler_button2, IRQF_TRIGGER_FALLING, GPIO_BUTTON_2_DESC, GPIO_BUTTON_DEVICE_DESC)))
 	{
 		printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
 		return (res);
 	}
-	pritnk(KERN_NOTICE "%s: BUTTON_2 configured.\n", KBUILD_MODNAME);
+	printk(KERN_NOTICE "%s: BUTTON_2 configured.\n", KBUILD_MODNAME);
 
 	return (0);
 }
@@ -195,14 +200,13 @@ static int r_GPIO_config(void)
 static void r_cleanup(void)
 {
 	printk(KERN_NOTICE "%s: module clean up\n", KBUILD_MODNAME);
-	if (b_miscdev.this_device) misc_deregister(&buttons_miscdev);
+	if (buttons_miscdev.this_device) misc_deregister(&buttons_miscdev);
 
 	if (irq_BUTTON_1) free_irq(irq_BUTTON_1, GPIO_BUTTON_DEVICE_DESC);
 	if (irq_BUTTON_2) free_irq(irq_BUTTON_2, GPIO_BUTTON_DEVICE_DESC);
 	gpio_free(GPIO_BUTTON_1);
 	gpio_free(GPIO_BUTTON_2);
-	kfree(buffer);
-	prinkt(KERN_NOTICE "%s: module unloaded\n", KBUILD_MODNAME);
+	printk(KERN_NOTICE "%s: module unloaded\n", KBUILD_MODNAME);
 	return ;
 }
 
@@ -231,8 +235,6 @@ static int r_init(void)
     	}
 	printk(KERN_NOTICE "%s:  OK\n", KBUILD_MODNAME);
 
-	buffer_ptr = 0;
-	buffer = kmalloc(64, GFP_KERNEL);
 	return (0);
 }
 

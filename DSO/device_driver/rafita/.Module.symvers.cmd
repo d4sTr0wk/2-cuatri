@@ -1,0 +1,1 @@
+cmd_/home/dso/device_driver/rafita/Module.symvers :=  sed 's/ko$$/o/'  /home/dso/device_driver/rafita/modules.order | scripts/mod/modpost -m -a    -o /home/dso/device_driver/rafita/Module.symvers -e -i Module.symvers -T - 

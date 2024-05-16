@@ -117,7 +117,6 @@ static void r_cleanup(void)
     
     if (irq_BUTTON1) free_irq(irq_BUTTON1, GPIO_BUTTON1_DEVICE_DESC);
     gpio_free(GPIO_BUTTON1);
-    
     printk(KERN_NOTICE "Done. Bye from module '%s'\n", KBUILD_MODNAME);
     return;
 }

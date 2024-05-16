@@ -36,8 +36,6 @@ static int mi_getattr(const char *path, struct stat *stbuf)
 	/* completar */
 	struct structura_mis_datos *mis_datos= (struct structura_mis_datos *) fuse_get_context()->private_data;
 	
-	int i;
-	
 	int res = 0;
 
 	memset(stbuf, 0, sizeof(struct stat));
