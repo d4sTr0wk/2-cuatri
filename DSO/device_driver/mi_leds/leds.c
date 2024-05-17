@@ -159,6 +159,7 @@ static int r_GPIO_config(void)
                 {
                         printk(KERN_ERR "%s:   GPIO set direction output failure: led %s GPIO %d\n",
                                         KBUILD_MODNAME, desc_led[i], gpio_led[i]);
+			r_cleanup();
                         return res;
                 }
         }

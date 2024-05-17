@@ -1,1 +1,0 @@
-cmd_/home/dso/device_driver/rafita/buttons_rafita.ko := ld -r -EL -z noexecstack --no-warn-rwx-segments --build-id=sha1  -T arch/arm/module.lds -o /home/dso/device_driver/rafita/buttons_rafita.ko /home/dso/device_driver/rafita/buttons_rafita.o /home/dso/device_driver/rafita/buttons_rafita.mod.o;  true

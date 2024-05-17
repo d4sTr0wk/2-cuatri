@@ -1,1 +1,0 @@
-cmd_/home/dso/device_driver/rafita/buttons_rafita.mod := printf '%s\n'   buttons_rafita.o | awk '!x[$$0]++ { print("/home/dso/device_driver/rafita/"$$0) }' > /home/dso/device_driver/rafita/buttons_rafita.mod

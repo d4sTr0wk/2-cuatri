@@ -170,22 +170,14 @@ static int r_GPIO_config(void)
 		printk(KERN_ERR "%s: GPIO request failure failure: %s.\n", KBUILD_MODNAME, GPIO_BUTTON_1_DESC);
 		return (res);
 	}
-	if ((res = gpio_direction_input(GPIO_BUTTON_1)) < 0)
-	{
-		printk(KERN_ERR "%s: GPIO set direction input failure: %s.\n", KBUILD_MODNAME, GPIO_BUTTON_1_DESC);
-		gpio_free(GPIO_BUTTON_1);
-		return (res);
-	}
 	if ((irq_BUTTON_1 = gpio_to_irq(GPIO_BUTTON_1)) < 0)
 	{
 		printk(KERN_ERR "%s: GPIO mapping to IRQ number failed%s.\n", KBUILD_MODNAME, GPIO_BUTTON_1_DESC);
-		gpio_free(GPIO_BUTTON_1);
 		return (irq_BUTTON_1);
 	}
 	if ((res = request_irq(irq_BUTTON_1, (irq_handler_t) r_irq_handler_button1, IRQF_TRIGGER_FALLING, GPIO_BUTTON_1_DESC, GPIO_BUTTON_DEVICE_DESC)))
 	{
 		printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
-		gpio_free(GPIO_BUTTON_1);
 		return (res);
 	}
 	printk(KERN_NOTICE "%s: BUTTON_1 configured.\n", KBUILD_MODNAME);
@@ -194,34 +186,21 @@ static int r_GPIO_config(void)
 	if ((res = gpio_is_valid(GPIO_BUTTON_2)) < 0)
 	{
 		printk(KERN_ERR "%s: Invalid GPIO %d.\n" KBUILD_MODNAME, GPIO_BUTTON_2);
-		gpio_free(GPIO_BUTTON_1);
 		return (res);
 	}
 	if ((res = gpio_request(GPIO_BUTTON_2, GPIO_BUTTON_2_DESC)) < 0)
 	{
 		printk(KERN_ERR "%s: GPIO request failure failure: %s .\n", KBUILD_MODNAME, GPIO_BUTTON_2_DESC);
-		gpio_free(GPIO_BUTTON_1);
-		return (res);
-	}
-	if ((res = gpio_direction_input(GPIO_BUTTON_2)) < 0)
-	{
-		printk(KERN_ERR "%s: GPIO set direction input failure: %s.\n", KBUILD_MODNAME, GPIO_BUTTON_2_DESC);
-		gpio_free(GPIO_BUTTON_1);
-		gpio_free(GPIO_BUTTON_2);
 		return (res);
 	}
 	if ((irq_BUTTON_2 = gpio_to_irq(GPIO_BUTTON_2)) < 0)
 	{
 		printk(KERN_ERR "%s: GPIO mapping to IRQ number failed %s.\n", KBUILD_MODNAME, GPIO_BUTTON_2_DESC);
-		gpio_free(GPIO_BUTTON_1);
-		gpio_free(GPIO_BUTTON_2);
 		return (irq_BUTTON_2);
 	}
 	if ((res = request_irq(irq_BUTTON_2, (irq_handler_t) r_irq_handler_button2, IRQF_TRIGGER_FALLING, GPIO_BUTTON_2_DESC, GPIO_BUTTON_DEVICE_DESC)))
 	{
 		printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
-		gpio_free(GPIO_BUTTON_1);
-		gpio_free(GPIO_BUTTON_2);
 		return (res);
 	}
 	printk(KERN_NOTICE "%s: BUTTON_2 configured.\n", KBUILD_MODNAME);
