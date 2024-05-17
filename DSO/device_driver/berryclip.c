@@ -338,24 +338,24 @@ static int r_GPIO_config(void)
 	int res;
 
 	/*****LEDS*****/
-	for(i = 0; i < NUM_LEDS; i++) 
+	for(int i = 0; i < NUM_LEDS; i++) 
         {
                 if ((res = gpio_is_valid(gpio_led[i])) < 0) 
                 {
                         printk(KERN_ERR "%s:   Invalid GPIO %d\n", KBUILD_MODNAME, gpio_led[i]);
-                        return res;
+                        return (res);
                 }
                 if ((res = gpio_request_one(gpio_led[i],GPIOF_INIT_LOW,desc_led[i])) < 0) {
                             printk(KERN_ERR "%s:   GPIO request failure: led %s GPIO %d\n",
                                         KBUILD_MODNAME, desc_led[i], gpio_led[i]);
-                        return res;
+                        return (res);
                 }
                 if ((res = gpio_direction_output(gpio_led[i], 0)) < 0) 
                 {
                         printk(KERN_ERR "%s:   GPIO set direction output failure: led %s GPIO %d\n",
                                         KBUILD_MODNAME, desc_led[i], gpio_led[i]);
-                        r_cleanup();
-                        return res;
+                        for (i--; i >= 0; i--) gpio_free(gpio_led[i]);
+                        return (res);
                 }
         }
 	/*****SPEAKER*****/
@@ -453,11 +453,10 @@ static int r_GPIO_config(void)
 // Module init & cleanup
 static void r_cleanup(void)
 {
-	int i;
 	printk(KERN_NOTICE "%s: module clean up\n", KBUILD_MODNAME);
 	/*********LEDS********/
 	if (leds_miscdev.this_device) misc_deregister(&leds_miscdev);
-	for(i = 0; i < NUM_LEDS; i++)
+	for(int i = 0; i < NUM_LEDS; i++)
 	{
         	gpio_free(gpio_led[i]);
 	}
