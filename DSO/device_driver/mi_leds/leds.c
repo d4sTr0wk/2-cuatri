@@ -4,11 +4,10 @@
 #include <linux/init.h>
 #include <linux/miscdevice.h> // misc dev
 #include <linux/fs.h>         // file operations
-#include <linux/cdev.h>       // cdev structure
 #include <linux/uaccess.h>    // copy to/from user space
 #include <linux/gpio.h>       // gpio_get/set_value
 
-#define DRIVER_AUTHOR "DAC-UMA"
+#define DRIVER_AUTHOR "Máximo García Aroca / Rodrigo Hernández Barba"
 #define DRIVER_DESC   "Device driver for berryclip leds"
 
 //Minor=0: all leds, minor=i: i'th led (from 1 to 6)
