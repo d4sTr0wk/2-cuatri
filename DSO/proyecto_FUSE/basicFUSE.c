@@ -1,6 +1,6 @@
 /*
  * FUSE: Filesystem in Userspace
- * DSO 2024
+ * DSO 2014
  * Ejemplo para montar un libro de poesía como sistema de ficheros
  * Cada capítulo del libro será un fichero diferente
  * 
@@ -9,8 +9,7 @@
  * uso:  basicFUSE [opciones FUSE] fichero_inicial punto_de_montaje
  * 
  *  ./basicFUSE proverbiosycatares.txt punto_montaje
- * 	
- * Máximo García Aroca y Rodrigo Hernández Barba
+ * 
 */
 #define FUSE_USE_VERSION 26
 
@@ -38,7 +37,6 @@ static int mi_getattr(const char *path, struct stat *stbuf)
 	struct structura_mis_datos *mis_datos= (struct structura_mis_datos *) fuse_get_context()->private_data;
 	
 	int res = 0;
-	int i;
 
 	memset(stbuf, 0, sizeof(struct stat));
 	if (strcmp(path, "/") == 0) { // directorio raíz
@@ -114,9 +112,9 @@ static int mi_getattr(const char *path, struct stat *stbuf)
 		stbuf->st_size = strlen(mis_datos->contenido_ficheros[i]);
 		stbuf->st_blocks = stbuf->st_size/512 + (stbuf->st_size%512)? 1 : 0; // bloques ocupados por el fichero
 	} else
-		res = (-ENOENT);
+		res = -ENOENT;
 	
-	return (res);
+	return res;
 }
 
 /***********************************
@@ -129,51 +127,51 @@ static int mi_readdir(const char *path, void *buf, fuse_fill_dir_t filler,
 		
 	(void) offset;
 	(void) fi;
-	int	i;
 
 	if (*path !=  '/') // Si no es una dirección se reporta error
-		return (-ENOENT);
+		return -ENOENT;
 	
 	if (strcmp(path, "/") == 0) // Si es la raíz
 	{
-		if(filler(buf, "." , NULL, 0)!=0) return (-ENOMEM); // añadir "." al directorio
-		if(filler(buf, "..", NULL, 0)!=0) return (-ENOMEM); // añadir ".." al directorio
-		if (filler(buf,"BIG", NULL, 0) != 0) return (-ENOMEM); // añadir "BIG" al directorio	
-		if (filler(buf,"little", NULL, 0) != 0) return (-ENOMEM); // añadir "little" al directorio
-		i = -1;
-		while ((++i) < mis_datos->numero_ficheros)
-			if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0) return -ENOMEM;
+		if(filler(buf, "." , NULL, 0)!=0) return -ENOMEM; // añadir "." al directorio
+		if(filler(buf, "..", NULL, 0)!=0) return -ENOMEM; // añadir ".." al directorio
+		if (filler(buf,"BIG", NULL, 0) != 0) return -ENOMEM; // añadir "BIG" al directorio	
+		if (filler(buf,"little", NULL, 0) != 0) return -ENOMEM; // añadir "little" al directorio
+
+		for (int i=0; i< mis_datos->numero_ficheros; i++)
+		{
+			if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0)
+				return -ENOMEM;
+		}
 	}
 	else if	(strstr(path, "BIG") != NULL)
 	{
-		if(filler(buf, "." , NULL, 0)!=0) return (-ENOMEM); // añadir "." al directorio
-		if(filler(buf, "..", NULL, 0)!=0) return (-ENOMEM); // añadir ".." al directorio
-		i = -1;
-		while ((++i) < mis_datos->numero_ficheros)
+		if(filler(buf, "." , NULL, 0)!=0) return -ENOMEM; // añadir "." al directorio
+		if(filler(buf, "..", NULL, 0)!=0) return -ENOMEM; // añadir ".." al directorio
+		for(int i = 0; i < mis_datos->numero_ficheros; i++)
 		{
 			if (strlen(mis_datos->contenido_ficheros[i]) > 255) // Si el nombre del fichero es mayor a 255 caracteres
 			{
 				if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0)
-					return (-ENOMEM);
+					return -ENOMEM;
 			}
 		}
 	}
 	else if	(strstr(path, "little") != NULL)
 	{
-		if(filler(buf, "." , NULL, 0)!=0) return (-ENOMEM); // añadir "." al directorio
-		if(filler(buf, "..", NULL, 0)!=0) return (-ENOMEM); // añadir ".." al directorio
-		i = -1;
-		while ((++i) < mis_datos->numero_ficheros)
+		if(filler(buf, "." , NULL, 0)!=0) return -ENOMEM; // añadir "." al directorio
+		if(filler(buf, "..", NULL, 0)!=0) return -ENOMEM; // añadir ".." al directorio
+		for(int i = 0; i < mis_datos->numero_ficheros; i++)
 		{
 			if (strlen(mis_datos->contenido_ficheros[i]) < 256) // Si el nombre del fichero es menor a 256 caracteres
 			{
 				if (filler(buf,mis_datos->nombre_ficheros[i], NULL, 0) != 0)
-					return (-ENOMEM);
+					return -ENOMEM;
 			}
 		}
 	}
 
-	return (0);
+	return 0;
 
 }
 
@@ -186,21 +184,21 @@ static int mi_open(const char *path, struct fuse_file_info *fi)
 	int	file_descriptor;
 	int	chapter_position;
 	
-	if ((fi->flags & 3) != O_RDONLY) return (-EACCES); // Se intentó abrir en modo escritura
+	if ((fi->flags & 3) != O_RDONLY) return -EACCES; // Se intentó abrir en modo escritura
 	if (strstr(path, "BIG") != NULL)
 	{
 		chapter_position = buscar_fichero(path+4, mis_datos); // buscar capítulo /BIG/...
-		if (chapter_position < 0) return (-ENOENT); // no existe el fichero
+		if (chapter_position < 0) return -ENOENT; // no existe el fichero
 	}
 	else if (strstr(path, "little") != NULL)
 	{
 		chapter_position = buscar_fichero(path+7, mis_datos); // buscar capítulo /little/...
-		if (chapter_position < 0) return (-ENOENT); // no existe el fichero
+		if (chapter_position < 0) return -ENOENT; // no existe el fichero
 	}
-	else // en la raíz
+	else
 	{
 		chapter_position = buscar_fichero(path, mis_datos); // buscar capítulo /...
-		if (chapter_position < 0) return (-ENOENT); // no existe el fichero
+		if (chapter_position < 0) return -ENOENT; // no existe el fichero
 	}
 	
 	fi->fh = chapter_position; // voy a utilizar el descriptor para guardar la posición del fichero en el array de ficheros
@@ -222,7 +220,8 @@ static int mi_read(const char *path, char *buf, size_t size, off_t offset,
 		memcpy(buf, contenido_ficheros + offset, size);
 		return (size);
 	} 
-	return (0);
+	else 
+		return (0);
 
 }
 
