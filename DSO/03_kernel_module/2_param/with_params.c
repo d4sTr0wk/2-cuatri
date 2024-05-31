@@ -7,7 +7,7 @@
 
 static char *one = "default string one";
 static int two = 2;
-module_param(one, charp, S_IRUGO);
+module_param(one, char, S_IRUGO);
 module_param(two, int, S_IRUGO);
 
 // Module init & cleanup

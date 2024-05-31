@@ -3,6 +3,11 @@ KERNEL_SRC:=/lib/modules/${KERNEL}/build
 
 ifndef MODULE
 $(error MODULE not defined, use: MODULE=<name> make)
+	
+endif
+
+ifndef MILLISECONDS
+$(error MILLISECONDS not defined, use: MILLISECONDS=<name> make)
 endif
 
 obj-m += ${MODULE}.o
@@ -13,7 +18,7 @@ install: uninstall compile
 	@tput setaf 2
 	@echo "instaling module"
 	@tput sgr0
-	sudo insmod ${MODULE}.ko 
+	sudo insmod ${MODULE}.ko milliseconds=$(MILLISECONDS)
 	dmesg | tail 
 	@echo "done"
 

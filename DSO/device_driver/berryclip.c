@@ -8,6 +8,8 @@
 #include <linux/gpio.h>       // gpio_get/set_value
 #include <linux/mutex.h>
 #include <linux/interrupt.h>
+#include <linux/moduleparam.h>
+#include <linux/jiffies.h>
 
 #define DRIVER_AUTHOR "Máximo García Aroca / Rodrigo Hernández Barba"
 #define DRIVER_DESC   "Device driver for berryclip"
@@ -57,17 +59,21 @@ static	DEFINE_MUTEX(counter_mutex);
 int	should_block = 1;
 int	busy = 0;
 
+int milliseconds;
+module_param(milliseconds, int, S_IRUGO);
+static unsigned long long max_gap_in_jiffies;
+
 /**********************************************************************************************/
 /*************************************LED FILE OPERATIONS**************************************/
 /**********************************************************************************************/
 static ssize_t leds_write(struct file *file, const char __user *buf,
                           size_t count, loff_t *ppos)
 {
-        int led;
+        int 	led;
         char    ch;
 
-        if (*ppos > 0) return count;
-        if (copy_from_user(&ch, buf, 1)) return -EFAULT;
+        if (*ppos > 0) return (count);
+        if (copy_from_user(&ch, buf, 1)) return (-EFAULT);
         if ((ch & 0xC0) == 0) //00xxxxxx
         {
                 for (led = 0; led < NUM_LEDS; led++) {
@@ -122,16 +128,15 @@ static ssize_t leds_write(struct file *file, const char __user *buf,
 
 static ssize_t leds_read(struct file *file, char __user *buf, size_t size, loff_t *off)
 {
-	int led;
 	char    ch = 0;
 
-	if (*off > 0) return 0;
-	for (led = 0; led < NUM_LEDS; led++) 
+	if (*off > 0) return (0);
+	*off += 1;
+	for (int led = 0; led < NUM_LEDS; led++) 
 	{
 		ch |= (gpio_get_value(gpio_led[led]) << led);
 	}
-	if (copy_to_user(buf, &ch, 1)) return -EFAULT;
-	*off += 1;
+	if (copy_to_user(buf, &ch, 1)) return (-EFAULT);
 	return (1);
 }
 
@@ -166,41 +171,69 @@ static ssize_t speaker_write(struct file *file, const char __user *buf, size_t c
 /*********************************BUTTONS FILE OPERATIONS**************************************/
 /**********************************************************************************************/
 
-// IRQ handler for Button1
+// IRQ handler for Button1 (TOP_HALF)
 static irqreturn_t r_irq_handler_button1(int irq, void *dev_id)
 {
-	printk(KERN_NOTICE "%s: Button 1 pressed.\n", KBUILD_MODNAME);
-	mutex_lock(&counter_mutex);
-	if (buffer_ptr == 64)
-	{
+	static unsigned long long last = 0;
+        unsigned long long now = get_jiffies_64();
+        printk(KERN_NOTICE "%s: Button 1 pressed.\n", KBUILD_MODNAME);
+        if (now - last < max_gap_in_jiffies)
+        {
+                printk(KERN_INFO "%s: in_interrupt()=%d\tin_hardirq()=%d\tin_softirq()=%d\n" KBUILD_MODNAME, !!in_interrupt(), !!in_hardirq(), !!in_softirq());
+                return (IRQ_HANDLED); // Ignore bounce
+        }
+        last = now;
+        return (IRQ_WAKE_THREAD);	
+}
 
-		printk(KERN_NOTICE "%s: Buffer is full.\n", KBUILD_MODNAME);
-		mutex_unlock(&counter_mutex);
-		return (-EFAULT);
-	}
-	buffer[buffer_ptr++] = '1';
-	should_block = 0;
-	mutex_unlock(&counter_mutex);
-	wake_up_interruptible(&my_wait_queue);
-	return (IRQ_HANDLED);
+// BUTTON1 BOTTOM_HALF
+static irqreturn_t      irq_thread_function_button1(int irq, void *dev_id)
+{
+        mutex_lock(&counter_mutex);
+        if (buffer_ptr == 64)
+        {
+
+                printk(KERN_NOTICE "%s: Buffer is full.\n", KBUILD_MODNAME);
+                mutex_unlock(&counter_mutex);
+                return (-EFAULT);
+        }
+        buffer[buffer_ptr++] = '1';
+        should_block = 0;
+        mutex_unlock(&counter_mutex);
+        wake_up_interruptible(&my_wait_queue);
+        return (IRQ_HANDLED);
 }
 
 // IRQ handler for Button2
 static irqreturn_t r_irq_handler_button2(int irq, void *dev_id)
 {
-	printk(KERN_NOTICE "%s: Button 2 pressed.\n", KBUILD_MODNAME);
-	mutex_lock(&counter_mutex);
-	if (buffer_ptr == 64)
-	{
-		printk(KERN_NOTICE "%s: Buffer is full.\n", KBUILD_MODNAME);
-		mutex_unlock(&counter_mutex);
-		return (-EFAULT);
-	}
-	buffer[buffer_ptr++] = '2';
-	should_block = 0;
-	mutex_unlock(&counter_mutex);
-	wake_up_interruptible(&my_wait_queue);
-	return (IRQ_HANDLED);
+
+        static unsigned long long last = 0;
+        unsigned long long now = get_jiffies_64();
+        printk(KERN_NOTICE "%s: Button 2 pressed.\n", KBUILD_MODNAME);
+        if (now - last < max_gap_in_jiffies)
+        {
+                printk(KERN_INFO "%s: in_interrupt()=%d\tin_hardirq()=%d\tin_softirq()=%d\n" KBUILD_MODNAME, !!in_interrupt(), !!in_hardirq(), !!in_softirq());
+                return (IRQ_HANDLED); // Ignore bounce
+        }
+        last = now;
+        return (IRQ_WAKE_THREAD);
+}
+
+static irqreturn_t      irq_thread_function_button2(int irq, void *dev_id)
+{
+        mutex_lock(&counter_mutex);
+        if (buffer_ptr == 64)
+        {
+                printk(KERN_NOTICE "%s: Buffer is full.\n", KBUILD_MODNAME);
+                mutex_unlock(&counter_mutex);
+                return (-EFAULT);
+        }
+        buffer[buffer_ptr++] = '2';
+        should_block = 0;
+        mutex_unlock(&counter_mutex);
+        wake_up_interruptible(&my_wait_queue);
+        return (IRQ_HANDLED);
 }
 
 // Read function for the buttons
@@ -402,12 +435,12 @@ static int r_GPIO_config(void)
 		gpio_free(GPIO_BUTTON_1);
 		return (irq_BUTTON_1);
 	}
-	if ((res = request_irq(irq_BUTTON_1, (irq_handler_t) r_irq_handler_button1, IRQF_TRIGGER_FALLING, GPIO_BUTTON_1_DESC, GPIO_BUTTON_DEVICE_DESC)))
-	{
-		printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
-		gpio_free(GPIO_BUTTON_1);
-		return (res);
-	}
+	if ((res = request_threaded_irq(irq_BUTTON_1, (irq_handler_t) r_irq_handler_button1, (irq_handler_t) irq_thread_function_button1, IRQF_TRIGGER_FALLING, GPIO_BUTTON_1_DESC, GPIO_BUTTON_DEVICE_DESC)))
+        {
+                printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
+                gpio_free(GPIO_BUTTON_1);
+                return (res);
+        }
 	printk(KERN_NOTICE "%s: BUTTON_1 configured.\n", KBUILD_MODNAME);
 
 	// Config BUTTON_2 GPIO
@@ -437,13 +470,13 @@ static int r_GPIO_config(void)
 		gpio_free(GPIO_BUTTON_2);
 		return (irq_BUTTON_2);
 	}
-	if ((res = request_irq(irq_BUTTON_2, (irq_handler_t) r_irq_handler_button2, IRQF_TRIGGER_FALLING, GPIO_BUTTON_2_DESC, GPIO_BUTTON_DEVICE_DESC)))
-	{
-		printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
-		gpio_free(GPIO_BUTTON_1);
-		gpio_free(GPIO_BUTTON_2);
-		return (res);
-	}
+	if ((res = request_threaded_irq(irq_BUTTON_2, (irq_handler_t) r_irq_handler_button2, (irq_handler_t) irq_thread_function_button2, IRQF_TRIGGER_FALLING, GPIO_BUTTON_2_DESC, GPIO_BUTTON_DEVICE_DESC)))
+        {
+                printk(KERN_NOTICE "%s: IRQ request failure.\n", KBUILD_MODNAME);
+                gpio_free(GPIO_BUTTON_1);
+                gpio_free(GPIO_BUTTON_2);
+                return (res);
+        }	
 	printk(KERN_NOTICE "%s: BUTTON_2 configured.\n", KBUILD_MODNAME);
 
 	return (0);
@@ -499,6 +532,8 @@ static int r_init(void)
 		r_cleanup();
 		return (res);
     	}
+	max_gap_in_jiffies = msecs_to_jiffies(milliseconds);
+	printk(KERN_NOTICE "%s: Max gap in jiffies: %llu, milliseconds: %d\n", KBUILD_MODNAME, max_gap_in_jiffies, milliseconds);
 	printk(KERN_NOTICE "%s:  OK\n", KBUILD_MODNAME);
 
 	return (0);

@@ -91,7 +91,7 @@ filetype * filetypeFromPath(char * path){
 		// Muevo index hasta el siguiente "/".
 		index = strchr(path_name, '/');
 		
-		// Significa que sigue habiendo más PATH que investigar, tengo que llegar hasta /Doraemon.
+		// Significa que sigue habiendo más PATH que investigar, tengo que llegas hasta /Doraemon.
 		if(index != NULL){
 			strncpy(curr_folder, path_name, index - path_name);
 			curr_folder[index-path_name] = '\0';

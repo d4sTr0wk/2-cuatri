@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # Convert decimal number writen as binary to ASCII character
+
 # Check if the number of arguments is correct
 if [ $# -ne 1 ]; then
     echo "Usage: $0 <binary number>"
@@ -8,7 +9,14 @@ if [ $# -ne 1 ]; then
 fi
 
 # Convert the binary number to decimal
-ascii_value=$(echo -n "$1" | od -An -tuC)
-dec=$(echo "ibase=10;obase=2; $ascii_value" | bc)
+dec=$(echo "ibase=2; $1" | bc)
 
-echo $dec
+oct=$(printf '%03o' $dec)
+
+if [ -n "$oct" ]; then
+        printf "\\$oct\n"
+else
+        char=$(printf \\$(printf '%03o' $dec))
+        echo "$char"
+fi
+
