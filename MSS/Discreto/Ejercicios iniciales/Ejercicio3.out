@@ -1,0 +1,502 @@
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 1 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .06982     (Insuf)     1.8038E-4 .38475        104    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        104    
+Piezas.WaitTime                             .28682     (Insuf)    .00000     .92326        104    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        104    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        104    
+Piezas.TotalTime                            .35664     (Insuf)    .00586     1.0026        104    
+Procesado de piezas.Queue.WaitingTime       .28891     (Insuf)    .00000     .92326        105    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  4.9552     (Insuf)    .00000     14.000     8.0000    
+Tratado de piezas.NumberBusy                .90777     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .90777     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     4.0475     (Insuf)    .00000     13.000     7.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             112.00    
+Piezas.NumberOut                            104.00    
+Tratado de piezas.NumberSeized              105.00    
+Tratado de piezas.ScheduledUtilization      .90777    
+System.NumberOut                            104.00    
+
+Beginning replication 2 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 2 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .05970     (Insuf)    .00105     .31637        116    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        116    
+Piezas.WaitTime                             .13096     (Insuf)    .00000     .34494        116    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        116    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        116    
+Piezas.TotalTime                            .19066     (Insuf)    .00190     .43477        116    
+Procesado de piezas.Queue.WaitingTime       .13284     (Insuf)    .00000     .35125        117    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  2.9750     (Insuf)    .00000     11.000     6.0000    
+Tratado de piezas.NumberBusy                .86700     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .86700     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     2.1080     (Insuf)    .00000     10.000     5.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             122.00    
+Piezas.NumberOut                            116.00    
+Tratado de piezas.NumberSeized              117.00    
+Tratado de piezas.ScheduledUtilization      .86700    
+System.NumberOut                            116.00    
+
+Beginning replication 3 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 3 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .05748     (Insuf)     2.3841E-4 .39999        118    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        118    
+Piezas.WaitTime                             .22927     (Insuf)    .00000     .74127        118    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        118    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        118    
+Piezas.TotalTime                            .28675     (Insuf)     2.3841E-4 .78682        118    
+Procesado de piezas.Queue.WaitingTime       .23207     (Insuf)    .00000     .74127        119    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  4.4729     (Insuf)    .00000     14.000     5.0000    
+Tratado de piezas.NumberBusy                .85634     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .85634     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     3.6165     (Insuf)    .00000     13.000     4.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             123.00    
+Piezas.NumberOut                            118.00    
+Tratado de piezas.NumberSeized              119.00    
+Tratado de piezas.ScheduledUtilization      .85634    
+System.NumberOut                            118.00    
+
+Beginning replication 4 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 4 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .05346     (Insuf)    .00133     .30419        107    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        107    
+Piezas.WaitTime                             .05510     (Insuf)    .00000     .27056        107    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        107    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        107    
+Piezas.TotalTime                            .10856     (Insuf)    .00189     .37842        107    
+Procesado de piezas.Queue.WaitingTime       .05537     (Insuf)    .00000     .27056        108    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  1.4817     (Insuf)    .00000     5.0000     3.0000    
+Tratado de piezas.NumberBusy                .72160     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .72160     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     .76018     (Insuf)    .00000     4.0000     2.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             110.00    
+Piezas.NumberOut                            107.00    
+Tratado de piezas.NumberSeized              108.00    
+Tratado de piezas.ScheduledUtilization      .72160    
+System.NumberOut                            107.00    
+
+Beginning replication 5 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 5 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .05851     (Insuf)     2.4461E-5 .26066        136    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        136    
+Piezas.WaitTime                             .92272     (Insuf)    .00000     1.6651        136    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        136    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        136    
+Piezas.TotalTime                            .98123     (Insuf)    .06622     1.7388        136    
+Procesado de piezas.Queue.WaitingTime       .92164     (Insuf)    .00000     1.6651        137    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  17.597     (Insuf)    .00000     29.000     16.000    
+Tratado de piezas.NumberBusy                1.0000     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               1.0000     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     16.597     (Insuf)    .00000     28.000     15.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             152.00    
+Piezas.NumberOut                            136.00    
+Tratado de piezas.NumberSeized              137.00    
+Tratado de piezas.ScheduledUtilization      1.0000    
+System.NumberOut                            136.00    
+
+Beginning replication 6 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 6 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .06585     (Insuf)     3.3103E-4 .36094        109    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        109    
+Piezas.WaitTime                             .17782     (Insuf)    .00000     .64469        109    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        109    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        109    
+Piezas.TotalTime                            .24367     (Insuf)    .00493     .80723        109    
+Procesado de piezas.Queue.WaitingTime       .18299     (Insuf)    .00000     .74750        110    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  4.4488     (Insuf)    .00000     22.000     21.000    
+Tratado de piezas.NumberBusy                .89958     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .89958     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     3.5492     (Insuf)    .00000     21.000     20.000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             130.00    
+Piezas.NumberOut                            109.00    
+Tratado de piezas.NumberSeized              110.00    
+Tratado de piezas.ScheduledUtilization      .89958    
+System.NumberOut                            109.00    
+
+Beginning replication 7 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 7 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .06225     (Insuf)     4.3713E-4 .26727        119    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        119    
+Piezas.WaitTime                             .42745     (Insuf)    .00000     1.0243        119    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        119    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        119    
+Piezas.TotalTime                            .48970     (Insuf)    .00273     1.0895        119    
+Procesado de piezas.Queue.WaitingTime       .42745     (Insuf)    .00000     1.0243        119    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  7.2843     (Insuf)    .00000     15.000     .00000    
+Tratado de piezas.NumberBusy                .92597     (Insuf)    .00000     1.0000     .00000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .92597     (Insuf)    .00000     1.0000     .00000    
+Procesado de piezas.Queue.NumberInQueue     6.3583     (Insuf)    .00000     14.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             119.00    
+Piezas.NumberOut                            119.00    
+Tratado de piezas.NumberSeized              119.00    
+Tratado de piezas.ScheduledUtilization      .92597    
+System.NumberOut                            119.00    
+
+Beginning replication 8 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 8 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .06769     (Insuf)     1.2575E-4 .42526        105    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        105    
+Piezas.WaitTime                             .35826     (Insuf)    .00000     1.1627        105    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        105    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        105    
+Piezas.TotalTime                            .42594     (Insuf)    .00502     1.1789        105    
+Procesado de piezas.Queue.WaitingTime       .35826     (Insuf)    .00000     1.1627        105    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  5.5904     (Insuf)    .00000     18.000     .00000    
+Tratado de piezas.NumberBusy                .88838     (Insuf)    .00000     1.0000     .00000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .88838     (Insuf)    .00000     1.0000     .00000    
+Procesado de piezas.Queue.NumberInQueue     4.7021     (Insuf)    .00000     17.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             105.00    
+Piezas.NumberOut                            105.00    
+Tratado de piezas.NumberSeized              105.00    
+Tratado de piezas.ScheduledUtilization      .88838    
+System.NumberOut                            105.00    
+
+Beginning replication 9 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 9 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .06261     (Insuf)     7.2555E-4 .25644        122    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        122    
+Piezas.WaitTime                             .52417     (Insuf)    .00000     1.1337        122    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        122    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        122    
+Piezas.TotalTime                            .58678     (Insuf)    .01367     1.2173        122    
+Procesado de piezas.Queue.WaitingTime       .52384     (Insuf)    .00000     1.1337        123    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  9.2577     (Insuf)    .00000     20.000     6.0000    
+Tratado de piezas.NumberBusy                .97052     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .97052     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     8.2872     (Insuf)    .00000     19.000     5.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             128.00    
+Piezas.NumberOut                            122.00    
+Tratado de piezas.NumberSeized              123.00    
+Tratado de piezas.ScheduledUtilization      .97052    
+System.NumberOut                            122.00    
+
+Beginning replication 10 of 10
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 10 of 10
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 8.0 Hours 
+Base Time Units: Hours
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+Piezas.VATime                               .05371     (Insuf)     5.6464E-4 .24870        109    
+Piezas.NVATime                              .00000     (Insuf)    .00000     .00000        109    
+Piezas.WaitTime                             .15136     (Insuf)    .00000     .70621        109    
+Piezas.TranTime                             .00000     (Insuf)    .00000     .00000        109    
+Piezas.OtherTime                            .00000     (Insuf)    .00000     .00000        109    
+Piezas.TotalTime                            .20506     (Insuf)     5.6464E-4 .73343        109    
+Procesado de piezas.Queue.WaitingTime       .15505     (Insuf)    .00000     .70621        110    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+Piezas.WIP                                  3.1658     (Insuf)    .00000     13.000     8.0000    
+Tratado de piezas.NumberBusy                .73324     (Insuf)    .00000     1.0000     1.0000    
+Tratado de piezas.NumberScheduled           1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Tratado de piezas.Utilization               .73324     (Insuf)    .00000     1.0000     1.0000    
+Procesado de piezas.Queue.NumberInQueue     2.4326     (Insuf)    .00000     12.000     7.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+Piezas.NumberIn                             117.00    
+Piezas.NumberOut                            109.00    
+Tratado de piezas.NumberSeized              110.00    
+Tratado de piezas.ScheduledUtilization      .73324    
+System.NumberOut                            109.00    
+
+
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                 Output Summary for 10 Replications
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+
+                                             OUTPUTS
+
+Identifier                                 Average    Half-width Minimum    Maximum # Replications
+___________________________________________________________________________________________________
+
+Piezas.NumberIn                             121.80     9.4403     105.00     152.00     10
+Piezas.NumberOut                            114.50     7.0348     104.00     136.00     10
+Tratado de piezas.NumberSeized              115.30     7.0815     105.00     137.00     10
+Tratado de piezas.ScheduledUtilization      .87704     .06451     .72160     1.0000     10
+System.NumberOut                            114.50     7.0348     104.00     136.00     10
+
+Simulation run time: 0.48 minutes.
+Simulation run complete.

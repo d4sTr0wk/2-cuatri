@@ -1,0 +1,66 @@
+
+0.0 Minutes>
+0.0 Minutes>
+1.4123013 Minutes>
+1.4123013 Minutes>
+2.5148661 Minutes>
+2.5148661 Minutes>
+2.7603652 Minutes>
+2.7603652 Minutes>
+3.3343282 Minutes>
+3.3343282 Minutes>
+3.8438895 Minutes>
+3.8438895 Minutes>
+15.493684 Minutes>
+15.493684 Minutes>
+18.724123 Minutes>
+18.724123 Minutes>
+                                      ARENA Simulation Results
+                             necropepo13@outlook.com - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 5/15/2024
+Analyst: necropepo13@outlook.com                                     Model revision date: 5/15/2024
+
+Replication ended at time      : 20.0 Minutes 
+Base Time Units: Minutes
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+piezas.VATime                                   --         --         --         --          0
+piezas.NVATime                                  --         --         --         --          0
+piezas.WaitTime                                 --         --         --         --          0
+piezas.TranTime                                 --         --         --         --          0
+piezas.OtherTime                                --         --         --         --          0
+piezas.TotalTime                                --         --         --         --          0
+Process 1.Queue.WaitingTime                 .00000     (Insuf)    .00000     .00000          1    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+piezas.WIP                                  5.5958     (Insuf)    .00000     8.0000     8.0000    
+Escaner.NumberBusy                          1.0000     (Insuf)    .00000     1.0000     1.0000    
+Escaner.NumberScheduled                     1.0000     (Insuf)    1.0000     1.0000     1.0000    
+Escaner.Utilization                         1.0000     (Insuf)    .00000     1.0000     1.0000    
+Process 1.Queue.NumberInQueue               4.5958     (Insuf)    .00000     7.0000     7.0000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+piezas.NumberIn                             8.0000    
+piezas.NumberOut                            .00000    
+Escaner.NumberSeized                        1.0000    
+Escaner.ScheduledUtilization                1.0000    
+System.NumberOut                            .00000    
+
+
+Simulation run time: 0.47 minutes.
+Simulation run complete.

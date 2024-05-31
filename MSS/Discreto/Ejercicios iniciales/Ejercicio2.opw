@@ -1,0 +1,7 @@
+[RESOURCES]
+Escaner
+[VARIABLES]
+Process 1.NumberIn
+Dispose 1.NumberOut
+Creación de piezas.NumberOut
+Process 1.NumberOut
