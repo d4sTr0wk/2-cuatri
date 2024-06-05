@@ -14,4 +14,4 @@ Timeout = 10000
 NoTXN = 0
 SyncPragma = NORMAL
 StepAPI = 0
-Database=C:\Users\Máximo\Documents\GitHub\2-cuatri\MSS\Modelado mio\Arena\Practica 1\practica1.db
+Database=C:\Users\Máximo\Documents\GitHub\2-cuatri\MSS\Discreto\Práctica 1 Básico\McMonroy.db

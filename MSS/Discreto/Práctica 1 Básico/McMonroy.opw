@@ -1,0 +1,8 @@
+[RESOURCES]
+[VARIABLES]
+Clientes a pie.NumberOut
+Dispose 2.NumberOut
+Dispose 1.NumberOut
+Clientes en autobús.NumberOut
+Dispose 3.NumberOut
+Clientes en coche.NumberOut

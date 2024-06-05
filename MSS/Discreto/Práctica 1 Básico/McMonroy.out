@@ -1,0 +1,82 @@
+SIMAN Run Controller.
+
+0.0 Days>
+----------------------------------------------------------------------
+19145:DISC
+Entity: 3
+A runtime error was detected at time 0.0 at the following block:
+
+ *    5 8$              CREATE,DISC(0.2,1,0.3,2,0.3,3,0.2,4),
+                            MinutesToBaseTime(0.0),C.en coche:
+                            MinutesToBaseTime(EXPO(5)):
+                            NEXT(9$);
+
+Invalid cumulative probability value 0.2 :
+ must be greater than last specified probability
+ and less than or equal to 1.0
+----------------------------------------------------------------------
+
+
+SIMAN Run Controller.
+
+0.0 Days>
+                                      ARENA Simulation Results
+                                      Máximo - License: STUDENT
+
+                                  Summary for Replication 1 of 1
+
+Project: Unnamed Project                                             Run execution date : 6/ 4/2024
+Analyst: Máximo                                                      Model revision date: 6/ 4/2024
+
+Replication ended at time      : 0.16666667 Days 
+Base Time Units: Days
+
+                                           TALLY VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Observations
+___________________________________________________________________________________________________
+
+C.en coche.VATime                               --         --         --         --          0
+C.en coche.NVATime                              --         --         --         --          0
+C.en coche.WaitTime                             --         --         --         --          0
+C.en coche.TranTime                             --         --         --         --          0
+C.en coche.OtherTime                            --         --         --         --          0
+C.en coche.TotalTime                            --         --         --         --          0
+C.A pie.VATime                              .00000     (Insuf)    .00000     .00000         66    
+C.A pie.NVATime                             .00000     (Insuf)    .00000     .00000         66    
+C.A pie.WaitTime                            .00000     (Insuf)    .00000     .00000         66    
+C.A pie.TranTime                            .00000     (Insuf)    .00000     .00000         66    
+C.A pie.OtherTime                           .00000     (Insuf)    .00000     .00000         66    
+C.A pie.TotalTime                           .00000     (Insuf)    .00000     .00000         66    
+C.en autobús.VATime                         .00000     (Insuf)    .00000     .00000         26    
+C.en autobús.NVATime                        .00000     (Insuf)    .00000     .00000         26    
+C.en autobús.WaitTime                       .00000     (Insuf)    .00000     .00000         26    
+C.en autobús.TranTime                       .00000     (Insuf)    .00000     .00000         26    
+C.en autobús.OtherTime                      .00000     (Insuf)    .00000     .00000         26    
+C.en autobús.TotalTime                      .00000     (Insuf)    .00000     .00000         26    
+
+                                     DISCRETE-CHANGE VARIABLES
+
+Identifier                                  Average   Half Width  Minimum    Maximum   Final Value
+___________________________________________________________________________________________________
+
+C.en coche.WIP                              .00000     (Insuf)    .00000     .00000     .00000    
+C.A pie.WIP                                 .00000     (Insuf)    .00000     1.0000     .00000    
+C.en autobús.WIP                            .00000     (Insuf)    .00000     26.000     .00000    
+
+                                             OUTPUTS
+
+Identifier                                   Value
+_____________________________________________________________
+
+C.en coche.NumberIn                         .00000    
+C.en coche.NumberOut                        .00000    
+C.A pie.NumberIn                            66.000    
+C.A pie.NumberOut                           66.000    
+C.en autobús.NumberIn                       26.000    
+C.en autobús.NumberOut                      26.000    
+System.NumberOut                            93.000    
+
+
+Simulation run time: 0.48 minutes.
+Simulation run completed with 1 error(s) and 0 warning(s).
