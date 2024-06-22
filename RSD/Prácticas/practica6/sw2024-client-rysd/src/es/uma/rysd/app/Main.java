@@ -11,10 +11,7 @@ import es.uma.rysd.entities.World;
 public class Main {	
 	private static Random rand; // for random numbers
 	private static Scanner sc; // for reading from keyboard
-	private final static String proxy = "proxy.lcc.uma.es";
-	private final static String proxy_port = "3128";
-	
-    public static void main(String[] args) {
+	public static void main(String[] args) {
 		// Uncomment the following lines if you are testing in the lab and accessing the Internet using the proxy
 		// System.setProperty("https.proxyHost",proxy);
     	// System.setProperty("https.proxyPort",proxy_port);
@@ -26,8 +23,8 @@ public class Main {
 
         do{
         	//tallest(sw);
-        	 whoBornIn1(sw);
-			// whoBornIn2(sw);
+        	 //whoBornIn1(sw);
+			 whoBornIn2(sw);
 	       	System.out.println("Desea otra ronda (s/n)?");
 	       	response = sc.nextLine();
 	    }while(response.equals("s"));
